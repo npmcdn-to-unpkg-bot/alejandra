@@ -75,6 +75,7 @@ if ( ! isset( $content_width ) ) {
 // Thumbnail sizes
 add_image_size( 'bones-thumb-600', 600, 150, true );
 add_image_size( 'bones-thumb-300', 300, 100, true );
+add_image_size( 'bones-thumb-square', 300, 300, array('center','center') );
 
 /*
 to add more sizes, simply copy a line from above
@@ -205,5 +206,11 @@ function bones_fonts() {
 }
 
 add_action('wp_enqueue_scripts', 'bones_fonts');
+
+register_nav_menus( array(
+    'Social_Links' => 'Sticky Réseaux Sociaux',
+) );
+
+
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>

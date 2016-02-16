@@ -155,6 +155,7 @@ function bones_scripts_and_styles() {
 		*/
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'bones-js' );
+	  	wp_enqueue_script('bxslider', get_stylesheet_directory_uri(). '/library/js/libs/jquery.bxslider.min.js', array(),'','');
 
 	}
 }

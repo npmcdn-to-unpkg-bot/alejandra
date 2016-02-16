@@ -39,7 +39,7 @@ the whole project.
 @import "partials/mixins";
 
 // the grid
-@import "partials/grid";
+/*@import "partials/grid";*/
 
 /*********************
 IMPORTING MODULES
@@ -145,3 +145,155 @@ be set to display none.
 	@import "partials/print";
 
 }
+
+html, body, .bxslider {
+	height:calc(100% + 60px);
+	margin:0;
+}
+
+.header {
+	#logo {
+		transition: $basicTransition;
+		&:hover {
+			fill: $orange;
+		}
+	}
+	&.whiteHeader{
+		background-image: none;
+		background-color: $white;
+		position:fixed;
+		top:0;
+		left:0;
+		width:100%;
+		box-shadow: 0px 5px 0 0 rgba(0,0,0,0.1);
+		transition: background-color ease-in-out 0.2s;
+
+		a {
+			color: $black;
+		}
+		#logo {
+			fill: $black;
+			&:hover {
+				fill: $orange;
+			}
+		}
+	}
+}
+body.padded {
+	}
+	.heroSlider {
+		position: relative;
+		height: 670px;
+		overflow: hidden;
+		h1 {
+			width: 50%;
+			margin-left: 5%;
+			position: absolute;
+			z-index: 110;
+			height: 50%;
+			top: 10%;
+			font-family: $playfair;
+			color: $white;
+			font-weight: 900;
+			font-size: 8em;
+			line-height: 1.2;
+			&::before {
+				width:50px;
+				height:3px;
+				content:'';
+				display:block;
+				background:white;
+			}
+		}
+	}
+	.eventKind {
+		z-index: 100;
+		position: relative;
+		transform: translateY(-40px);
+		> div {
+			.eventButton {
+				background-color:$black;
+				border:10px solid $AlejandraGrey;
+				width:80%;
+				margin:0 auto;
+				position: relative;
+				img {
+					width:100%;
+				}
+				.eventTitleContainer {
+					height: 100%;
+					position: absolute;
+					width: 100%;
+					margin: 0;
+					top:0;
+					h2 {
+						background: $dark-opacity;
+						font-weight: 900;
+						color: #fff;
+						text-align: center;
+						font-size: 2.2em;
+						font-family: "Playfair Display", serif;
+						padding: 10px 0;
+						margin-top: 40%;
+					}
+					&:hover{
+						opacity:1;
+					}
+				}
+			}
+		}
+	}
+	.lastEvents {
+		background-color:$AlejandraGrey;
+		padding-bottom: 100px;
+		h2 {
+			font-family: "Playfair Display", serif;
+			text-transform: uppercase;
+			color: $black;
+			font-size: 5em;
+			text-align: left;
+			font-weight: 900;
+			line-height: 1;
+			transform: translateY(-70px);
+			&::after{
+				content: '';
+				width: 75px;
+				height: 5px;
+				background-color: $black;
+				display: block;
+				position: absolute;
+				top: 75px;
+				right: -10px;
+			}
+		}
+		article {
+			margin: 25px 0;
+			.articleContainer {
+				width: 80%;
+				margin: 0 auto;
+				background-color: #fff;
+				position: relative;
+				padding: 10px;
+				}
+				img {
+					max-width: 100%;
+					height: auto ;
+				}
+				h3 {
+					font-family: $montserrat;
+					text-transform: uppercase;
+					font-size: 2em;
+					line-height: 1;
+					position: relative;
+					z-index: 10;
+					position: absolute;
+					font-weight: 900;
+					color: white;
+					width: calc(100% - 20px);
+					text-align: center;
+				}
+			}
+
+		}
+
+

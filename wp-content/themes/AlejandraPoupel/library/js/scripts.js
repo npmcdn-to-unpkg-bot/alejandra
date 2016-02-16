@@ -109,12 +109,63 @@ function loadGravatars() {
  * Put all your regular jQuery in here.
 */
 jQuery(document).ready(function($) {
-
+    $(window).trigger('scroll');
   /*
    * Let's fire off the gravatar function
    * You can remove this if you don't need it
   */
   loadGravatars();
+	$('.bxslider').bxSlider({
+		controls: false,
+			auto: true,
+			mode: 'fade',
+		captions: true,
+		   pager: false
+		}
+
+	);
+
+	$(window).scroll(function(){
+		var $this = $(this),
+			$head = $('header');
+		if ($this.scrollTop() > 30) {
+			$head.addClass('whiteHeader');
+			$('body').addClass('padded');
+            var $scroll = $(window).scrollTop();
+            $("h1").css("transform","translateY("+($scroll*0.1)+"px)");
+            $(".bx-wrapper").css("transform","translateY("+($scroll*0.2)+"px)");
+            $('.lastEvents article').css("transform", "translateY(-" +  ($scroll * 0.06) + "px)");
+		} else {
+			$head.removeClass('whiteHeader');
+            $(".bx-wrapper").css("transform","translateY(0px)");
+			$('body').removeClass('padded');
+		}
+
+	});
+
+	var $window = $(window);
+	var scrollTime = 1.2;
+	var scrollDistance = 170;
+
+	$window.on("mousewheel DOMMouseScroll", function(event){
+
+		event.preventDefault();
+
+		var delta = event.originalEvent.wheelDelta/120 || -event.originalEvent.detail/3;
+		var scrollTop = $window.scrollTop();
+		var finalScroll = scrollTop - parseInt(delta*scrollDistance);
+
+		TweenMax.to($window, scrollTime, {
+			scrollTo : { y: finalScroll, autoKill:true },
+			ease: Power1.easeOut,
+			overwrite: 5
+		});
+
+
+
+	});
+
 
 
 }); /* end of as page load scripts */
+

@@ -22,10 +22,13 @@ $alert-red:         #fbe3e4;
 $alert-green:       #e6efc2;
 $alert-blue:        #d5edf8;
 
+$orange:            #F4920A;
+$dark-opacity:      rgba(50,57,68,0.6);
+
 $black:             #323944;
 $white:             #fff;
-
-$light-gray:        #f8f9fa;
+$black_gradient:   linear-gradient(to bottom, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0) 70%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+$light-gray:        whitesmoke;
 $gray:              #eaedf2;
 $text-color:        #5c6b80;
 $meta-gray:         #9fa6b4;
@@ -42,6 +45,11 @@ $link-hover:        darken($link-color, 9%);
 
 $border-color:      #ccc;
 $disabled-gray:     #cfcfcf;
+
+$AlejandraGrey:     #e8ded5;
+$AlejandraSoften:   rgba(232, 222, 213, 0.6);
+
+$basicTransition:   all ease-in-out 0.2s;
 
 
 /*
