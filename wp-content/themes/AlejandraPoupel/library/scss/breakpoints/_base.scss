@@ -16,7 +16,7 @@ GENERAL STYLES
 *********************/
 
 body {
-	font-family: $lato;
+	font-family: $montserrat;
 	font-size: 100%;
 	line-height: 1.5;
 	color: $text-color;
@@ -162,25 +162,42 @@ easily write one group of styles for
 the navs on the site so our css is cleaner
 and more scalable.
 */
-
+.link {
+	font-family: $playfair;
+	color:$black;
+	font-weight:900;
+	border-bottom: 2px dotted $black;
+	font-size: 2em;
+	padding-bottom: 5px;
+	transition: $basicTransition;
+	&:hover{
+		text-decoration:none;
+		padding-bottom: 3px;
+		border-bottom-style:solid ;
+		color:$black;
+	}
+}
 .btn {
-	margin: 50px auto 100px;
+
 	width: auto;
 	text-align: center;
 	font-family: "montserrat";
 	font-weight: 900;
-	padding: 20px 25px;
+	padding: 25px 30px;
 	font-size: 1.4em;
 	text-decoration: none;
 	border-radius: 2px;
 	background-color: $black;
 	color:$AlejandraGrey;
 	display: inline-block;
-	margin-left: 50%;
-	transform: translateX(-160px);
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	transition: $basicTransition;
+	position:relative;
+	&.firstBtn {
+		margin: 20px auto 30px 50%;
+		transform: translateX(-160px);
+}
 	&:hover {
 		background-color: transparent;
 		color: $black;
@@ -233,8 +250,8 @@ and more scalable.
 .menu-social-media-container {
 	position: fixed;
 	right: 0px;
-	Z-index: 100;
-	top: 50%;
+	Z-index: 130;
+	top: 30%;
 	transform: translateY(-115px);
 	li {
 		background-color: $AlejandraGrey;
@@ -280,7 +297,7 @@ and more scalable.
 		}
 	}
 }
-nav {
+header nav {
 	li{
 		a {
 			letter-spacing: 1px;
@@ -394,7 +411,10 @@ nav {
 /*********************
 POSTS & CONTENT STYLES
 *********************/
-
+.btnContainer {
+	text-align:center;
+	padding-top:100px ;
+}
 #content {
 	margin-top: 1.5em;
 }
@@ -1006,8 +1026,14 @@ FOOTER STYLES
 
 .footer {
 	clear: both;
-	background-color: $black;
-	color: $light-gray;
+	background-color: #323944;
+	color: #fff;
+	padding: 0 0 30px 0;
+	margin-top: 100px;
+	svg {
+		width:150px;
+		fill: $white;
+	}
 }
 
 	/*
@@ -1030,4 +1056,6 @@ FOOTER STYLES
 	} /* end .footer-links */
 
 
-	.copyright {}
+	.copyright {
+		text-align:center;
+	}

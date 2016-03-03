@@ -1022,7 +1022,7 @@ and will be used across all viewports.
 GENERAL STYLES
 *********************/
 body {
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 100%;
   line-height: 1.5;
   color: #5c6b80;
@@ -1126,7 +1126,7 @@ HEADER STYLES
   left: 30px;
   width: calc(100% - 60px);
   z-index: 120;
-  font-family: "Montserrat", sans-serif; }
+  font-family: "Montserrat", Helvetica Neue, Helvetica, Arial, sans-serif; }
   .header #logo {
     margin: 0.75em 0;
     fill: #fff;
@@ -1145,24 +1145,39 @@ easily write one group of styles for
 the navs on the site so our css is cleaner
 and more scalable.
 */
+.link {
+  font-family: "Playfair Display", serif;
+  color: #323944;
+  font-weight: 900;
+  border-bottom: 2px dotted #323944;
+  font-size: 2em;
+  padding-bottom: 5px;
+  transition: all ease-in-out 0.2s; }
+  .link:hover {
+    text-decoration: none;
+    padding-bottom: 3px;
+    border-bottom-style: solid;
+    color: #323944; }
+
 .btn {
-  margin: 50px auto 100px;
   width: auto;
   text-align: center;
   font-family: "montserrat";
   font-weight: 900;
-  padding: 20px 25px;
+  padding: 25px 30px;
   font-size: 1.4em;
   text-decoration: none;
   border-radius: 2px;
   background-color: #323944;
   color: #e8ded5;
   display: inline-block;
-  margin-left: 50%;
-  transform: translateX(-160px);
   text-transform: uppercase;
   letter-spacing: 2px;
-  transition: all ease-in-out 0.2s; }
+  transition: all ease-in-out 0.2s;
+  position: relative; }
+  .btn.firstBtn {
+    margin: 20px auto 30px 50%;
+    transform: translateX(-160px); }
   .btn:hover {
     background-color: transparent;
     color: #323944;
@@ -1208,8 +1223,8 @@ and more scalable.
 .menu-social-media-container {
   position: fixed;
   right: 0px;
-  Z-index: 100;
-  top: 50%;
+  Z-index: 130;
+  top: 30%;
   transform: translateY(-115px); }
   .menu-social-media-container li {
     background-color: #e8ded5;
@@ -1217,7 +1232,7 @@ and more scalable.
     .menu-social-media-container li a {
       color: #e8ded5;
       text-decoration: none;
-      font-family: "Montserrat", sans-serif;
+      font-family: "Montserrat", Helvetica Neue, Helvetica, Arial, sans-serif;
       text-transform: uppercase;
       width: 50px;
       height: 50px;
@@ -1248,20 +1263,20 @@ and more scalable.
     .menu-social-media-container li.icon-instagram a::before {
       content: "\63"; }
 
-nav li a {
+header nav li a {
   letter-spacing: 1px;
   font-size: 1.3em;
   text-transform: uppercase;
   position: relative;
   transition: all cubic-bezier(0, 0.92, 0.45, 1.02) 0.2s; }
-  nav li a:hover {
+  header nav li a:hover {
     text-decoration: none;
     color: #F4920A; }
-    nav li a:hover::before, nav li a:hover::after {
+    header nav li a:hover::before, header nav li a:hover::after {
       left: 50%;
       opacity: 1;
       transition: all cubic-bezier(0, 0.92, 0.45, 1.02) 0.2s; }
-  nav li a::before, nav li a::after {
+  header nav li a::before, header nav li a::after {
     content: '';
     width: 30px;
     height: 1px;
@@ -1271,10 +1286,10 @@ nav li a {
     margin-left: -15px;
     opacity: 0;
     margin-top: 4px; }
-  nav li a::before {
+  header nav li a::before {
     margin-top: -5px;
     left: -100%; }
-  nav li a::after {
+  header nav li a::after {
     left: 100%; }
 
 .nav {
@@ -1311,6 +1326,10 @@ nav li a {
 /*********************
 POSTS & CONTENT STYLES
 *********************/
+.btnContainer {
+  text-align: center;
+  padding-top: 100px; }
+
 #content {
   margin-top: 1.5em; }
 
@@ -1639,7 +1658,12 @@ FOOTER STYLES
 .footer {
   clear: both;
   background-color: #323944;
-  color: whitesmoke; }
+  color: #fff;
+  padding: 0 0 30px 0;
+  margin-top: 100px; }
+  .footer svg {
+    width: 150px;
+    fill: #fff; }
 
 /*
 if you checked out the link above:
@@ -1651,6 +1675,9 @@ override these styles for the desktop
 view.
 */
 /* end .footer-links */
+.copyright {
+  text-align: center; }
+
 /*********************
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's
@@ -2020,11 +2047,21 @@ html, body, .bxslider {
   height: calc(100% + 60px);
   margin: 0; }
 
-.header #logo {
+body::after {
+  content: '';
+  width: 100%;
+  display: block;
+  height: 30px;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 130; }
+body .header #logo {
   transition: all ease-in-out 0.2s; }
-  .header #logo:hover {
+  body .header #logo:hover {
     fill: #F4920A; }
-.header.whiteHeader {
+body .header.whiteHeader {
   background-image: none;
   background-color: #fff;
   position: fixed;
@@ -2033,79 +2070,119 @@ html, body, .bxslider {
   width: 100%;
   box-shadow: 0px 5px 0 0 rgba(0, 0, 0, 0.1);
   transition: background-color ease-in-out 0.2s; }
-  .header.whiteHeader a {
+  body .header.whiteHeader a {
     color: #323944; }
-  .header.whiteHeader #logo {
-    fill: #323944; }
-    .header.whiteHeader #logo:hover {
-      fill: #F4920A; }
-
-.heroSlider {
+  body .header.whiteHeader #logo {
+    fill: #F4920A; }
+    body .header.whiteHeader #logo:hover {
+      fill: #323944; }
+body .heroSlider {
   position: relative;
   height: 670px;
   overflow: hidden; }
-  .heroSlider h1 {
-    width: 50%;
-    margin-left: 5%;
+  body .heroSlider::before {
     position: absolute;
-    z-index: 110;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    content: '';
+    top: 0;
+    z-index: 90;
+    left: 0; }
+  body .heroSlider img {
+    max-width: 100%;
+    height: auto; }
+  body .heroSlider h1 {
+    width: 50%;
+    margin-left: 25%;
+    position: absolute;
+    z-index: 99;
     height: 50%;
-    top: 10%;
+    top: 20%;
     font-family: "Playfair Display", serif;
     color: #fff;
+    color: #fff;
     font-weight: 900;
-    font-size: 8em;
-    line-height: 1.2; }
-    .heroSlider h1::before {
+    font-size: 6em;
+    line-height: 1.2;
+    text-align: center; }
+    body .heroSlider h1::before, body .heroSlider h1::after {
       width: 50px;
-      height: 3px;
+      height: 2px;
       content: '';
       display: block;
-      background: white; }
-
-.eventKind {
+      background: white;
+      margin: 10px auto; }
+body .eventKind {
   z-index: 100;
   position: relative;
-  transform: translateY(-40px); }
-  .eventKind > div .eventButton {
-    background-color: #323944;
-    border: 10px solid #e8ded5;
-    width: 80%;
-    margin: 0 auto;
-    position: relative; }
-    .eventKind > div .eventButton img {
-      width: 100%; }
-    .eventKind > div .eventButton .eventTitleContainer {
-      height: 100%;
-      position: absolute;
-      width: 100%;
-      margin: 0;
-      top: 0; }
-      .eventKind > div .eventButton .eventTitleContainer h2 {
-        background: rgba(50, 57, 68, 0.6);
-        font-weight: 900;
-        color: #fff;
-        text-align: center;
-        font-size: 2.2em;
-        font-family: "Playfair Display", serif;
-        padding: 10px 0;
-        margin-top: 40%; }
-      .eventKind > div .eventButton .eventTitleContainer:hover {
-        opacity: 1; }
-
-.lastEvents {
+  background: whitesmoke; }
+  body .eventKind > div {
+    transform: translateY(-60px); }
+    body .eventKind > div .eventButton {
+      background-color: #323944;
+      border: 10px solid #fff;
+      width: 80%;
+      margin: 0 auto;
+      position: relative; }
+      body .eventKind > div .eventButton img {
+        width: 100%; }
+    body .eventKind > div .eventTitleContainer h2 {
+      font-weight: 900;
+      color: #323944;
+      text-align: center;
+      font-size: 2.6em;
+      font-family: "Playfair Display", serif;
+      padding: 10px 0; }
+  body .eventKind .eventsDescription {
+    font-size: 1.3em;
+    text-align: center;
+    line-height: 1.9;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    letter-spacing: 2px; }
+body .alejandraDescription h2 {
+  text-align: right;
+  font-family: "Playfair Display", serif;
+  text-transform: uppercase;
+  color: #323944;
+  font-size: 5em;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 120px; }
+body .alejandraDescription img {
+  width: 350px; }
+body .alejandraDescription .descriptionContent p {
   background-color: #e8ded5;
-  padding-bottom: 100px; }
-  .lastEvents h2 {
+  color: #fff;
+  padding: 50px;
+  font-family: "Montserrat", Helvetica Neue, Helvetica, Arial, sans-serif;
+  margin-top: 20%;
+  font-size: 1.5em;
+  letter-spacing: 2px; }
+body .alejandraDescription .descriptionContent .btn {
+  margin: 0 auto;
+  transform: translateY(0px); }
+body .lastEvents {
+  background-color: #e8ded5;
+  position: relative;
+  padding: 50px 0; }
+  body .lastEvents::before {
+    height: 100%;
+    top: 0;
+    content: '';
+    width: 13%;
+    background-color: #fff;
+    position: absolute; }
+  body .lastEvents h2 {
     font-family: "Playfair Display", serif;
     text-transform: uppercase;
     color: #323944;
     font-size: 5em;
     text-align: left;
     font-weight: 900;
-    line-height: 1;
-    transform: translateY(-70px); }
-    .lastEvents h2::after {
+    line-height: 1; }
+    body .lastEvents h2::after {
       content: '';
       width: 75px;
       height: 5px;
@@ -2114,28 +2191,48 @@ html, body, .bxslider {
       position: absolute;
       top: 75px;
       right: -10px; }
-  .lastEvents article {
-    margin: 25px 0; }
-    .lastEvents article .articleContainer {
-      width: 80%;
+  body .lastEvents article {
+    margin: 25px 0 0 0; }
+    body .lastEvents article a:hover {
+      text-decoration: none; }
+      body .lastEvents article a:hover h3 {
+        color: #F4920A !important; }
+      body .lastEvents article a:hover img {
+        opacity: 1; }
+      body .lastEvents article a:hover .articleInfos {
+        transform: translateY(-60px); }
+    body .lastEvents article .articleContainer {
+      width: 90%;
       margin: 0 auto;
-      background-color: #fff;
       position: relative;
-      padding: 10px; }
-    .lastEvents article img {
-      max-width: 100%;
-      height: auto; }
-    .lastEvents article h3 {
-      font-family: "Montserrat", sans-serif;
-      text-transform: uppercase;
-      font-size: 2em;
-      line-height: 1;
-      position: relative;
-      z-index: 10;
-      position: absolute;
-      font-weight: 900;
-      color: white;
-      width: calc(100% - 20px);
-      text-align: center; }
+      text-align: center;
+      margin-bottom: -90px; }
+      body .lastEvents article .articleContainer img {
+        max-width: 100%;
+        height: auto;
+        opacity: 0.6;
+        transition: all ease-in-out 0.2s; }
+      body .lastEvents article .articleContainer .articleInfos {
+        width: 78%;
+        margin: 0 auto;
+        background: #fff;
+        padding: 20px 0;
+        transform: translateY(-180px);
+        transition: all ease-in-out 0.2s; }
+        body .lastEvents article .articleContainer .articleInfos h3 {
+          font-family: "Playfair Display", serif;
+          text-transform: uppercase;
+          font-size: 2em;
+          line-height: 1;
+          position: relative;
+          font-weight: 900;
+          color: #323944;
+          text-align: center;
+          min-height: 60px; }
+        body .lastEvents article .articleContainer .articleInfos time {
+          color: #e8ded5;
+          font-family: "Montserrat", Helvetica Neue, Helvetica, Arial, sans-serif;
+          text-transform: uppercase;
+          letter-spacing: 2px; }
 
 /*# sourceMappingURL=style.css.map */

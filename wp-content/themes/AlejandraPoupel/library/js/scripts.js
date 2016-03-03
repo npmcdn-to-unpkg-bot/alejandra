@@ -134,7 +134,9 @@ jQuery(document).ready(function($) {
             var $scroll = $(window).scrollTop();
             $("h1").css("transform","translateY("+($scroll*0.1)+"px)");
             $(".bx-wrapper").css("transform","translateY("+($scroll*0.2)+"px)");
-            $('.lastEvents article').css("transform", "translateY(-" +  ($scroll * 0.06) + "px)");
+            $('.descriptionContent').css("transform", "translateY(-" +  ($scroll * 0.1) + "px)");
+			$('.descriptionImage').css("transform", "translateY(" +  (-150 + ($scroll * 0.02)) + "px)");
+            $('.lastEvents h2').css("transform", "translateY(-" +  (-100 + ($scroll * 0.05)) + "px)");
 		} else {
 			$head.removeClass('whiteHeader');
             $(".bx-wrapper").css("transform","translateY(0px)");

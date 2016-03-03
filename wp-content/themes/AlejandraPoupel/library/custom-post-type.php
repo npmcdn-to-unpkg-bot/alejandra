@@ -29,6 +29,7 @@ function custom_post_example() {
 		// let's now add all the options for this post type
 		array( 'labels' => array(
 			'name' => __( 'Événements', 'bonestheme' ), /* This is the Title of the Group */
+			'taxonomies' => array('category'),
 			'singular_name' => __( 'Événement', 'bonestheme' ), /* This is the individual type */
 			'all_items' => __( 'Tous les événements', 'bonestheme' ), /* the all items menu item */
 			'add_new' => __( 'Ajouter un nouvel événement', 'bonestheme' ), /* The add new menu item */
@@ -55,7 +56,7 @@ function custom_post_example() {
 			'capability_type' => 'post',
 			'hierarchical' => false,
 			/* the next one is important, it tells what's enabled in the post editor */
-			'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions', 'sticky')
+			'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt', 'revisions', 'sticky', 'categories')
 		) /* end of options */
 	); /* end of register post type */
 	
