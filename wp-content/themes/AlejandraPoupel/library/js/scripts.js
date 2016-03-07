@@ -115,14 +115,22 @@ jQuery(document).ready(function($) {
    * You can remove this if you don't need it
   */
   loadGravatars();
-	$('.bxslider').bxSlider({
+	$('.homepageSlider').bxSlider({
 		controls: false,
 			auto: true,
 			mode: 'fade',
 		captions: true,
 		   pager: false
 		}
+	);
 
+	$('.serviceSlider').bxSlider({
+			controls: true,
+			auto: true,
+			mode: 'slide',
+			captions: true,
+			pager: false
+		}
 	);
 
 	$(window).scroll(function(){
@@ -133,7 +141,7 @@ jQuery(document).ready(function($) {
 			$('body').addClass('padded');
             var $scroll = $(window).scrollTop();
             $("h1").css("transform","translateY("+($scroll*0.1)+"px)");
-            $(".bx-wrapper").css("transform","translateY("+($scroll*0.2)+"px)");
+            $(".homepageSlider .bx-wrapper").css("transform","translateY("+($scroll*0.2)+"px)");
             $('.descriptionContent').css("transform", "translateY(-" +  ($scroll * 0.1) + "px)");
 			$('.descriptionImage').css("transform", "translateY(" +  (-150 + ($scroll * 0.02)) + "px)");
             $('.lastEvents h2').css("transform", "translateY(-" +  (-100 + ($scroll * 0.05)) + "px)");

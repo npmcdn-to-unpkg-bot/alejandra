@@ -11,7 +11,7 @@
 <?php get_header();?>
 
 <div class="heroSlider" xmlns="http://www.w3.org/1999/html">
-    <ul class="bxslider">
+    <ul class="homepageSlider">
         <?php
             if( have_rows('slide_images') ):
                 while ( have_rows('slide_images') ) : the_row();?>

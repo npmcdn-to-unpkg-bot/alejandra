@@ -39,21 +39,18 @@ select,
 textarea,
 .field {
   display: block;
-  height: 40px;
+  height: 60px;
   line-height: 1em;
   padding: 0 12px;
   margin-bottom: 14px;
   font-size: 1em;
   color: $text-color;
-  border-radius: 3px;
   vertical-align: middle;
   box-shadow: none;
-  border: 0;
   width: 100%;
-  max-width: 400px;
-  font-family: $lato;
-  background-color: $gray;
+  border:2px solid $black;
   @include transition(background-color 0.24s ease-in-out);
+  resize:none;
 
   // a focused input (or hovered on)
   &:focus,

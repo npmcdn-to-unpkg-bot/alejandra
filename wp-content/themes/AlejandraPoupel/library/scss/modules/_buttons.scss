@@ -24,35 +24,77 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 
 *********************/
 
-%btn {
-  display: inline-block;
-  position: relative;
-  font-family: $sans-serif;
+.btn {
+
+  width: auto;
+  text-align: center;
+  font-family: "montserrat";
+  font-weight: 900;
+  padding: 25px 30px;
+  font-size: 1.4em;
   text-decoration: none;
-  color: $white;
-  font-size: 0.9em;
-  font-size: 34px;
-  line-height: 34px;
-  font-weight: normal;
-  padding: 0 24px;
-  border-radius: 4px;
-  border: 0;
-  cursor: pointer;
-  @include transition(background-color 0.14s ease-in-out);
+  border-radius: 2px;
+  background-color: $black;
+  color:$AlejandraGrey;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: $basicTransition;
+  position:relative;
+  &.firstBtn {
+    margin: 20px auto 30px 50%;
+    transform: translateX(-160px);
+  }
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    color: $black;
+    text-decoration:none;
+    &::before {
+      background-color: $black;
+      transition: $basicTransition;
+      top: 50%;
+      margin-top: -1px;
+      left: -10px;
+      margin-left:0;
+    }
+    &::after {
+      background-color: $black;
+      transition: $basicTransition;
+      top: 50%;
+      margin-top: -1px;
+      right: -10px;
+      margin-right:0;
+    }
+  }
+  &::before, &:after {
+    background-color:$AlejandraGrey;
+    content: "";
+    width: 20px;
+    height: 2px;
+    background-color: #323944;
+    display: block;
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+  }
+  &::before {
+    background-color: $AlejandraGrey;
+    left:50%;
+    margin-top:14px;
+    margin-left:-10px;
+  }
+  &:after {
+    background-color: $AlejandraGrey;
+    margin-top:-16px;
+    right: 50%;
+    margin-right:-10px;
+  }
+}
 
-  // hovering on the btn
-  &:hover, &:focus {
-    color: $white;
-    text-decoration: none;
-    outline: none;
-  } // end hover
-
-  // clicking on the button
-  &:active {
-    top: 1px; // adds a tiny hop to the click
-  } // end active
-
-} // end .button
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  display:none;
+}
 
 /*
 An example button.
@@ -60,7 +102,7 @@ You can use this example if you want. Just replace all the variables
 and it will create a button dependant on those variables.
 */
 .blue-btn {
-  @extend %btn; // here we load the btn defaults
+  @extend .btn; // here we load the btn defaults
   background-color: $blue;
 
   &:hover,
