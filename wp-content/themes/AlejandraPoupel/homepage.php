@@ -97,8 +97,8 @@
             <?php query_posts( 'post_type=events&posts_per_page=4' ); ?>
                <?php $count = 0;?>
             <?php while ( have_posts() ) : the_post(); ?>
-                <article class="col-lg-4 articleNumber<?php echo $count;?>">
-                    <a href="<?php the_permalink();?>">
+                <article class="col-lg-4 portfolioSingle">
+                    <a href="<?php echo get_permalink();?>">
                         <div class="articleContainer">
 
                         <?php the_post_thumbnail('bones-thumb-square');?>

@@ -77,6 +77,7 @@ add_image_size( 'bones-thumb-600', 600, 150, true );
 add_image_size( 'bones-thumb-300', 300, 100, true );
 add_image_size( 'bones-thumb-square', 300, 300, array('center','center') );
 add_image_size( 'bones-thumb-rectangle', 600, 300, array('center','center') );
+add_image_size( 'testimonials', 700, 300, array('center','center') );
 
 /*
 to add more sizes, simply copy a line from above
@@ -104,6 +105,7 @@ function bones_custom_image_sizes( $sizes ) {
     return array_merge( $sizes, array(
         'bones-thumb-600' => __('600px by 150px'),
         'bones-thumb-300' => __('300px by 100px'),
+
     ) );
 }
 

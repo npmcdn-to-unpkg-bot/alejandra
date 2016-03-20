@@ -1288,6 +1288,10 @@ header nav li a {
     left: -100%; }
   header nav li a::after {
     left: 100%; }
+header nav li.current_page_item a::before, header nav li.current_page_item a::after {
+  left: 50%;
+  opacity: 1;
+  transition: all cubic-bezier(0, 0.92, 0.45, 1.02) 0.2s; }
 
 .nav {
   border-bottom: 0;
@@ -1330,11 +1334,28 @@ POSTS & CONTENT STYLES
 #content {
   margin-top: 1.5em; }
 
+.blogList .hentry {
+  background-color: black; }
+
 .hentry {
-  background-color: #fff;
-  border-radius: 3px;
-  margin-bottom: 1.5em;
-  border: 1px solid #ccc; }
+  padding: 150px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  border: 5px solid white; }
+  .hentry:hover img, .hentry:focus img {
+    transform: scale(1.1) rotateZ(2deg); }
+  .hentry a {
+    position: relative;
+    z-index: 1;
+    color: white; }
+  .hentry img {
+    position: absolute;
+    left: 0;
+    margin-top: -50%;
+    top: 500px;
+    opacity: 0.5;
+    transition: all ease-in-out 2s; }
   .hentry header {
     border-bottom: 1px solid whitesmoke;
     padding: 1.5em; }
@@ -2044,7 +2065,9 @@ html, body {
   margin: 0; }
 
 body {
-  /******PAGE AGENCE************/ }
+  /******PAGE AGENCE************/
+  /******PAGE CONTACT************/
+  /******PAGE SERVICES************/ }
   body.page-template-homepage .bxslider {
     height: calc(100% + 60px);
     margin: 0; }
@@ -2152,49 +2175,49 @@ body {
       body .lastEvents h2::before, body .lastEvents h2::after {
         background: #fff;
         margin: 20px auto; }
-    body .lastEvents article {
-      margin: 25px 0 0 0; }
-      body .lastEvents article a:hover {
-        text-decoration: none; }
-        body .lastEvents article a:hover h3 {
-          color: #F4920A !important; }
-        body .lastEvents article a:hover img {
-          opacity: 1; }
-        body .lastEvents article a:hover .articleInfos {
-          transform: translateY(-60px); }
-      body .lastEvents article .articleContainer {
-        width: 90%;
+  body .portfolioSingle {
+    margin: 25px 0 0 0; }
+    body .portfolioSingle a:hover {
+      text-decoration: none; }
+      body .portfolioSingle a:hover h3 {
+        color: #F4920A !important; }
+      body .portfolioSingle a:hover img {
+        opacity: 1; }
+      body .portfolioSingle a:hover .articleInfos {
+        transform: translateY(-60px); }
+    body .portfolioSingle .articleContainer {
+      width: 90%;
+      margin: 0 auto;
+      position: relative;
+      text-align: center;
+      margin-bottom: -90px; }
+      body .portfolioSingle .articleContainer img {
+        max-width: 100%;
+        height: auto;
+        opacity: 0.6;
+        transition: all ease-in-out 0.2s; }
+      body .portfolioSingle .articleContainer .articleInfos {
+        width: 78%;
         margin: 0 auto;
-        position: relative;
-        text-align: center;
-        margin-bottom: -90px; }
-        body .lastEvents article .articleContainer img {
-          max-width: 100%;
-          height: auto;
-          opacity: 0.6;
-          transition: all ease-in-out 0.2s; }
-        body .lastEvents article .articleContainer .articleInfos {
-          width: 78%;
-          margin: 0 auto;
-          background: #fff;
-          padding: 20px 0;
-          transform: translateY(-180px);
-          transition: all ease-in-out 0.2s; }
-          body .lastEvents article .articleContainer .articleInfos h3 {
-            font-family: "Playfair Display", serif;
-            text-transform: uppercase;
-            font-size: 2em;
-            line-height: 1;
-            position: relative;
-            font-weight: 900;
-            color: #323944;
-            text-align: center;
-            min-height: 60px; }
-          body .lastEvents article .articleContainer .articleInfos time {
-            color: #e8ded5;
-            font-family: "Montserrat", Helvetica Neue, Helvetica, Arial, sans-serif;
-            text-transform: uppercase;
-            letter-spacing: 2px; }
+        background: #fff;
+        padding: 20px 0;
+        transform: translateY(-180px);
+        transition: all ease-in-out 0.2s; }
+        body .portfolioSingle .articleContainer .articleInfos h3 {
+          font-family: "Playfair Display", serif;
+          text-transform: uppercase;
+          font-size: 2em;
+          line-height: 1;
+          position: relative;
+          font-weight: 900;
+          color: #323944;
+          text-align: center;
+          min-height: 60px; }
+        body .portfolioSingle .articleContainer .articleInfos time {
+          color: #e8ded5;
+          font-family: "Montserrat", Helvetica Neue, Helvetica, Arial, sans-serif;
+          text-transform: uppercase;
+          letter-spacing: 2px; }
   body.page-template-Agency section {
     padding: 70px 0 130px; }
   body.page-template-Agency h2 {
@@ -2284,16 +2307,24 @@ body {
       float: left;
       margin: 0; }
   body.page-template-Service article {
-    padding: 100px 0;
+    padding: 50px 0;
     position: relative; }
     body.page-template-Service article:nth-child(odd) .descriptionContainer {
       float: right; }
     body.page-template-Service article .sliderContainer {
       height: 350px;
       overflow: hidden; }
+      body.page-template-Service article .sliderContainer img {
+        max-width: 100%; }
       body.page-template-Service article .sliderContainer .bx-controls {
         position: absolute;
         bottom: 0;
         right: 0; }
+  body .hentry:nth-child(2), body .hentry:nth-child(3) {
+    width: 50%;
+    float: left; }
+  body .hentry:nth-child(N + 5) {
+    width: 33.33333333%;
+    float: left; }
 
 /*# sourceMappingURL=style.css.map */

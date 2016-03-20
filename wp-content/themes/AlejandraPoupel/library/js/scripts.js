@@ -25,7 +25,6 @@ function updateViewportDimensions() {
 // setting the viewport width
 var viewport = updateViewportDimensions();
 
-
 /*
  * Throttle Resize-triggered Events
  * Wrap your actions in this function to throttle the frequency of firing them off, for better performance, esp. on mobile.
@@ -126,12 +125,19 @@ jQuery(document).ready(function($) {
 
 	$('.serviceSlider').bxSlider({
 			controls: true,
-			auto: true,
-			mode: 'slide',
-			captions: true,
 			pager: false
 		}
 	);
+
+	$('.portfolioSlider').bxSlider({
+			controls: true,
+			auto: true,
+			pager: false
+		}
+	);
+
+
+
 
 	$(window).scroll(function(){
 		var $this = $(this),
@@ -153,7 +159,7 @@ jQuery(document).ready(function($) {
 
 	});
 
-	var $window = $(window);
+	/*var $window = $(window);
 	var scrollTime = 1.2;
 	var scrollDistance = 170;
 
@@ -173,7 +179,7 @@ jQuery(document).ready(function($) {
 
 
 
-	});
+	});*/
 
 
 

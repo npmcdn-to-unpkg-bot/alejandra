@@ -209,6 +209,7 @@ and more scalable.
 	Z-index: 130;
 	top: 30%;
 	transform: translateY(-115px);
+
 	li {
 		background-color: $AlejandraGrey;
 		margin: 10px 0;
@@ -288,6 +289,11 @@ header nav {
 			&::after {
 				left:100%;
 			}
+		}
+		&.current_page_item a::before, &.current_page_item a::after {
+			left: 50%;
+			opacity: 1;
+			transition: all cubic-bezier(0, 0.92, 0.45, 1.02) 0.2s;
 		}
 	}
 }
@@ -371,16 +377,38 @@ POSTS & CONTENT STYLES
 	text-align:center;
 	padding-top:100px ;
 }
+
 #content {
 	margin-top: 1.5em;
 }
-
+.blogList {
+	.hentry {
+		background-color:black;
+	}
+}
 		.hentry {
-			background-color: $white;
-			border-radius: 3px;
-			margin-bottom: 1.5em;
-			border: 1px solid $border-color;
+			padding: 150px;
+			text-align: center;
+			overflow: hidden;
+			position: relative;
+			border: 5px solid white;
 
+			&:hover img, &:focus img{
+				transform: scale(1.1) rotateZ(2deg);
+			}
+			a {
+				position: relative;
+				z-index: 1;
+				color:white;
+			}
+			img {
+				position: absolute;
+				left: 0;
+				margin-top: -50%;
+				top: 500px;
+				opacity: 0.5;
+				transition: all ease-in-out 2s;
+			}
 			header {
 				border-bottom: 1px solid $light-gray;
 				padding: 1.5em;
@@ -394,7 +422,6 @@ POSTS & CONTENT STYLES
 					margin: 0;
 				}
 			}
-
 		} /* end .hentry */
 
 		.single-title,
