@@ -26,14 +26,10 @@
 </div>
 
 <main>
-
         <section class="container portfolio">
             <div class="row">
-
                 <aside>
-
                 </aside>
-
                 <?php query_posts( 'post_type=events' ); ?>
                 <?php $count = 0;?>
                 <?php while ( have_posts() ) : the_post(); ?>
@@ -52,14 +48,8 @@
                 </article>
                     <?php endwhile; ?>
                     <?php wp_reset_query();?>
-
             </div>
         </section>
-
-
-
-
-
 </main>
 
 <?php get_footer();?>
