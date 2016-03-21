@@ -28,17 +28,17 @@ function custom_post_example() {
 	register_post_type( 'events', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
 		// let's now add all the options for this post type
 		array( 'labels' => array(
-			'name' => __( 'Événements', 'bonestheme' ), /* This is the Title of the Group */
+			'name' => __( 'Events', 'bonestheme' ), /* This is the Title of the Group */
 			'taxonomies' => array('category'),
-			'singular_name' => __( 'Événement', 'bonestheme' ), /* This is the individual type */
-			'all_items' => __( 'Tous les événements', 'bonestheme' ), /* the all items menu item */
-			'add_new' => __( 'Ajouter un nouvel événement', 'bonestheme' ), /* The add new menu item */
-			'add_new_item' => __( 'Add New Custom Type', 'bonestheme' ), /* Add New Display Title */
+			'singular_name' => __( 'Event', 'bonestheme' ), /* This is the individual type */
+			'all_items' => __( 'Tous les events', 'bonestheme' ), /* the all items menu item */
+			'add_new' => __( 'Ajouter un nouvel event', 'bonestheme' ), /* The add new menu item */
+			'add_new_item' => __( 'Ajouter un nouvel event', 'bonestheme' ), /* Add New Display Title */
 			'edit' => __( 'Modifier', 'bonestheme' ), /* Edit Dialog */
-			'edit_item' => __( 'Edit Post Types', 'bonestheme' ), /* Edit Display Title */
-			'new_item' => __( 'New Post Type', 'bonestheme' ), /* New Display Title */
-			'view_item' => __( 'View Post Type', 'bonestheme' ), /* View Display Title */
-			'search_items' => __( 'Search Post Type', 'bonestheme' ), /* Search Custom Type Title */ 
+			'edit_item' => __( 'Editer un event', 'bonestheme' ), /* Edit Display Title */
+			'new_item' => __( 'Nouvel event', 'bonestheme' ), /* New Display Title */
+			'view_item' => __( 'Voir l\'event', 'bonestheme' ), /* View Display Title */
+			'search_items' => __( 'Chercher un event', 'bonestheme' ), /* Search Custom Type Title */
 			'not_found' =>  __( 'Nothing found in the Database.', 'bonestheme' ), /* This displays if there are no entries yet */ 
 			'not_found_in_trash' => __( 'Nothing found in Trash', 'bonestheme' ), /* This displays if there is nothing in the trash */
 			'parent_item_colon' => ''

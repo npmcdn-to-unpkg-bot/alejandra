@@ -2201,7 +2201,7 @@ body {
         margin: 0 auto;
         background: #fff;
         padding: 20px 0;
-        transform: translateY(-180px);
+        transform: translateY(-200px);
         transition: all ease-in-out 0.2s; }
         body .portfolioSingle .articleContainer .articleInfos h3 {
           font-family: "Playfair Display", serif;
