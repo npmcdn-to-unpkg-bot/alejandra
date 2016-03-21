@@ -148,6 +148,7 @@ jQuery(document).ready(function($) {
             var $scroll = $(window).scrollTop();
             $("h1").css("transform","translateY("+($scroll*0.1)+"px)");
             $(".homepageSlider .bx-wrapper").css("transform","translateY("+($scroll*0.2)+"px)");
+			console.log($scroll);
             $('.descriptionContent').css("transform", "translateY(-" +  ($scroll * 0.1) + "px)");
 			$('.descriptionImage').css("transform", "translateY(" +  (-150 + ($scroll * 0.02)) + "px)");
             $('.lastEvents h2').css("transform", "translateY(-" +  (-100 + ($scroll * 0.05)) + "px)");
@@ -159,7 +160,7 @@ jQuery(document).ready(function($) {
 
 	});
 
-	/*var $window = $(window);
+	var $window = $(window);
 	var scrollTime = 1.2;
 	var scrollDistance = 170;
 
@@ -179,7 +180,7 @@ jQuery(document).ready(function($) {
 
 
 
-	});*/
+	});
 
 
 
