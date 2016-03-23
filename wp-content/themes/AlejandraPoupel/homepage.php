@@ -15,7 +15,7 @@
         <?php
             if( have_rows('slide_images') ):
                 while ( have_rows('slide_images') ) : the_row();?>
-                    <li><img src="<?php the_sub_field('slide_single');?>"></li>
+                    <li data-img="<?php the_sub_field('slide_single');?>"></li>
                 <?php endwhile;
             else :?>
             <?php endif; ?>
@@ -103,7 +103,7 @@
 
                         <?php the_post_thumbnail('bones-thumb-square');?>
                             <div class="articleInfos">
-                                <?php the_category();?>
+                                <?php /*the_category();*/?>
                                 <h3><?php the_title();?></h3>
                                 <time><?php the_date();?></time>
                             </div>

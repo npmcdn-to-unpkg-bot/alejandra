@@ -39,7 +39,7 @@
 
                             <?php the_post_thumbnail('bones-thumb-square');?>
                             <div class="articleInfos">
-                                <?php the_category();?>
+                                <?php /*the_category();*/?>
                                 <h3><?php the_title();?></h3>
                                 <time><?php the_date();?></time>
                             </div>

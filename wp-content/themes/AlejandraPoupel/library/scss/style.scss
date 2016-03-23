@@ -146,6 +146,16 @@ be set to display none.
 
 }
 
+@keyframes sliderAppearance {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+@keyframes appearance {
+	from {opacity: 0;transform: translateY(20px);}
+	to {opacity: 1;transform: translateY(0px);}
+}
+
 html, body{
 	height:calc(100% + 60px);
 	margin:0;
@@ -153,9 +163,52 @@ html, body{
 
 body {
 	&.page-template-homepage {
-		.bxslider {
+		opacity:0;
+		animation: sliderAppearance 1s ease-in-out 0.5s;
+		webkit-animation-fill-mode: forwards;
+		-moz-animation-fill-mode: forwards;
+		-o-animation-fill-mode: forwards;
+		-ms-animation-fill-mode: forwards;
+		animation-fill-mode: forwards;
+		h1 {
+			opacity:0;
+			animation: appearance 1s ease-in-out 1.9s;
+			webkit-animation-fill-mode: forwards;
+			-moz-animation-fill-mode: forwards;
+			-o-animation-fill-mode: forwards;
+			-ms-animation-fill-mode: forwards;
+			animation-fill-mode: forwards;
+		}
+		.header {
+			opacity:0;
+			animation: appearance 1s ease-in-out 1.5s;
+			webkit-animation-fill-mode: forwards;
+			-moz-animation-fill-mode: forwards;
+			-o-animation-fill-mode: forwards;
+			-ms-animation-fill-mode: forwards;
+			animation-fill-mode: forwards;
+		}
+		.eventKind {
+			opacity:0;
+			animation: appearance 1s ease-in-out 2.4s;
+			webkit-animation-fill-mode: forwards;
+			-moz-animation-fill-mode: forwards;
+			-o-animation-fill-mode: forwards;
+			-ms-animation-fill-mode: forwards;
+			animation-fill-mode: forwards;
+		}
+		.bx-slider {
+			height:670px !important;
+
+		}
+		.homepageSlider {
 			height:calc(100% + 60px);
 			margin:0;
+			li {
+				background-size: cover;
+				height: 670px;
+				background-position: center;
+			}
 		}
 	}
 	&::after{
@@ -213,6 +266,7 @@ body {
 		}
 		img {
 			max-width:100%;
+			min-width:100%;
 			height:auto;
 		}
 
@@ -495,12 +549,29 @@ body {
 	/******PAGE SERVICES************/
 
 	&.page-template-Service {
+		h2 {
+			width:50%;
+			text-align:center;
+			margin: 0 auto;
+		}
+		.service {
+			padding-bottom: 80px;
+		}
 		article {
 			padding:50px 0;
 			position: relative;
+			text-align:right;
+			h3 {
+				font-size:3em;
+			}
+				p {
+					text-align:inherit;
+				}
 			&:nth-child(odd) .descriptionContainer {
 				float: right;
-			}
+				text-align:left;
+				}
+
 			.sliderContainer {
 				height:350px;
 				overflow:hidden;
@@ -508,9 +579,25 @@ body {
 					max-width:100%;
 				}
 				.bx-controls {
-					position:absolute;
-					bottom:0;
-					right:0;
+					position: absolute;
+					bottom: 0;
+					right: 0;
+					width: 95%;
+					text-align: center;
+					background: red; /* For browsers that do not support gradients */
+					background: -webkit-linear-gradient(top,rgba(0,0,0,0.5), rgba(0,0,0,0)); /*Safari 5.1-6*/
+					background: -o-linear-gradient(top,rgba(0,0,0,0.5), rgba(0,0,0,0)); /*Opera 11.1-12*/
+					background: -moz-linear-gradient(top,rgba(0,0,0,0.5), rgba(0,0,0,0)); /*Fx 3.6-15*/
+					background: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0));
+					margin-right: 2.5%;
+					 a {
+						color: $AlejandraGrey;
+						font-size:5em;
+						 margin: 0 20px;
+						 &:hover, &:focus {
+							 text-decoration:none;
+						 }
+					}
 				}
 			}
 		}
@@ -524,6 +611,53 @@ body {
 	.hentry:nth-child(N + 5) {
 		width:33.33333333%;
 		float:left;
+	}
+	/******PAGE SERVICES************/
+
+	&.single-events {
+		h2 {
+			text-align:center;
+			color:$white;
+			text-align:center ;
+			font-size:3em;
+			&::after, &::before {
+				background-color:$white;
+				margin:20px auto ;
+			}
+		}
+		.eventDescription {
+			background-color: $AlejandraGrey;
+			padding: 50px 0;
+			p {
+				text-align: left;
+				margin-top: 40px;
+			}
+		}
+		.grid {
+			overflow:visible;
+			margin-top: 10px;
+		}
+		.grid-sizer {
+		width:24%;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}.gutter-sizer { width: 1%; }
+		 .grid-item{
+			 width:24%;
+			 margin-bottom:10px;
+			 -webkit-box-sizing: border-box;
+			 -moz-box-sizing: border-box;
+			 box-sizing: border-box;
+
+		}
+		.grid-item--2{
+			width:49%;
+		}
+		.grid-item:nth-child(1) {
+			width:48% !important;
+		}
+
 	}
 }
 

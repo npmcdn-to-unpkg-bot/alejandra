@@ -108,6 +108,12 @@ function loadGravatars() {
  * Put all your regular jQuery in here.
 */
 jQuery(document).ready(function($) {
+
+	$('.homepageSlider > li').each(function(){
+		var slideImage = $(this).data('img');
+		console.log(slideImage);
+		$(this).css('background-image', 'url('+slideImage+')');
+	});
     $(window).trigger('scroll');
   /*
    * Let's fire off the gravatar function
@@ -125,7 +131,9 @@ jQuery(document).ready(function($) {
 
 	$('.serviceSlider').bxSlider({
 			controls: true,
-			pager: false
+			pager: false,
+			nextText: '&rarr;',
+			prevText: '&larr;'
 		}
 	);
 
@@ -135,6 +143,13 @@ jQuery(document).ready(function($) {
 			pager: false
 		}
 	);
+
+	$('.grid').masonry({
+		columnWidth: '.grid-sizer',
+		gutter: '.gutter-sizer',
+		itemSelector: '.grid-item',
+		percentPosition: true
+	});
 
 
 

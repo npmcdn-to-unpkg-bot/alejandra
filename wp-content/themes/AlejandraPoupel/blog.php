@@ -29,13 +29,13 @@
         <article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
 
 
-            <a href="<?php the_permalink(); ?>">
-            <?php the_title();?>
-            <?php the_date();?>
-            </a>
+
+            <h2><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h2>
+            <?php /*the_date();*/?>
+
             <?php /*the_category();*/?>
 
-            <?php the_post_thumbnail('full');?>
+            <?php the_post_thumbnail('large');?>
 
         </article>
 
