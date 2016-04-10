@@ -33,8 +33,8 @@
             if( have_rows('events_buttons') ):
                 while ( have_rows('events_buttons') ) : the_row();?>
                     <div class="col-lg-4 col-md-4 eventSingle">
-                        <div class="eventButton">
-                           <a href="<?php the_sub_field('event_link');?>">
+                        <div class="eventButton" >
+                           <a href="<?php the_sub_field('event_link');?>" data-category="<?php the_sub_field('event_title');?>">
                                <img src="<?php the_sub_field('event_image');?>">
                            </a>
                         </div>
@@ -98,12 +98,12 @@
                <?php $count = 0;?>
             <?php while ( have_posts() ) : the_post(); ?>
                 <article class="col-lg-4 portfolioSingle">
+                    <?php echo the_category();?>
                     <a href="<?php echo get_permalink();?>">
                         <div class="articleContainer">
 
                         <?php the_post_thumbnail('bones-thumb-square');?>
                             <div class="articleInfos">
-                                <?php /*the_category();*/?>
                                 <h3><?php the_title();?></h3>
                                 <time><?php the_date();?></time>
                             </div>

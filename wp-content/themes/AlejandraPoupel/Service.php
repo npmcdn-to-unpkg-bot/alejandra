@@ -22,28 +22,26 @@
         <section class="container service">
         <div class="row">
             <h2><?php the_field('services_title');?></h2>
-            <p><?php the_field('services_description');?></p>
+
             <?php if( have_rows('services') ):
                 while ( have_rows('services') ) : the_row();?>
                     <article class="row">
 
-                        <div class="col-lg-6 descriptionContainer">
+                        <div class="col-lg-8 descriptionContainer">
+
                             <h3><?php the_sub_field('service_title');?></h3>
                             <p><?php the_sub_field('service_description');?></p>
+
                         </div>
 
-                        <div class="col-lg-6 sliderContainer">
-                        <div class="serviceSlider">
-                            <?php if( have_rows('service_slider') ):
-                                while ( have_rows('service_slider') ) : the_row();?>
-                                    <li><img src="<?php the_sub_field('service_slider_image');?>"></li>
-                                <?php endwhile;
-                            else :?>
-                            <?php endif; ?>
+                        <div class="col-lg-4 sliderContainer">
+                            <blockquote><?php the_sub_field('service_quote');?></blockquote>
                         </div>
-                        </div>
+
+
 
                     </article>
+                    <div class="separator" style="background-image:url('<?php the_sub_field('service_image');?>');"></div>
                 <?php endwhile;
             else :?>
             <?php endif; ?>

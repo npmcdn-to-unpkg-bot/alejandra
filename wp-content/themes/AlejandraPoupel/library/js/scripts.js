@@ -129,14 +129,6 @@ jQuery(document).ready(function($) {
 		}
 	);
 
-	$('.serviceSlider').bxSlider({
-			controls: true,
-			pager: false,
-			nextText: '&rarr;',
-			prevText: '&larr;'
-		}
-	);
-
 	$('.portfolioSlider').bxSlider({
 			controls: true,
 			auto: true,
@@ -151,7 +143,10 @@ jQuery(document).ready(function($) {
 		percentPosition: true
 	});
 
-
+	$('.separator').each(function(){
+		var sepImage = $(this).attr('data-image');
+		$(this).css('background-image', 'url('+ sepImage +')');
+	});
 
 
 	$(window).scroll(function(){

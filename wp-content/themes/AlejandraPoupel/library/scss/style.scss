@@ -170,6 +170,15 @@ body {
 		-o-animation-fill-mode: forwards;
 		-ms-animation-fill-mode: forwards;
 		animation-fill-mode: forwards;
+		.header .container{
+			opacity:0;
+			animation: appearance 1s ease-in-out 1.5s;
+			webkit-animation-fill-mode: forwards;
+			-moz-animation-fill-mode: forwards;
+			-o-animation-fill-mode: forwards;
+			-ms-animation-fill-mode: forwards;
+			animation-fill-mode: forwards;
+		}
 		h1 {
 			opacity:0;
 			animation: appearance 1s ease-in-out 1.9s;
@@ -179,9 +188,9 @@ body {
 			-ms-animation-fill-mode: forwards;
 			animation-fill-mode: forwards;
 		}
-		.header {
+		.menu-social-media-container {
 			opacity:0;
-			animation: appearance 1s ease-in-out 1.5s;
+			animation: appearance 1s ease-in-out 2.4s;
 			webkit-animation-fill-mode: forwards;
 			-moz-animation-fill-mode: forwards;
 			-o-animation-fill-mode: forwards;
@@ -190,7 +199,7 @@ body {
 		}
 		.eventKind {
 			opacity:0;
-			animation: appearance 1s ease-in-out 2.4s;
+			animation: appearance 1s ease-in-out 2.9s;
 			webkit-animation-fill-mode: forwards;
 			-moz-animation-fill-mode: forwards;
 			-o-animation-fill-mode: forwards;
@@ -284,9 +293,35 @@ body {
 				width:80%;
 				margin:0 auto;
 				position: relative;
+				a {
+					&::after {
+						display: block;
+						width: 100%;
+						height: 100%;
+						background-color: rgba(0, 0, 0, 0.5);
+						content: attr(data-category);
+						color: white;
+						position: absolute;
+						top: 0;
+						left: 0;
+						line-height: 402px;
+						text-align: center;
+						font-size: 16px;
+						letter-spacing: 2px;
+						opacity:0;
+						transform:scale(0.8);
+						transition:$basicTransition;
+					}
+				}
+
 				img {
 					width:100%;
+					position:relative;
 				}
+			}
+			&:hover a::after, &:active a::after {
+				opacity:1;
+				transform:scale(1);
 			}
 			.eventTitleContainer {
 				h2 {
@@ -355,17 +390,27 @@ body {
 	}
 	.portfolioSingle {
 		margin: 25px 0 0 0;
+		.post-categories {
+			text-align: center;
+			position: absolute;
+			width: calc(100% - 30px);
+			z-index: 2;
+			margin-top: 5px;
+			a {
+				color: white;
+				font-family: $montserrat;
+				text-transform: uppercase;
+				z-index: 10;
+				font-size: 1em;
+				letter-spacing: 2px;
+			}
+		}
 		a {
-			&:hover {
+			&:hover, &:focus  {
 				text-decoration: none;
-				h3 {
-					color: $orange !important ;
-				}
-				img {
-					opacity: 1;
-				}
 				.articleInfos {
-					transform: translateY(-60px);
+					opacity: 1;
+					top: 8%;
 				}
 			}
 
@@ -375,22 +420,23 @@ body {
 			margin: 0 auto;
 			position: relative;
 			text-align: center;
-			margin-bottom: -90px;
 			img {
 				max-width: 100%;
 				height: auto;
-				opacity: 0.6;
-				transition: $basicTransition;
 			}
 			.articleInfos {
 				width: 78%;
-				margin: 0 auto;
+				height: 84%;
+				top: 16%;
+				left: 11%;
 				background: #fff;
 				padding: 20px 0;
-				transform: translateY(-200px);
 				transition: $basicTransition;
+				position:absolute;
+				opacity: 0;
 				h3 {
 					font-family: $playfair;
+					color: $orange;
 					text-transform: uppercase;
 					font-size: 2em;
 					line-height: 1;
@@ -418,14 +464,24 @@ body {
 		section {
 			padding: 70px 0 130px;
 		}
+
 		h2 {
 			text-align:center;
-			margin-bottom:150px;
 		}
-		.dnaSingle {
-			text-align: center;
-			h3 {
-
+		.ourDna {
+			blockquote {
+				position: absolute;
+				color: $AlejandraGrey;
+				font-size: 13em;
+				font-family: $playfair;
+				width: 50%;
+				font-weight: 900;
+				line-height: 1;
+				opacity: 0.5;
+				margin-top: 70px;
+			}
+			p {
+				text-align:left;
 			}
 		}
 		.meetAlejandra {
@@ -564,42 +620,31 @@ body {
 			h3 {
 				font-size:3em;
 			}
-				p {
-					text-align:inherit;
+			p {
+				text-align: inherit;
+				z-index: 1;
+				position: relative;
 				}
-			&:nth-child(odd) .descriptionContainer {
+			blockquote {
+				font-size: 5em;
+				font-family: $playfair;
+				font-weight: 900;
+				top: 0;
+				color: whitesmoke;
+				text-align: left;
+			}
+			&:nth-of-type(odd) .descriptionContainer {
 				float: right;
 				text-align:left;
-				}
-
-			.sliderContainer {
-				height:350px;
-				overflow:hidden;
-				img {
-					max-width:100%;
-				}
-				.bx-controls {
-					position: absolute;
-					bottom: 0;
-					right: 0;
-					width: 95%;
-					text-align: center;
-					background: red; /* For browsers that do not support gradients */
-					background: -webkit-linear-gradient(top,rgba(0,0,0,0.5), rgba(0,0,0,0)); /*Safari 5.1-6*/
-					background: -o-linear-gradient(top,rgba(0,0,0,0.5), rgba(0,0,0,0)); /*Opera 11.1-12*/
-					background: -moz-linear-gradient(top,rgba(0,0,0,0.5), rgba(0,0,0,0)); /*Fx 3.6-15*/
-					background: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0));
-					margin-right: 2.5%;
-					 a {
-						color: $AlejandraGrey;
-						font-size:5em;
-						 margin: 0 20px;
-						 &:hover, &:focus {
-							 text-decoration:none;
-						 }
-					}
+				blockquote {
+					text-align:right;
 				}
 			}
+		}
+		.separator {
+			height: 350px;
+			background-size: cover;
+			background-attachment: fixed;
 		}
 	}
 
