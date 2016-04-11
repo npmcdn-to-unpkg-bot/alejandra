@@ -41,7 +41,7 @@
 
 
                     </article>
-                    <div class="separator" style="background-image:url('<?php the_sub_field('service_image');?>');"></div>
+                    <div class="separator" data-image="<?php the_sub_field('service_image');?>"></div>
                 <?php endwhile;
             else :?>
             <?php endif; ?>

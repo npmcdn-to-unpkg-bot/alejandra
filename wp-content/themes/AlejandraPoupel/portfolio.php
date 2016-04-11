@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Portfolio
+ * Template Name: Portfolio Classique
  *
  * @package WordPress
  * @subpackage Alejandra Poupel Event

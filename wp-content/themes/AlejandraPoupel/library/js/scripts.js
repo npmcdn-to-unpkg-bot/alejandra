@@ -148,6 +148,19 @@ jQuery(document).ready(function($) {
 		$(this).css('background-image', 'url('+ sepImage +')');
 	});
 
+	$('.portfolioFilter').each(function(){
+		var categoryId = $(this).attr('data-category');
+		var imageCatId = $('.grid-item[data-category='+categoryId+']');
+		$(this).click(function(){
+			console.log(categoryId);
+			console.log((imageCatId).length);
+			imageCatId.hide();
+
+
+			//$('.grid-item').attr('data-category', categoryId).siblings().hide();
+		});
+	});
+
 
 	$(window).scroll(function(){
 		var $this = $(this),
@@ -169,7 +182,7 @@ jQuery(document).ready(function($) {
 
 	});
 
-	var $window = $(window);
+	/*var $window = $(window);
 	var scrollTime = 1.2;
 	var scrollDistance = 170;
 
@@ -190,7 +203,7 @@ jQuery(document).ready(function($) {
 
 
 	});
-
+*/
 
 
 }); /* end of as page load scripts */
