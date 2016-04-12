@@ -1,0 +1,44 @@
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Super Large Monitor Stylesheet
+
+You can add some advanced styles here if you like. This kicks in
+on larger screens.
+
+******************************************************************/
+
+body {
+  /* HOMEPAGE */
+  .header {
+    .logoHeader {
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+      width: 200px;
+      #logo {
+        width:100%;
+      }
+    }
+    nav {
+      width:100%;
+      float:none;
+      text-align:center;
+      .nav {
+        li {
+          float:none;
+          display:inline-block;
+        }
+
+      }
+    }
+  }
+
+  &.page-template-homepage {
+    .lastEvents::before {
+      display:none;
+    }
+
+  }
+}

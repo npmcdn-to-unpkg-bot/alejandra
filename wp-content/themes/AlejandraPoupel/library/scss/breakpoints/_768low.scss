@@ -1,0 +1,49 @@
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Super Large Monitor Stylesheet
+
+You can add some advanced styles here if you like. This kicks in
+on larger screens.
+
+******************************************************************/
+
+body {
+  .header {
+    nav {
+      display:none;
+    }
+  }
+  font-size:10px;
+  p {
+    font-size:1.1em;
+  }
+  h1 {
+    width:90%;
+    margin-left:5%;
+    margin-top: -60px;
+  }
+  .btn {
+    font-size:1.2em;
+    &.firstBtn {
+      width: 80%;
+      transform: none;
+      margin-left: 10%;
+    }
+  }
+  &.page-template-homepage {
+    .portfolioSingle {
+      margin-left:16.66666667%;
+
+    }
+    .alejandraDescription {
+      .descriptionContent {
+        p{
+          font-size:inherit;
+          padding:30px;
+        }
+      }
+    }
+  }
+}

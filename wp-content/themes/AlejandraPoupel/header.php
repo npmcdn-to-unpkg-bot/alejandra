@@ -56,7 +56,7 @@
 
 			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 				<div class="container">
-					<a href="/">
+					<a href="/" class="logoHeader">
 
 						<svg version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 							 viewBox="0 0 441.5 160.9" style="enable-background:new 0 0 441.5 160.9;" xml:space="preserve">
@@ -250,6 +250,7 @@
 						)); ?>
 
 					</nav>
+					<span class="menuOpener"></span>
 				</div>
 			</header>
 

@@ -77,7 +77,7 @@ add_image_size( 'bones-thumb-600', 600, 150, true );
 add_image_size( 'bones-thumb-300', 300, 100, true );
 add_image_size( 'bones-thumb-square', 300, 300, array('center','center') );
 add_image_size( 'bones-thumb-rectangle', 600, 300, array('center','center') );
-add_image_size( 'testimonials', 700, 300, array('center','center') );
+add_image_size( 'testimonials', 700, 400, array('center','center') );
 
 /*
 to add more sizes, simply copy a line from above

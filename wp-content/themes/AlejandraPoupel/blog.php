@@ -12,7 +12,7 @@
 
 
 <div class="heroSlider" xmlns="http://www.w3.org/1999/html">
-    <?php the_post_thumbnail('full');?>
+    <?php /*the_post_thumbnail('full');*/?>
 
     <h1 class="heroMessage">
         <?php the_field('heading_message');?>
@@ -23,7 +23,8 @@
 <main id="main" class="m-all t-2of3 d-5of7 cf blogList" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 
-    <?php query_posts( 'post_type=post&posts_per_page=10' ); ?>
+    <?php $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+          query_posts( 'post_type=post&posts_per_page=7&paged='.$paged ); ?>
     <?php while (have_posts()) : the_post(); ?>
 
         <article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
@@ -40,7 +41,10 @@
         </article>
 
     <?php endwhile;?>
+<div class="paginationContainer">
     <?php echo paginate_links(array('prev_text' =>__('Previous'),'next_text'=>__('Next')));?>
+</div>
+
 </main>
 
 

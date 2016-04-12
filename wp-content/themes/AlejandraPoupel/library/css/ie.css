@@ -250,6 +250,9 @@ come into play. Have fun!
 /*********************
 GENERAL STYLES
 *********************/
+body .menuOpener {
+  display: none; }
+
 /*********************
 LAYOUT & GRID STYLES
 *********************/

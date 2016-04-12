@@ -26,35 +26,43 @@
 </div>
 
 <main>
-        <section class="container portfolioAlter">
-            <div class="row">
+    <section class="container portfolioAlter" id="gallery">
+        <div class="row">
+            <aside>
+                    <?php
+                    foreach (get_categories() as $category){
+                        echo "<a data-category='$category->term_id' class='portfolioFilter' id='filter-$category->name'>";
+                        echo $category->name;
+                        echo "</a>";
+                    } ?>
+                    <a id="filter-all">Voir tout</a>
+            </aside>
 
-                <aside>
-                    <ul>
-                        <?php
-                        foreach (get_categories() as $category){
-                            echo "<li data-category='$category->term_id' class='portfolioFilter'>";
-                            echo $category->name;
-                            echo "</li>";
-                        } ?>
-                    </ul>
-                </aside>
-
-                <div class="grid">
-                    <div class="grid-sizer"></div>
-                    <div class="gutter-sizer"></div>
-
-                <?php if( have_rows('portfolio_images') ):
-                while ( have_rows('portfolio_images') ) : the_row();?>
-
-                <img src="<?php the_sub_field('portfolio_image');?>" class="grid-item" data-category="<?php the_sub_field('portfolio_category');?>"/>
-
-                <?php endwhile;
-                      endif;
-                ?>
+            <div id="gallery-content">
+                <div id="gallery-content-center">
+                    <?php if( have_rows('portfolio_images') ):
+                        while ( have_rows('portfolio_images') ) : the_row();?>
+                            <img src="<?php the_sub_field('portfolio_image');?>" class="grid-item all <?php echo $category->name;?>" />
+                        <?php endwhile;
+                    endif; ?>
+                </div>
             </div>
-            </div>
-        </section>
+
+           <!-- <div class="grid" id="gallery">
+                <div class="grid-sizer"></div>
+                <div class="gutter-sizer"></div>
+
+            <?php /*if( have_rows('portfolio_images') ):
+            while ( have_rows('portfolio_images') ) : the_row();*/?>
+
+            <img src="<?php /*the_sub_field('portfolio_image');*/?>" class="grid-item" data-category="<?php /*the_sub_field('portfolio_category');*/?>"/>
+
+            <?php /*endwhile;
+                  endif;
+            */?>
+        </div>-->
+        </div>
+    </section>
 </main>
 
 <?php get_footer();?>

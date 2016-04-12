@@ -17,7 +17,11 @@ come into play. Have fun!
 GENERAL STYLES
 *********************/
 
-body {}
+body {
+	.menuOpener {
+		display:none;
+	}
+}
 
 /*********************
 LAYOUT & GRID STYLES

@@ -207,8 +207,8 @@ and more scalable.
 	position: fixed;
 	right: 0px;
 	Z-index: 130;
-	top: 30%;
-	transform: translateY(-115px);
+	top: 50%;
+	transform: translateY(-125px);
 
 	li {
 		background-color: $AlejandraGrey;
@@ -368,7 +368,30 @@ header nav {
 	}  /* end current highlighters */
 
 } /* end .nav */
-
+.menuOpener{
+	display: block;
+	width: 40px;
+	height: 4px;
+	background: $black;
+	position: absolute;
+	top: 40px;
+	right: 30px;
+	cursor:pointer;
+	z-index: 1000;
+	&::before, &::after {
+		display: block;
+		width: 40px;
+		height: 4px;
+		background: $black;
+		content:'';
+		position:absolute;
+	}
+	&::before{
+		margin-top:-9px;
+	}	&::after{
+			 margin-top:9px;
+		 }
+}
 
 /*********************
 POSTS & CONTENT STYLES
@@ -406,6 +429,8 @@ POSTS & CONTENT STYLES
 				a {
 					color:$white;
 					cursor:pointer;
+					text-transform: none;
+					font-size: 1.6em;
 				}
 				&::after, &::before {
 					display:none;
@@ -1028,6 +1053,7 @@ FOOTER STYLES
 	padding: 0 0 30px 0;
 	#inner-footer {
 		text-align:center;
+		padding-top: 20px;
 	}
 	svg {
 		width: 150px;
