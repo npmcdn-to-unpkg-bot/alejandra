@@ -11,6 +11,11 @@ on larger screens.
 
 body {
   .header {
+    background-color:$white;
+    background-image:none;
+    #logo {
+      fill:$orange;
+    }
     nav {
       display:none;
     }

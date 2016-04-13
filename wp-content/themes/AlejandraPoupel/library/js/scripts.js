@@ -134,9 +134,11 @@ jQuery(document).ready(function($) {
 	);
 
 	$('.portfolioSlider').bxSlider({
-			controls: true,
-			auto: true,
-			pager: false
+		controls: false,
+		auto: true,
+		mode: 'fade',
+		captions: true,
+		pager: false
 		}
 	);
 

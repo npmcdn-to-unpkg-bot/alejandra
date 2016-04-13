@@ -1308,6 +1308,8 @@ header nav li.current_page_item a::before, header nav li.current_page_item a::af
     depend on the project. Here's some great info on it:
     http://www.alistapart.com/articles/organizing-mobile/
     */ }
+    .nav li.qtranxs-lang-menu {
+      border: 1px solid white; }
     .nav li a {
       display: block;
       color: #fff;
@@ -1833,8 +1835,13 @@ tweeners.
   ******************************************************************/
   body {
     font-size: 10px; }
-    body .header nav {
-      display: none; }
+    body .header {
+      background-color: #fff;
+      background-image: none; }
+      body .header #logo {
+        fill: #F4920A; }
+      body .header nav {
+        display: none; }
     body p {
       font-size: 1.1em; }
     body h1 {
@@ -1887,6 +1894,9 @@ you can add resource intensive styles.
   /*********************
   HEADER STYLES
   *********************/
+  .header.whiteHeader .nav .sub-menu {
+    background-color: #fff; }
+
   /*********************
   NAVIGATION STYLES
   *********************/
@@ -1896,8 +1906,8 @@ you can add resource intensive styles.
     /* highlight current page */
     /* end current highlighters */ }
     .nav ul {
-      background: #323944;
-      margin-top: 0; }
+      margin-top: 0;
+      width: 100%; }
     .nav li {
       float: left;
       position: relative;
@@ -1914,7 +1924,6 @@ you can add resource intensive styles.
       .nav li ul.sub-menu,
       .nav li ul.children {
         margin-top: 0;
-        border: 1px solid #ccc;
         border-top: 0;
         position: absolute;
         visibility: hidden;
@@ -1922,6 +1931,7 @@ you can add resource intensive styles.
         /* highlight sub-menu current page */ }
         .nav li ul.sub-menu li,
         .nav li ul.children li {
+          width: 100%;
           /*
           if you need to go deeper, go nuts
           just remember deeper menus suck
@@ -1932,8 +1942,7 @@ you can add resource intensive styles.
             padding-left: 10px;
             border-right: 0;
             display: block;
-            width: 180px;
-            border-bottom: 1px solid #ccc; }
+            border-bottom: 1px solid #fff; }
           .nav li ul.sub-menu li:last-child a,
           .nav li ul.children li:last-child a {
             border-bottom: 0; }
@@ -2621,6 +2630,9 @@ body {
   body.page-template-testimonial .testimonials {
     background-color: whitesmoke;
     padding-bottom: 160px; }
+    body.page-template-testimonial .testimonials .testimonialImage {
+      text-align: right;
+      margin-right: -40px; }
     body.page-template-testimonial .testimonials .testimonialDescription {
       background-color: #fff;
       padding: 20px;

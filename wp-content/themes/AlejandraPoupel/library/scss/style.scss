@@ -756,6 +756,10 @@ body {
 		.testimonials {
 			background-color:whitesmoke;
 			padding-bottom:160px;
+			.testimonialImage {
+				text-align:right;
+				margin-right: -40px;
+			}
 			.testimonialDescription {
 				background-color: $white;
 				padding:20px;

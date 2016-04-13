@@ -28,7 +28,7 @@
                 <?php if( have_rows('testimonials') ):
                     while ( have_rows('testimonials') ) : the_row();?>
                         <article>
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 testimonialImage">
                                 <?php $thumb = wp_get_attachment_image_src(get_sub_field('testimonial_image'), 'testimonials' ); ?>
                                 <img src="<?php echo $thumb[0];?>">
                             </div>

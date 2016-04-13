@@ -262,6 +262,9 @@ LAYOUT & GRID STYLES
 /*********************
 HEADER STYLES
 *********************/
+.header.whiteHeader .nav .sub-menu {
+  background-color: #fff; }
+
 /*********************
 NAVIGATION STYLES
 *********************/
@@ -271,8 +274,8 @@ NAVIGATION STYLES
   /* highlight current page */
   /* end current highlighters */ }
   .nav ul {
-    background: #323944;
-    margin-top: 0; }
+    margin-top: 0;
+    width: 100%; }
   .nav li {
     float: left;
     position: relative;
@@ -289,7 +292,6 @@ NAVIGATION STYLES
     .nav li ul.sub-menu,
     .nav li ul.children {
       margin-top: 0;
-      border: 1px solid #ccc;
       border-top: 0;
       position: absolute;
       visibility: hidden;
@@ -297,6 +299,7 @@ NAVIGATION STYLES
       /* highlight sub-menu current page */ }
       .nav li ul.sub-menu li,
       .nav li ul.children li {
+        width: 100%;
         /*
         if you need to go deeper, go nuts
         just remember deeper menus suck
@@ -307,8 +310,7 @@ NAVIGATION STYLES
           padding-left: 10px;
           border-right: 0;
           display: block;
-          width: 180px;
-          border-bottom: 1px solid #ccc; }
+          border-bottom: 1px solid #fff; }
         .nav li ul.sub-menu li:last-child a,
         .nav li ul.children li:last-child a {
           border-bottom: 0; }

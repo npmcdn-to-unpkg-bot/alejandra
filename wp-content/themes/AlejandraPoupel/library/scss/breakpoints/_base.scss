@@ -302,6 +302,9 @@ header nav {
 	margin: 0;
 
 	li {
+		&.qtranxs-lang-menu{
+			border:1px solid white;
+		}
 
 		a {
 			display: block;
