@@ -224,6 +224,7 @@ body {
 			-o-animation-fill-mode: forwards;
 			-ms-animation-fill-mode: forwards;
 			animation-fill-mode: forwards;
+			text-align:center;
 		}
 		.bx-slider {
 			height:670px !important;
@@ -275,6 +276,9 @@ body {
 			&:hover {
 				fill: $black;
 			}
+		}
+		li.qtranxs-lang-menu {
+			border-color: $black;
 		}
 	}
 }
@@ -380,7 +384,7 @@ body {
 			}
 		}
 		img {
-			width:350px;
+			width: 410px;
 		}
 		.descriptionContent {
 			p{

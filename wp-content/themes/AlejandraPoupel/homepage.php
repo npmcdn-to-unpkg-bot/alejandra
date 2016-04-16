@@ -45,7 +45,9 @@
                 <?php endwhile;
             else :?>
             <?php endif; ?>
-                <div class="eventsDescription col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12"><?php the_field('events_description');?></div>
+                <div class="eventsDescription col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
+                    <p><?php the_field('events_description');?></p>
+                </div>
                 <?php if( have_rows('page_event_link') ):
                     while ( have_rows('page_event_link') ) : the_row();?>
                         <a class="btn firstBtn" href="<?php the_sub_field('page_link');?>"><?php the_sub_field('page_link_name');?></a>
@@ -67,8 +69,8 @@
             while ( have_rows('meet_alejandra') ) : the_row();?>
                <div class="col-lg-4 col-lg-offset-8 col-md-4 col-md-offset-8 descriptionTitle"><h2><?php the_sub_field('meet_title');?></h2></div>
             <div class="col-lg-3 col-lg-offset-1 col-md-3 col-md-offset-1 col-sm-4 col-xs-4 descriptionImage"><img src="<?php the_sub_field('meet_img');?>" alt="Alejandra Poupel Portrait"></div>
-                <div class="col-lg-7 col-md-7 col-sm-7 col-sm-offset-1 col-xs-8 descriptionContent">
-                    <?php the_sub_field('meet_content');?>
+                <div class="col-lg-7 col-lg-offset-0 col-md-7 col-md-offset-0 col-sm-7 col-sm-offset-1 col-xs-8 descriptionContent">
+                    <p><?php the_sub_field('meet_content');?></p>
                     <?php if( have_rows('cta_page_agence') ):
                         while ( have_rows('cta_page_agence') ) : the_row();?>
                             <a class="btn" href="<?php the_sub_field('page_agence_link');?>"><?php the_sub_field('page_agence_name');?></a>
@@ -90,7 +92,7 @@
     <section class="lastEvents">
         <div class="container">
             <div class="row">
-            <h2 class="col-lg-4 col-md-4">Nos derniers évènements</h2>
+            <h2 class="col-lg-4 col-md-4"><?php the_field('latestArticles_title');?></h2>
 
 
 

@@ -693,9 +693,6 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   letter-spacing: 2px;
   transition: all ease-in-out 0.2s;
   position: relative; }
-  .btn.firstBtn, .firstBtn.blue-btn, .firstBtn.comment-reply-link, .firstBtn#submit {
-    margin: 20px auto 30px 50%;
-    transform: translateX(-160px); }
   .btn:hover, .blue-btn:hover, .comment-reply-link:hover, #submit:hover, .btn:focus, .blue-btn:focus, .comment-reply-link:focus, #submit:focus {
     background-color: transparent;
     color: #323944;
@@ -1738,6 +1735,8 @@ view.
 .footer-links ul li {
   float: none;
   display: inline-block; }
+  .footer-links ul li.qtranxs-lang-menu {
+    display: none; }
 
 /* end .footer-links */
 .copyright {
@@ -2249,7 +2248,8 @@ body {
       -moz-animation-fill-mode: forwards;
       -o-animation-fill-mode: forwards;
       -ms-animation-fill-mode: forwards;
-      animation-fill-mode: forwards; }
+      animation-fill-mode: forwards;
+      text-align: center; }
     body.page-template-homepage .bx-slider {
       height: 670px !important; }
     body.page-template-homepage .homepageSlider {
@@ -2288,6 +2288,8 @@ body {
       fill: #F4920A; }
       body .header.whiteHeader #logo:hover {
         fill: #323944; }
+    body .header.whiteHeader li.qtranxs-lang-menu {
+      border-color: #323944; }
   body .heroSlider {
     position: relative;
     height: 670px;
@@ -2366,7 +2368,7 @@ body {
       margin: 20px auto;
       background-color: #e8ded5; }
   body .alejandraDescription img {
-    width: 350px; }
+    width: 410px; }
   body .alejandraDescription .descriptionContent p {
     background-color: #e8ded5;
     color: #fff;

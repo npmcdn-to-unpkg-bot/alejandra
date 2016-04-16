@@ -1087,6 +1087,9 @@ FOOTER STYLES
 			li {
 				float: none;
 				display: inline-block;
+				&.qtranxs-lang-menu {
+					display:none;
+				}
 			}
 
 		}

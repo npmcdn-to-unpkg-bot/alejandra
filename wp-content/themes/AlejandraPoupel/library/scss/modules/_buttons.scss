@@ -41,10 +41,6 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   letter-spacing: 2px;
   transition: $basicTransition;
   position:relative;
-  &.firstBtn {
-    margin: 20px auto 30px 50%;
-    transform: translateX(-160px);
-  }
   &:hover,
   &:focus {
     background-color: transparent;

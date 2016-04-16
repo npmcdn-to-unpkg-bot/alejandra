@@ -42,6 +42,10 @@
                 <div id="gallery-content-center">
                     <?php if( have_rows('portfolio_images') ):
                         while ( have_rows('portfolio_images') ) : the_row();?>
+                            <?php $thumbs = wp_get_attachment_image_src(get_sub_field('portfolio_image'), 'testimonials' ); ?>
+                            <img src="<?php echo $thumbs[0];?>" />
+
+
                             <img src="<?php the_sub_field('portfolio_image');?>" class="grid-item all <?php echo $category->name;?>" />
                         <?php endwhile;
                     endif; ?>
