@@ -10,9 +10,12 @@
 
 <?php get_header();?>
 
-<div class="heroSlider" xmlns="http://www.w3.org/1999/html">
-    <?php the_post_thumbnail('full');?>
-    <h1 class="heroMessage">
+<div class="heroSlider" xmlns="http://www.w3.org/1999/html" >
+    <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+    $url = $thumb['0']; ?>
+    <div data-scroll-speed="-4" class="heroSliderImage" style="background-image:url('<?php echo $url;?>');">
+    </div>
+    <h1 class="heroMessage" data-scroll-speed="-8">
         <?php the_field('heading_message');?>
     </h1>
 </div>

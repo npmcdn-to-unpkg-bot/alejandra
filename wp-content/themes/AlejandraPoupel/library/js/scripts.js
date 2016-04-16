@@ -162,6 +162,37 @@ jQuery(document).ready(function($) {
 	});
 
 
+	$.fn.moveIt = function(){
+		var $window = $(window);
+		var $scrollHeight = $window.height();
+		var instances = [];
+
+		$(this).each(function(){
+			instances.push(new moveItItem($(this)));
+		});
+
+		window.onscroll = function(){
+			var scrollTop = $window.scrollTop();
+			instances.forEach(function(inst){
+				inst.update(scrollTop);
+			});
+		}
+	}
+
+	var moveItItem = function(el){
+		this.el = $(el);
+		this.speed = parseInt(this.el.attr('data-scroll-speed'));
+	};
+
+	moveItItem.prototype.update = function(scrollTop){
+		var pos = scrollTop / this.speed;
+		this.el.css('transform', 'translateY(' + -pos + 'px)');
+	};
+
+
+	$('[data-scroll-speed]').moveIt();
+
+
 
 
 	$(window).scroll(function(){
@@ -169,21 +200,14 @@ jQuery(document).ready(function($) {
 			$head = $('header');
 		if ($this.scrollTop() > 30) {
 			$head.addClass('whiteHeader');
-			$('body').addClass('padded');
-            var $scroll = $(window).scrollTop();
-            $("h1").css("transform","translateY("+($scroll*0.1)+"px)");
-            $(".homepageSlider .bx-wrapper").css("transform","translateY("+($scroll*0.2)+"px)");
-            $('.descriptionContent').css("transform", "translateY(-" +  ($scroll * 0.1) + "px)");
-			$('.descriptionImage').css("transform", "translateY(" +  (-150 + ($scroll * 0.02)) + "px)");
-            $('.lastEvents h2').css("transform", "translateY(-" +  (-100 + ($scroll * 0.05)) + "px)");
 		} else {
 			$head.removeClass('whiteHeader');
-            $(".bx-wrapper").css("transform","translateY(0px)");
-			$('body').removeClass('padded');
 		}
 
 	});
 
+
+	/* LIGHTBOX */
 	var index;
 	var nextImg;
 	var prevImg;
@@ -207,15 +231,11 @@ jQuery(document).ready(function($) {
 			index++;
 		}
 		nextImg=index+1;
-		//alert(nextImg);
 		var srcImg = $(".pressSingle:nth-child("+nextImg+")").attr("data-image");
 		//var legende = $(".container div:nth-child("+nextImg+")").children("img").attr("alt");
-		//alert(srcImg);
 		$(".lightbox img").attr("src",srcImg);
 		//$(".legende").text(legende);
 	});
-
-	//pour afficher l'image précédente
 	$(".navPrev").click(function(){
 		if(index<=0) {
 			index=pressReleasesCount-1 ;
@@ -224,7 +244,6 @@ jQuery(document).ready(function($) {
 			index--;
 		}
 		nextImg=index+1;
-		// alert(nextImg);
 		var srcImg = $(".pressSingle:nth-child("+nextImg+")").attr("data-image");
 		//var legende = $(".container div:nth-child("+nextImg+")").children("img").attr("alt");
 		$(".lightbox img").attr("src",srcImg);

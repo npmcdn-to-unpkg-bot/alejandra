@@ -2227,7 +2227,7 @@ body {
       animation-fill-mode: forwards; }
     body.page-template-homepage h1 {
       opacity: 0;
-      animation: appearance 1s ease-in-out 1.9s;
+      animation: sliderAppearance 1s ease-in-out 2.4s;
       webkit-animation-fill-mode: forwards;
       -moz-animation-fill-mode: forwards;
       -o-animation-fill-mode: forwards;
@@ -2235,7 +2235,7 @@ body {
       animation-fill-mode: forwards; }
     body.page-template-homepage .menu-social-media-container {
       opacity: 0;
-      animation: SocialAppearance 1s ease-in-out 2.4s;
+      animation: SocialAppearance 1s ease-in-out 1.9s;
       webkit-animation-fill-mode: forwards;
       -moz-animation-fill-mode: forwards;
       -o-animation-fill-mode: forwards;
@@ -2304,6 +2304,10 @@ body {
       top: 0;
       z-index: 90;
       left: 0; }
+    body .heroSlider .heroSliderImage {
+      height: 100%;
+      background-size: cover;
+      background-position: center; }
     body .heroSlider img {
       opacity: 1;
       max-width: none;
@@ -2463,7 +2467,7 @@ body {
     font-weight: 900;
     line-height: 1;
     opacity: 0.5;
-    margin-top: 70px; }
+    margin-top: 200px; }
   body.page-template-Agency .ourDna p {
     text-align: left; }
   body.page-template-Agency .meetAlejandra {
@@ -2479,6 +2483,8 @@ body {
     body.page-template-Agency .meetAlejandra .meetAlejandraSingle > div {
       min-height: 500px;
       line-height: 500px; }
+      body.page-template-Agency .meetAlejandra .meetAlejandraSingle > div.meetAlejandraText {
+        z-index: 10; }
       body.page-template-Agency .meetAlejandra .meetAlejandraSingle > div > p {
         vertical-align: middle;
         display: inline-block;

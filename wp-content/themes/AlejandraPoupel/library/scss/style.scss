@@ -169,7 +169,6 @@ be set to display none.
 	to {opacity: 1;transform: translateY(0px);}
 }
 
-
 @keyframes SocialAppearance {
 	from {opacity: 0;transform: translateY(-100px);}
 	to {opacity: 1;transform: translateY(-125px);}
@@ -200,7 +199,7 @@ body {
 		}
 		h1 {
 			opacity:0;
-			animation: appearance 1s ease-in-out 1.9s;
+			animation: sliderAppearance 1s ease-in-out 2.4s;
 			webkit-animation-fill-mode: forwards;
 			-moz-animation-fill-mode: forwards;
 			-o-animation-fill-mode: forwards;
@@ -209,7 +208,7 @@ body {
 		}
 		.menu-social-media-container {
 			opacity:0;
-			animation: SocialAppearance 1s ease-in-out 2.4s;
+			animation: SocialAppearance 1s ease-in-out 1.9s;
 			webkit-animation-fill-mode: forwards;
 			-moz-animation-fill-mode: forwards;
 			-o-animation-fill-mode: forwards;
@@ -296,6 +295,11 @@ body {
 			top: 0;
 			z-index: 90;
 			left: 0;
+		}
+		.heroSliderImage {
+			height:100%;
+			background-size:cover;
+			background-position:center;
 		}
 		img {
 			opacity: 1;
@@ -512,7 +516,7 @@ body {
 				font-weight: 900;
 				line-height: 1;
 				opacity: 0.5;
-				margin-top: 70px;
+				margin-top: 200px;
 			}
 			p {
 				text-align:left;
@@ -533,6 +537,9 @@ body {
 				> div {
 					min-height: 500px;
 					line-height: 500px;
+					&.meetAlejandraText {
+						z-index:10;
+					}
 					> p {
 						vertical-align: middle;
 						display: inline-block;

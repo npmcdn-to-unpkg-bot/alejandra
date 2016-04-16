@@ -11,7 +11,7 @@
 <?php get_header();?>
 
 <div class="heroSlider" xmlns="http://www.w3.org/1999/html">
-    <ul class="homepageSlider">
+    <ul class="homepageSlider" data-scroll-speed="-4">
         <?php
             if( have_rows('slide_images') ):
                 while ( have_rows('slide_images') ) : the_row();?>
@@ -20,7 +20,7 @@
             else :?>
             <?php endif; ?>
     </ul>
-    <h1 class="heroMessage">
+    <h1 class="heroMessage" data-scroll-speed="-8">
         <?php the_field('heading_message');?>
     </h1>
 </div>
@@ -67,10 +67,15 @@
 
         <?php if( have_rows('meet_alejandra') ):
             while ( have_rows('meet_alejandra') ) : the_row();?>
-               <div class="col-lg-4 col-lg-offset-8 col-md-4 col-md-offset-8 descriptionTitle"><h2><?php the_sub_field('meet_title');?></h2></div>
-            <div class="col-lg-3 col-lg-offset-1 col-md-3 col-md-offset-1 col-sm-4 col-xs-4 descriptionImage"><img src="<?php the_sub_field('meet_img');?>" alt="Alejandra Poupel Portrait"></div>
-                <div class="col-lg-7 col-lg-offset-0 col-md-7 col-md-offset-0 col-sm-7 col-sm-offset-1 col-xs-8 descriptionContent">
+               <div class="col-lg-4 col-lg-offset-8 col-md-4 col-md-offset-8 descriptionTitle">
+                   <h2><?php the_sub_field('meet_title');?></h2>
+               </div>
+                <div class="col-lg-3 col-lg-offset-1 col-md-3 col-md-offset-1 col-sm-4 col-xs-4 descriptionImage" data-scroll-speed="17" data-scroll-style="lerp">
+                    <img src="<?php the_sub_field('meet_img');?>" alt="Alejandra Poupel Portrait">
+                </div>
+                <div class="col-lg-7 col-lg-offset-0 col-md-7 col-md-offset-0 col-sm-7 col-sm-offset-1 col-xs-8 descriptionContent" data-scroll-speed="8">
                     <p><?php the_sub_field('meet_content');?></p>
+
                     <?php if( have_rows('cta_page_agence') ):
                         while ( have_rows('cta_page_agence') ) : the_row();?>
                             <a class="btn" href="<?php the_sub_field('page_agence_link');?>"><?php the_sub_field('page_agence_name');?></a>
@@ -92,7 +97,7 @@
     <section class="lastEvents">
         <div class="container">
             <div class="row">
-            <h2 class="col-lg-4 col-md-4"><?php the_field('latestArticles_title');?></h2>
+            <h2 class="col-lg-4 col-md-4" data-scroll-speed="20"><?php the_field('latestArticles_title');?></h2>
 
 
 
