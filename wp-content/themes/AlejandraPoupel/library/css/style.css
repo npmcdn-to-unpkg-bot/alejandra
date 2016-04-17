@@ -1740,7 +1740,8 @@ view.
 
 /******PAGE ACCUEIL************/
 .page-template-homepage .portfolioSingle {
-  margin-left: 16.66666667%; }
+  margin-top: 15px;
+  margin-bottom: 15px; }
 .page-template-homepage .alejandraDescription img {
   width: 100%; }
 .page-template-homepage .alejandraDescription .descriptionContent {
@@ -1882,6 +1883,40 @@ view.
     float: left;
     margin: 0; }
 
+/*________SINGLE PORTFOLIO___________*/
+.single-events .grid {
+  overflow: visible;
+  margin-top: 10px; }
+.single-events .grid-sizer {
+  width: calc(50% - 10px);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+.single-events .gutter-sizer {
+  width: 10px; }
+.single-events .grid-item {
+  width: calc(50% - 10px);
+  margin-bottom: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/******PAGE PORTFOLIO ALTERNATIVE************/
+.page-template-portfolioAlter .portfolioAlter #gallery-content-center img {
+  width: calc(50% - 10px);
+  margin-bottom: 10px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  margin-left: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  			/*&.grid-item--2 {
+                  width:48%;
+              }*/ }
+
 /*********************
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's
@@ -1959,7 +1994,15 @@ tweeners.
         margin-right: auto;
         margin-left: auto;
         display: block;
-        clear: both; } }
+        clear: both; }
+
+  .single-events .grid-sizer {
+    width: calc(33% - 10px); }
+  .single-events .grid-item {
+    width: calc(33% - 10px); }
+
+  .page-template-portfolioAlter .portfolioAlter #gallery-content-center img {
+    width: calc(33% - 10px); } }
 @media only screen and (max-width: 768px) {
   /******************************************************************
   Site Name: 
@@ -2135,7 +2178,7 @@ you can add resource intensive styles.
 
   /* end .footer-links */
   .page-template-homepage .portfolioSingle {
-    margin-left: 0; }
+    margin: 25px 0 0 0; }
   .page-template-homepage .alejandraDescription img {
     width: 410px; }
   .page-template-homepage .alejandraDescription .descriptionContent {
@@ -2278,7 +2321,16 @@ This is for the larger monitors and possibly full screen viewers.
   You can add some advanced styles here if you like. This kicks in
   on larger screens.
   
-  ******************************************************************/ }
+  ******************************************************************/
+  .single-events .grid-sizer {
+    width: calc(25% - 10px); }
+  .single-events .gutter-sizer {
+    width: 10px; }
+  .single-events .grid-item {
+    width: calc(25% - 10px); }
+
+  .page-template-portfolioAlter .portfolioAlter #gallery-content-center img {
+    width: calc(25% - 10px); } }
 /*********************
 RETINA (2x RESOLUTION DEVICES)
 This applies to the retina iPhone (4s) and iPad (2,3) along with
@@ -2420,7 +2472,6 @@ body {
   /******PAGE AGENCE************/
   /******PAGE SERVICES************/
   /******PAGE PORTFOLIO************/
-  /******PAGE PORTFOLIO ALTERNATIVE************/
   /******PAGE REFERENCES************/ }
   body.page-template-homepage {
     opacity: 0;
@@ -2580,7 +2631,9 @@ body {
       margin-bottom: 3em; }
   body .alejandraDescription h2 {
     margin-bottom: 120px;
-    text-align: center; }
+    text-align: center;
+    position: relative;
+    z-index: 10; }
     body .alejandraDescription h2::before, body .alejandraDescription h2::after {
       margin: 20px auto;
       background-color: #e8ded5; }
@@ -2613,60 +2666,58 @@ body {
       body .lastEvents h2::before, body .lastEvents h2::after {
         background: #fff;
         margin: 20px auto; }
-  body .portfolioSingle {
-    margin: 25px 0 0 0; }
-    body .portfolioSingle .post-categories {
-      text-align: center;
+  body .portfolioSingle .post-categories {
+    text-align: center;
+    position: absolute;
+    width: calc(100% - 30px);
+    z-index: 2;
+    margin-top: 5px; }
+    body .portfolioSingle .post-categories a {
+      color: white;
+      font-family: "Montserrat", Helvetica Neue, Helvetica, Arial, sans-serif;
+      text-transform: uppercase;
+      z-index: 10;
+      font-size: 1em;
+      letter-spacing: 2px; }
+  body .portfolioSingle a:hover, body .portfolioSingle a:focus {
+    text-decoration: none; }
+    body .portfolioSingle a:hover .articleInfos, body .portfolioSingle a:focus .articleInfos {
+      opacity: 1;
+      top: 8%; }
+  body .portfolioSingle .articleContainer {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    text-align: center; }
+    body .portfolioSingle .articleContainer img {
+      max-width: 100%;
+      height: auto; }
+    body .portfolioSingle .articleContainer .articleInfos {
+      width: 78%;
+      height: 84%;
+      top: 16%;
+      left: 11%;
+      background: #fff;
+      padding: 20px 0;
+      transition: all ease-in-out 0.2s;
       position: absolute;
-      width: calc(100% - 30px);
-      z-index: 2;
-      margin-top: 5px; }
-      body .portfolioSingle .post-categories a {
-        color: white;
+      opacity: 0; }
+      body .portfolioSingle .articleContainer .articleInfos h3 {
+        font-family: "Playfair Display", serif;
+        color: #F4920A;
+        text-transform: uppercase;
+        font-size: 2em;
+        line-height: 1;
+        position: relative;
+        font-weight: 900;
+        color: #323944;
+        text-align: center;
+        min-height: 60px; }
+      body .portfolioSingle .articleContainer .articleInfos time {
+        color: #e8ded5;
         font-family: "Montserrat", Helvetica Neue, Helvetica, Arial, sans-serif;
         text-transform: uppercase;
-        z-index: 10;
-        font-size: 1em;
         letter-spacing: 2px; }
-    body .portfolioSingle a:hover, body .portfolioSingle a:focus {
-      text-decoration: none; }
-      body .portfolioSingle a:hover .articleInfos, body .portfolioSingle a:focus .articleInfos {
-        opacity: 1;
-        top: 8%; }
-    body .portfolioSingle .articleContainer {
-      width: 90%;
-      margin: 0 auto;
-      position: relative;
-      text-align: center; }
-      body .portfolioSingle .articleContainer img {
-        max-width: 100%;
-        height: auto; }
-      body .portfolioSingle .articleContainer .articleInfos {
-        width: 78%;
-        height: 84%;
-        top: 16%;
-        left: 11%;
-        background: #fff;
-        padding: 20px 0;
-        transition: all ease-in-out 0.2s;
-        position: absolute;
-        opacity: 0; }
-        body .portfolioSingle .articleContainer .articleInfos h3 {
-          font-family: "Playfair Display", serif;
-          color: #F4920A;
-          text-transform: uppercase;
-          font-size: 2em;
-          line-height: 1;
-          position: relative;
-          font-weight: 900;
-          color: #323944;
-          text-align: center;
-          min-height: 60px; }
-        body .portfolioSingle .articleContainer .articleInfos time {
-          color: #e8ded5;
-          font-family: "Montserrat", Helvetica Neue, Helvetica, Arial, sans-serif;
-          text-transform: uppercase;
-          letter-spacing: 2px; }
   body.page-template-Agency section {
     padding: 70px 0 130px; }
   body.page-template-Agency h2 {
@@ -2707,40 +2758,6 @@ body {
     body.single-events .eventDescription p {
       text-align: left;
       margin-top: 40px; }
-  body.single-events .grid {
-    overflow: visible;
-    margin-top: 10px; }
-  body.single-events .grid-sizer {
-    width: 24%;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box; }
-  body.single-events .gutter-sizer {
-    width: 1%; }
-  body.single-events .grid-item {
-    width: 24%;
-    margin-bottom: 10px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box; }
-  body.single-events .grid-item--2 {
-    width: 49%; }
-  body.single-events .grid-item:nth-child(1) {
-    width: 48% !important; }
-  body.page-template-portfolioAlter .portfolioAlter #gallery-content-center img {
-    width: 24%;
-    margin-bottom: 10px;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
-    margin-left: 10px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    /*&.grid-item--2 {
-    	width:48%;
-    }*/ }
   body.page-template-testimonial .testimonials {
     background-color: whitesmoke;
     padding-bottom: 160px; }

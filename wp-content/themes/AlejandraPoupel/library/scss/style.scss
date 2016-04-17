@@ -391,6 +391,8 @@ body {
 		h2 {
 			margin-bottom:120px;
 			text-align:center;
+			position: relative;
+			z-index: 10;
 			&::before, &::after{
 				margin:20px auto;
 				background-color:$AlejandraGrey;
@@ -435,7 +437,6 @@ body {
 		}
 	}
 	.portfolioSingle {
-		margin: 25px 0 0 0;
 		.post-categories {
 			text-align: center;
 			position: absolute;
@@ -579,54 +580,10 @@ body {
 				margin-top: 40px;
 			}
 		}
-		.grid {
-			overflow:visible;
-			margin-top: 10px;
-		}
-		.grid-sizer {
-		width:24%;
-			-webkit-box-sizing: border-box;
-			-moz-box-sizing: border-box;
-			box-sizing: border-box;
-		}.gutter-sizer { width: 1%; }
-		 .grid-item{
-			 width:24%;
-			 margin-bottom:10px;
-			 -webkit-box-sizing: border-box;
-			 -moz-box-sizing: border-box;
-			 box-sizing: border-box;
-
-		}
-		.grid-item--2{
-			width:49%;
-		}
-		.grid-item:nth-child(1) {
-			width:48% !important;
-		}
 
 	}
 
-	/******PAGE PORTFOLIO ALTERNATIVE************/
-	&.page-template-portfolioAlter {
-		.portfolioAlter {
 
-			#gallery-content-center img {
-				width:24%;
-				margin-bottom: 10px;
-				-webkit-transition: all 0.5s;
-				-moz-transition: all 0.5s;
-				-o-transition: all 0.5s;
-				transition: all 0.5s;
-				margin-left: 10px;
-				-webkit-box-sizing: border-box;
-				-moz-box-sizing: border-box;
-				box-sizing: border-box;
-				/*&.grid-item--2 {
-					width:48%;
-				}*/
-			}
-		}
-	}
 	/******PAGE REFERENCES************/
 	&.page-template-testimonial {
 		.testimonials {

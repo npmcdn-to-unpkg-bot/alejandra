@@ -97,14 +97,14 @@
     <section class="lastEvents">
         <div class="container">
             <div class="row">
-            <h2 class="col-lg-4 col-md-4" data-scroll-speed="20"><?php the_field('latestArticles_title');?></h2>
+            <h2 class="col-md-4" data-scroll-speed="20"><?php the_field('latestArticles_title');?></h2>
 
 
 
             <?php query_posts( 'post_type=events&posts_per_page=4' ); ?>
                <?php $count = 0;?>
             <?php while ( have_posts() ) : the_post(); ?>
-                <article class="col-lg-4 col-md-4 col-sm-6 col-xs-8 col-xs-offset-2 portfolioSingle">
+                <article class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-md-4 portfolioSingle">
                     <?php echo the_category();?>
                     <a href="<?php echo get_permalink();?>">
                         <div class="articleContainer">

@@ -234,6 +234,14 @@ body {
       display: block;
       clear: both; }
 
+.single-events .grid-sizer {
+  width: calc(33% - 10px); }
+.single-events .grid-item {
+  width: calc(33% - 10px); }
+
+.page-template-portfolioAlter .portfolioAlter #gallery-content-center img {
+  width: calc(33% - 10px); }
+
 /******************************************************************
 Site Name:
 Author:
@@ -368,7 +376,7 @@ mobile. Make sure to double check these!
 
 /* end .footer-links */
 .page-template-homepage .portfolioSingle {
-  margin-left: 0; }
+  margin: 25px 0 0 0; }
 .page-template-homepage .alejandraDescription img {
   width: 410px; }
 .page-template-homepage .alejandraDescription .descriptionContent {

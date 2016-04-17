@@ -32,13 +32,30 @@
 							if( have_rows('event_images') ):
 								while ( have_rows('event_images') ) : the_row();?>
 
-									<img src="<?php the_sub_field('event_image');?>" class="grid-item <?php if ( get_sub_field('double_width')): ?>grid-item--2<?php else:?><?php endif;?>">
+									<?php
+									$thumbs = wp_get_attachment_image_src(get_sub_field('event_image'), 'portfolio-thumb' );
+									$srcImage = wp_get_attachment_image_src(get_sub_field('event_image'), 'large' );
+									?>
+
+									<img src="<?php echo $thumbs[0];?>" class="grid-item lightboxSingle" data-image="<?php echo $srcImage[0];?>">
 
 								<?php endwhile;
 							else :?>
 							<?php endif; ?>
 
 						<?php endwhile; ?>
+
+							<div class="lightbox">
+								<img src="" class="lightboxedImage"/>
+								<div class="controls">
+									<span class="close">close</span>
+									<div class="navigators">
+										<span class="navPrev">prev</span>
+										<span class="navNext">next</span>
+									</div>
+								</div>
+							</div>
+
 							</div>
 							</div>
 						<?php else : ?>

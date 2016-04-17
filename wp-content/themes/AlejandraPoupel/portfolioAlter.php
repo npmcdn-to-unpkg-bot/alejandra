@@ -41,7 +41,6 @@
 
             <div id="gallery-content">
                 <div id="gallery-content-center">
-                    <?php $count=0;?>
                     <?php if( have_rows('portfolio_images') ):
                         while ( have_rows('portfolio_images') ) : the_row();?>
 
@@ -49,10 +48,8 @@
                                       $thumbs = wp_get_attachment_image_src(get_sub_field('portfolio_image'), 'portfolio-thumb' );
                                     $srcImage = wp_get_attachment_image_src(get_sub_field('portfolio_image'), 'large' );
                             ?>
-                            <img src="<?php echo $thumbs[0];?>" data-count="<?php echo $count;?>" class="grid-item cat-all cat-<?php the_sub_field('portfolio_category');?> lightboxSingle <?php if ( get_sub_field('double_width')): ?>grid-item--2<?php endif;?>" data-image="<?php echo $srcImage[0];?>" />
-                            <?php $count++;?>
+                            <img src="<?php echo $thumbs[0];?>" class="grid-item cat-all cat-<?php the_sub_field('portfolio_category');?> lightboxSingle" data-image="<?php echo $srcImage[0];?>" />
                         <?php endwhile;;?>
-
                     <?php endif; ?>
                 </div>
             </div>

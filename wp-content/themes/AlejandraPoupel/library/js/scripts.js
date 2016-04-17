@@ -159,6 +159,17 @@ jQuery(document).ready(function($) {
 		percentPosition: true
 	});
 
+/*
+	$('.grid').isotope({
+		itemSelector : '.grid-item',
+		masonry: {
+			columnWidth: $('.grid').width() / 4,
+			gutterWidth: 10
+		}
+	});
+*/
+
+
 	var button_class = "currrentCategory";
 	var $container = $('#gallery-content-center');
 	$container.isotope({itemSelector : 'img'});
@@ -231,8 +242,8 @@ jQuery(document).ready(function($) {
 	var prevImg;
 	var pressReleasesCount = $(".lightboxSingle").length;
 	$(".lightboxSingle").click(function(){
-		viewedImage = $(this);
-		hiddenAmount = viewedImage.nextUntil('.lightboxSingle:not(.isotope-hidden)').length;
+		/*viewedImage = $(this);
+		hiddenAmount = viewedImage.nextUntil('.lightboxSingle:not(.isotope-hidden)').length;*/
 		var src = $(this).attr("data-image");//récupère l'attribut src de l'img sur laquelle on clique
 		$(".lightbox img").attr("src",src);//remplace l'attribut src de l'img qui se trouve dans .lightbox par l'attribut src de l'img sur laquelle on clique
 		$(".lightbox").fadeIn(500);//ouvre la lightbox en fondu et remet la lightbox en display table
@@ -243,14 +254,13 @@ jQuery(document).ready(function($) {
 	});
 
 	$(".navNext").click(function(e){
-		e.preventDefault();
 		if(index>=pressReleasesCount-1) {
 			index=0;
 		}
 		else {
 			index++;
 		}
-		nextImg=index+hiddenAmount+1;
+		nextImg=index+1;
 		var srcImg = $(".lightboxSingle:nth-child("+nextImg+")").attr("data-image");
 		$(".lightbox img").fadeOut(300, function() {
 			$(".lightbox img").attr("src",srcImg);
@@ -259,7 +269,6 @@ jQuery(document).ready(function($) {
 	});
 
 	$(".navPrev").click(function(e){
-		e.preventDefault();
 		if(index<=0) {
 			index=pressReleasesCount-1 ;
 		}
@@ -267,7 +276,6 @@ jQuery(document).ready(function($) {
 			index--;
 		}
 		nextImg=index+1;
-
 		var srcImg = $(".lightboxSingle:nth-child("+nextImg+")").attr("data-image");
 		//var legende = $(".container div:nth-child("+nextImg+")").children("img").attr("alt");
 		$(".lightbox img").fadeOut(300, function() {

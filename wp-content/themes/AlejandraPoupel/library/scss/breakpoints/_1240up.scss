@@ -9,3 +9,22 @@ on larger screens.
 
 ******************************************************************/
 
+.single-events {
+
+  .grid-sizer {
+    width:calc(25% - 10px);
+  }.gutter-sizer {
+     width: 10px;
+   }
+  .grid-item{
+    width:calc(25% - 10px);
+  }
+}
+
+.page-template-portfolioAlter {
+  .portfolioAlter {
+    #gallery-content-center img {
+      width: calc(25% - 10px);
+    }
+  }
+}

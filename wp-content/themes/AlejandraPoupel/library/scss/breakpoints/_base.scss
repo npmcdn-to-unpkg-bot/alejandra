@@ -1108,7 +1108,8 @@ FOOTER STYLES
 
 .page-template-homepage {
 	.portfolioSingle {
-		margin-left: 16.66666667%;
+		margin-top:15px;
+		margin-bottom:15px;
 	}
 	.alejandraDescription {
 		img {
@@ -1313,6 +1314,51 @@ FOOTER STYLES
 	}
 }
 
+/*________SINGLE PORTFOLIO___________*/
+
+
+.single-events {
+	.grid {
+		overflow:visible;
+		margin-top: 10px;
+	}
+	.grid-sizer {
+		width:calc(50% - 10px);
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}.gutter-sizer {
+		 width: 10px;
+	 }
+	.grid-item{
+		width:calc(50% - 10px);
+		margin-bottom:10px;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+}
+
+/******PAGE PORTFOLIO ALTERNATIVE************/
+.page-template-portfolioAlter {
+	.portfolioAlter {
+		#gallery-content-center img {
+			width: calc(50% - 10px);
+			margin-bottom: 10px;
+			-webkit-transition: all 0.5s;
+			-moz-transition: all 0.5s;
+			-o-transition: all 0.5s;
+			transition: all 0.5s;
+			margin-left: 10px;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			/*&.grid-item--2 {
+                width:48%;
+            }*/
+		}
+	}
+}
 
 
 
