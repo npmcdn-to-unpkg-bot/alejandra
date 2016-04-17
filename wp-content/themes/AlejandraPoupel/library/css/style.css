@@ -2334,7 +2334,8 @@ you can add resource intensive styles.
     /* HOMEPAGE */ }
     body .header {
       background-color: #fff;
-      background-image: none; }
+      background-image: none;
+      position: fixed; }
       body .header nav {
         display: none;
         float: none;
@@ -2377,8 +2378,8 @@ you can add resource intensive styles.
   GENERAL STYLES
   *********************/
   body h1 {
-    width: 70%;
-    margin-left: 15%;
+    width: 50%;
+    margin-left: 25%;
     font-size: 6em; }
 
   /*********************
