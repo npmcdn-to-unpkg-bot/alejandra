@@ -1,28 +1,37 @@
 <?php get_header(); ?>
 
-			<div id="content">
 
-				<div id="inner-content" class="wrap cf">
+<div class="heroSlider" xmlns="http://www.w3.org/1999/html" >
+	<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+	$url = $thumb['0']; ?>
+	<div data-scroll-speed="-4" class="heroSliderImage" style="background-image:url('<?php echo $url;?>');">
+	</div>
+	<h1 class="heroMessage" data-scroll-speed="-8">
+		<?php the_title();?>
+	</h1>
+</div>
+<main role="main" class="articleMain" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
-					<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+		<div class="container">
+			<div class="row">
+
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 							<?php
-								/*
-								 * Ah, post formats. Nature's greatest mystery (aside from the sloth).
-								 *
-								 * So this function will bring in the needed template file depending on what the post
-								 * format is. The different post formats are located in the post-formats folder.
-								 *
-								 *
-								 * REMEMBER TO ALWAYS HAVE A DEFAULT ONE NAMED "format.php" FOR POSTS THAT AREN'T
-								 * A SPECIFIC POST FORMAT.
-								 *
-								 * If you want to remove post formats, just delete the post-formats folder and
-								 * replace the function below with the contents of the "format.php" file.
-								*/
+/*
 								get_template_part( 'post-formats/format', get_post_format() );
-							?>
+							*/?>
+						<article>
+
+							<section><?php the_content();?></section>
+							<footer>
+								<span class="previousLink"><?php previous_post_link('%link');?></span>
+
+								<span class="postInfos"><?php the_date();?> | <?php the_author();?></span>
+
+								<span class="nextLink"><?php next_post_link('%link'); ?></span>
+							</footer>
+						</article>
 
 						<?php endwhile; ?>
 
@@ -39,12 +48,10 @@
 									</footer>
 							</article>
 						<?php endif; ?>
-						<?php previous_post_link('%link');?>
-						<?php next_post_link(); ?>
 
-
-					</main>
-				</div>
 			</div>
+		</div>
+					</main>
+
 
 <?php get_footer(); ?>

@@ -1394,13 +1394,13 @@ POSTS & CONTENT STYLES
   border: 5px solid #fff; }
   .hentry:hover img, .hentry:focus img {
     transform: scale(1.1) rotateZ(2deg);
-    opacity: 1; }
+    opacity: 0.4; }
   .hentry h2 {
     font-size: 2em;
     position: relative;
     z-index: 2; }
     .hentry h2 a {
-      color: #fff;
+      color: #323944;
       cursor: pointer;
       text-transform: none;
       font-size: 1.6em; }
@@ -1410,7 +1410,7 @@ POSTS & CONTENT STYLES
     position: absolute;
     left: 0;
     top: 0;
-    opacity: 0.5;
+    opacity: 1;
     transition: all ease-in-out 0.5s;
     min-width: 100%;
     height: auto;
@@ -1976,6 +1976,45 @@ view.
     color: #323944;
     font-size: 2em;
     text-decoration: underline; }
+
+.single-post .articleMain footer {
+  text-align: center;
+  font-size: 0;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  border-bottom: 1px solid #e8ded5;
+  border-top: 1px solid #e8ded5; }
+  .single-post .articleMain footer span {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 1.3rem;
+    padding: 30px;
+    min-height: 81px; }
+    .single-post .articleMain footer span.previousLink, .single-post .articleMain footer span.nextLink {
+      width: 30%;
+      background-color: #e8ded5; }
+      .single-post .articleMain footer span.previousLink a, .single-post .articleMain footer span.nextLink a {
+        color: #fff; }
+    .single-post .articleMain footer span.previousLink a::before {
+      content: '';
+      border: 10px solid transparent;
+      border-right-color: white;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 10px; }
+    .single-post .articleMain footer span.nextLink a::after {
+      content: '';
+      border: 10px solid transparent;
+      border-left-color: white;
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 10px; }
+    .single-post .articleMain footer span.postInfos {
+      width: 40%; }
+.single-post .articleMain article section h2 {
+  text-align: center; }
+  .single-post .articleMain article section h2::before, .single-post .articleMain article section h2::after {
+    display: none; }
 
 /*********************
 LARGER MOBILE DEVICES

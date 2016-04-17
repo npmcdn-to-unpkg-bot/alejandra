@@ -16,6 +16,9 @@
         <?php
         if( have_rows('portfolio_slides') ):
             while ( have_rows('portfolio_slides') ) : the_row();?>
+                <?php
+                $slideThumbs = wp_get_attachment_image_src(get_sub_field('portfolio_image'), 'portfolio-thumb' );
+                ?>
                 <li><img src="<?php the_sub_field('portfolio_single_slide');?>"></li>
             <?php endwhile;
         else :?>

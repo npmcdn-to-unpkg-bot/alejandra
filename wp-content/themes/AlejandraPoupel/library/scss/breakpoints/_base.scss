@@ -426,14 +426,14 @@ POSTS & CONTENT STYLES
 
 			&:hover img, &:focus img{
 				transform: scale(1.1) rotateZ(2deg);
-				opacity:1;
+				opacity:0.4;
 			}
 			h2 {
 				font-size:2em;
 				position: relative;
 				z-index: 2;
 				a {
-					color:$white;
+					color:$black;
 					cursor:pointer;
 					text-transform: none;
 					font-size: 1.6em;
@@ -448,7 +448,7 @@ POSTS & CONTENT STYLES
 				position: absolute;
 				left: 0;
 				top: 0;
-				opacity: 0.5;
+				opacity: 1;
 				transition: $blogTransition;
 				min-width: 100%;
 				height: auto;
@@ -1391,6 +1391,62 @@ FOOTER STYLES
 				color:$black;
 				font-size:2em;
 				text-decoration:underline;
+			}
+		}
+	}
+}
+
+.single-post {
+	.articleMain {
+		footer {
+			text-align:center;
+			font-size:0;
+			margin-bottom: 30px;
+			margin-top: 30px;
+			border-bottom: 1px solid $AlejandraGrey;
+			border-top: 1px solid $AlejandraGrey;
+			span {
+				display:inline-block;
+				vertical-align:top;
+				font-size: 1.3rem;
+				padding:30px;
+				min-height:81px;
+				&.previousLink, &.nextLink {
+					width:30%;
+					background-color:$AlejandraGrey;
+					a {
+						color:$white;
+					}
+				}
+				&.previousLink a::before {
+					content:'';
+					border:10px solid transparent;
+					border-right-color: white;
+					display:inline-block;
+					vertical-align: middle;
+					margin-right: 10px;
+				}
+				&.nextLink a::after {
+					content:'';
+					border:10px solid transparent;
+					border-left-color: white;
+					display:inline-block;
+					vertical-align: middle;
+					margin-left: 10px;
+				}
+				&.postInfos {
+					width:40%;
+				}
+			}
+		}
+		article {
+			section {
+				h2 {
+					text-align:center;
+					&::before, &::after {
+						display:none;
+					}
+				}
 			}
 		}
 	}

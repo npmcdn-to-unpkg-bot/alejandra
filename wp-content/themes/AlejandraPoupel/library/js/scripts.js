@@ -127,6 +127,16 @@ jQuery(document).ready(function($) {
   */
   loadGravatars();
 
+	$('.portfolioSlider').bxSlider({
+			controls: false,
+			auto: true,
+			mode: 'fade',
+			captions: false,
+			pager: false
+		}
+	);
+
+
 	$('.homepageSlider').bxSlider({
 		controls: false,
 			auto: true,
@@ -136,14 +146,6 @@ jQuery(document).ready(function($) {
 		}
 	);
 
-	$('.portfolioSlider').bxSlider({
-		controls: false,
-		auto: true,
-		mode: 'fade',
-		captions: true,
-		pager: false
-		}
-	);
 
 	$('.testimonialsSlider').bxSlider({
 			controls: false,
