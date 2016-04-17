@@ -29,12 +29,12 @@
 <main>
     <section class="container portfolioAlter" id="gallery">
         <div class="row">
-            <aside>
+            <aside class="portfolioFilters">
                     <?php
                     foreach (get_categories() as $category){
-                        echo "<a data-category='cat-$category->term_id' class='portfolioFilter'>";
+                        echo "<span class='col-xs-6 col-sm-3' ><a data-category='cat-$category->term_id' class='portfolioFilter'>";
                         echo $category->name;
-                        echo "</a>";
+                        echo "</a></span>";
                     } ?>
                     <a id="filter-all" data-category="cat-all" class="portfolioFilter">Voir tout</a>
             </aside>
@@ -58,10 +58,8 @@
                 <img src="" class="lightboxedImage"/>
                 <div class="controls">
                     <span class="close">close</span>
-                    <div class="navigators">
                         <span class="navPrev">prev</span>
                         <span class="navNext">next</span>
-                    </div>
                 </div>
             </div>
 

@@ -264,6 +264,10 @@ body {
 		transition: $basicTransition;
 		&:hover {
 			fill: $orange;
+			.alterColor {
+				fill:$black;
+				transition: $basicTransition;
+			}
 		}
 	}
 	&.whiteHeader{
@@ -281,6 +285,9 @@ body {
 		}
 		#logo {
 			fill: $orange;
+			.alterColor {
+				fill:$black;
+			}
 			&:hover {
 				fill: $black;
 			}

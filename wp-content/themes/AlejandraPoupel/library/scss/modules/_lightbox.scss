@@ -23,12 +23,46 @@ you can just remove this stylesheet.
   text-align: center;
   background: rgba(255,255,255,0.95);
   img {
-    max-height:80%;
-    margin-top:5%;
-    max-width:80%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-height: 90%;
+    max-width: 90%;
   }
-  .navigators {
-
+  .controls {
+    .close{
+      position: absolute;
+      bottom: 0;
+      height: 5%;
+      display: block;
+      width: 100%;
+      z-index: 100;
+      font-size: 1.5em;
+      text-transform: uppercase;
+      color: $black;
+      letter-spacing: 5px;
+      cursor:pointer;
+      padding-top: 10px;
+    }
+    .navPrev, .navNext {
+      position: absolute;
+      height: 100%;
+      display:block;
+      width: 50%;
+      line-height:100%;
+      text-align:center;
+    }
+    .navPrev {
+      left:0;
+      cursor:url('../images/cursorPrev.png'), pointer;
+    }
+    .navNext {
+      right:0;
+      cursor:url('../images/cursorNext.png'), pointer;
+    }
   }
 
 }

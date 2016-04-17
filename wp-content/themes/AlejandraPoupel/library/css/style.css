@@ -646,9 +646,40 @@ you can just remove this stylesheet.
   text-align: center;
   background: rgba(255, 255, 255, 0.95); }
   .lightbox img {
-    max-height: 80%;
-    margin-top: 5%;
-    max-width: 80%; }
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-height: 90%;
+    max-width: 90%; }
+  .lightbox .controls .close {
+    position: absolute;
+    bottom: 0;
+    height: 5%;
+    display: block;
+    width: 100%;
+    z-index: 100;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: #323944;
+    letter-spacing: 5px;
+    cursor: pointer;
+    padding-top: 10px; }
+  .lightbox .controls .navPrev, .lightbox .controls .navNext {
+    position: absolute;
+    height: 100%;
+    display: block;
+    width: 50%;
+    line-height: 100%;
+    text-align: center; }
+  .lightbox .controls .navPrev {
+    left: 0;
+    cursor: url("../images/cursorPrev.png"), pointer; }
+  .lightbox .controls .navNext {
+    right: 0;
+    cursor: url("../images/cursorNext.png"), pointer; }
 
 /******************************************************************
 Site Name:
@@ -1196,7 +1227,7 @@ HEADER STYLES
   .header #logo {
     margin: 0.75em 0;
     fill: #fff;
-    width: 170px; }
+    width: 230px; }
   .header nav {
     float: right;
     margin: 1.5em 0; }
@@ -1715,6 +1746,8 @@ FOOTER STYLES
     display: inline-block;
     vertical-align: middle;
     margin: 0 30px; }
+    .footer svg .alterColor {
+      fill: #fff; }
   .footer nav {
     display: inline-block;
     vertical-align: middle; }
@@ -1916,6 +1949,33 @@ view.
   			/*&.grid-item--2 {
                   width:48%;
               }*/ }
+.page-template-portfolioAlter .portfolioAlter .portfolioFilters {
+  transform: translateY(-50px);
+  position: relative;
+  z-index: 100; }
+  .page-template-portfolioAlter .portfolioAlter .portfolioFilters span:hover {
+    cursor: pointer; }
+  .page-template-portfolioAlter .portfolioAlter .portfolioFilters span a {
+    width: 100%;
+    display: block;
+    margin: 5px auto;
+    text-align: center;
+    padding: 20px 0;
+    background-color: white;
+    border: 5px solid #e8ded5;
+    font-family: "Playfair Display", serif;
+    font-weight: 900;
+    color: #323944;
+    font-size: 2em; }
+  .page-template-portfolioAlter .portfolioAlter .portfolioFilters #filter-all {
+    text-align: center;
+    width: 100%;
+    display: block;
+    font-family: "Playfair Display", serif;
+    font-weight: 900;
+    color: #323944;
+    font-size: 2em;
+    text-decoration: underline; }
 
 /*********************
 LARGER MOBILE DEVICES
@@ -2286,8 +2346,18 @@ you can add resource intensive styles.
     .page-template-Agency .meetAlejandraSingle > div > p {
       padding: 70px; }
 
+  /*********************
+  PAGE TEMOIGNAGES
+  *********************/
   .page-template-testimonial .testimonialContent {
-    font-size: 1.5em; } }
+    font-size: 1.5em; }
+
+  /*********************
+  PAGE PORTFOLIO
+  *********************/
+  .page-template-portfolioAlter .portfolioAlter .portfolioFilters span a {
+    width: 70%;
+    padding: 60px 0; } }
 /*********************
 DESKTOP
 This is the average viewing window. So Desktops, Laptops, and
@@ -2537,6 +2607,9 @@ body {
     transition: all ease-in-out 0.2s; }
     body .header #logo:hover {
       fill: #F4920A; }
+      body .header #logo:hover .alterColor {
+        fill: #323944;
+        transition: all ease-in-out 0.2s; }
   body .header.whiteHeader {
     background-image: none;
     background-color: #fff;
@@ -2550,6 +2623,8 @@ body {
       color: #323944; }
     body .header.whiteHeader #logo {
       fill: #F4920A; }
+      body .header.whiteHeader #logo .alterColor {
+        fill: #323944; }
       body .header.whiteHeader #logo:hover {
         fill: #323944; }
     body .header.whiteHeader li.qtranxs-lang-menu {

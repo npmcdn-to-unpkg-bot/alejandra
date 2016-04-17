@@ -50,9 +50,28 @@ PAGE AGENCE
 	}
 }
 
+/*********************
+PAGE TEMOIGNAGES
+*********************/
+
 .page-template-testimonial {
 	.testimonialContent {
 		font-size: 1.5em;
 	}
 }
 
+/*********************
+PAGE PORTFOLIO
+*********************/
+.page-template-portfolioAlter {
+	.portfolioAlter {
+		.portfolioFilters {
+			span {
+				a {
+					width: 70%;
+					padding: 60px 0;
+				}
+			}
+		}
+	}
+}
