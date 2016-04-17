@@ -1191,14 +1191,19 @@ FOOTER STYLES
 
 /******PAGE TEMOIGNAGES************/
 
-.testimonialContent {
-	display: block;
-	width: 100%;
-	font-size: 1.1em;
-	font-style: italic;
-	font-weight: 100;
-	line-height: 1.5;
-	margin-bottom: 20px;
+.page-template-testimonial {
+	.testimonialContent {
+		display: block;
+		width: 100%;
+		font-size: 1.1em;
+		font-style: italic;
+		font-weight: 100;
+		line-height: 1.5;
+		margin-bottom: 20px;
+	}
+	h2 {
+		text-align:center;
+	}
 }
 
 /******PAGE BLOG************/

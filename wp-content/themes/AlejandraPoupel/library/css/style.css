@@ -1793,7 +1793,7 @@ view.
     max-width: 120%; }
 
 /******PAGE TEMOIGNAGES************/
-.testimonialContent {
+.page-template-testimonial .testimonialContent {
   display: block;
   width: 100%;
   font-size: 1.1em;
@@ -1801,6 +1801,8 @@ view.
   font-weight: 100;
   line-height: 1.5;
   margin-bottom: 20px; }
+.page-template-testimonial h2 {
+  text-align: center; }
 
 /******PAGE BLOG************/
 .page-template-blog .paginationContainer {
@@ -2085,10 +2087,6 @@ you can add resource intensive styles.
   .page-template-homepage .alejandraDescription .descriptionContent {
     margin-top: 200px; }
 
-  .testimonialContent {
-    font-size: 1.5em;
-    font-style: italic; }
-
   .page-template-blog .hentry:nth-child(2), .page-template-blog .hentry:nth-child(3) {
     width: 50%;
     float: left; }
@@ -2189,7 +2187,10 @@ you can add resource intensive styles.
     .page-template-Agency .meetAlejandraSingle > div.meetAlejandraText {
       margin: 0; }
     .page-template-Agency .meetAlejandraSingle > div > p {
-      padding: 70px; } }
+      padding: 70px; }
+
+  .page-template-testimonial .testimonialContent {
+    font-size: 1.5em; } }
 /*********************
 DESKTOP
 This is the average viewing window. So Desktops, Laptops, and
@@ -2739,8 +2740,6 @@ body {
     /*&.grid-item--2 {
     	width:48%;
     }*/ }
-  body.page-template-testimonial h2 {
-    text-align: center; }
   body.page-template-testimonial .testimonials {
     background-color: whitesmoke;
     padding-bottom: 160px; }

@@ -374,10 +374,6 @@ mobile. Make sure to double check these!
 .page-template-homepage .alejandraDescription .descriptionContent {
   margin-top: 200px; }
 
-.testimonialContent {
-  font-size: 1.5em;
-  font-style: italic; }
-
 .page-template-blog .hentry:nth-child(2), .page-template-blog .hentry:nth-child(3) {
   width: 50%;
   float: left; }
