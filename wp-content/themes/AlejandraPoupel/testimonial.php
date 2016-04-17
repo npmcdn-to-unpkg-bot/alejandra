@@ -7,7 +7,7 @@
  * @since 1986
  */
 ?>
-<?php header();?>
+
 <?php get_header();?>
 
 <div class="heroSlider" xmlns="http://www.w3.org/1999/html" >
