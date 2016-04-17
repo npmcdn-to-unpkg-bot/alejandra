@@ -63,4 +63,15 @@ body {
       }
     }
   }
+  &.page-template-Agency {
+    .imgContainer {
+      display:none;
+      &:nth-child(2){
+        display:block;
+      }
+      img {
+        width:100%;
+      }
+    }
+  }
 }

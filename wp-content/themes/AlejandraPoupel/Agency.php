@@ -40,10 +40,10 @@
 
         <div class="row meetAlejandraSingle">
 
-                    <div class="col-lg-6 imgContainer" data-scroll-speed="<?php the_sub_field('image_scroll_speed');?>">
+                    <div class="col-xs-12 col-sm-5 col-md-6 col-lg-6 imgContainer" data-scroll-speed="<?php the_sub_field('image_scroll_speed');?>">
                         <img src="<?php the_sub_field('alejandra_image');?>" alt="">
                         </div>
-                    <div class="col-lg-6 meetAlejandraText" data-scroll-speed="<?php the_sub_field('text_scroll_speed');?>" >
+                    <div class="col-xs-12 col-sm-7 col-md-6 col-lg-6 meetAlejandraText" data-scroll-speed="<?php the_sub_field('text_scroll_speed');?>" >
                             <p><?php the_sub_field('alejandra_description');?></p>
                     </div>
         </div>
