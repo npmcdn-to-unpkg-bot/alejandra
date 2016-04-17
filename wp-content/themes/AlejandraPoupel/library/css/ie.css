@@ -187,53 +187,53 @@ them in here, they won't work.
 /*********************
 NAVIGATION STYLES
 *********************/
-/* .menu is clearfixed inside mixins.scss */
-.menu {
-  /* end .menu ul */ }
-  .menu ul {
-    /* end .menu ul li */
-    /* highlight current page */
-    /* end current highlighters */ }
-    .menu ul li {
-      /*
-      plan your menus and drop-downs wisely.
-      */ }
-      .menu ul li a {
+body {
+  /* .menu is clearfixed inside mixins.scss */
+  /* end .menu */
+  	/*********************
+      POSTS & CONTENT STYLES
+      *********************/
+  /* entry content */
+  /* end .entry-content */
+  	/*********************
+      FOOTER STYLES
+      *********************/
+  	/*
+      check your menus here. do they look good?
+      do they need tweaking?
+      */
+  /* end .footer-links */ }
+  body .menu {
+    /* end .menu ul */ }
+    body .menu ul {
+      /* end .menu ul li */
+      /* highlight current page */
+      /* end current highlighters */ }
+      body .menu ul li {
         /*
-        you can use hover styles here even though this size
-        has the possibility of being a mobile device.
+        plan your menus and drop-downs wisely.
         */ }
+        body .menu ul li a {
+          /*
+          you can use hover styles here even though this size
+          has the possibility of being a mobile device.
+          */ }
+  body .entry-content {
+    /* at this larger size, we can start to align images */ }
+    body .entry-content .alignleft, body .entry-content img.alignleft {
+      margin-right: 1.5em;
+      display: inline;
+      float: left; }
+    body .entry-content .alignright, body .entry-content img.alignright {
+      margin-left: 1.5em;
+      display: inline;
+      float: right; }
+    body .entry-content .aligncenter, body .entry-content img.aligncenter {
+      margin-right: auto;
+      margin-left: auto;
+      display: block;
+      clear: both; }
 
-/* end .menu */
-/*********************
-POSTS & CONTENT STYLES
-*********************/
-/* entry content */
-.entry-content {
-  /* at this larger size, we can start to align images */ }
-  .entry-content .alignleft, .entry-content img.alignleft {
-    margin-right: 1.5em;
-    display: inline;
-    float: left; }
-  .entry-content .alignright, .entry-content img.alignright {
-    margin-left: 1.5em;
-    display: inline;
-    float: right; }
-  .entry-content .aligncenter, .entry-content img.aligncenter {
-    margin-right: auto;
-    margin-left: auto;
-    display: block;
-    clear: both; }
-
-/* end .entry-content */
-/*********************
-FOOTER STYLES
-*********************/
-/*
-check your menus here. do they look good?
-do they need tweaking?
-*/
-/* end .footer-links */
 /******************************************************************
 Site Name:
 Author:
@@ -367,6 +367,10 @@ mobile. Make sure to double check these!
   */ }
 
 /* end .footer-links */
+.testimonialContent {
+  font-size: 1.5em;
+  font-style: italic; }
+
 /******************************************************************
 Site Name:
 Author:

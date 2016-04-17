@@ -1738,6 +1738,15 @@ view.
 .copyright {
   font-size: 0.8rem; }
 
+.testimonialContent {
+  display: block;
+  width: 100%;
+  font-size: 1.1em;
+  font-style: italic;
+  font-weight: 100;
+  line-height: 1.5;
+  margin-bottom: 20px; }
+
 /*********************
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's
@@ -1770,53 +1779,52 @@ tweeners.
   /*********************
   NAVIGATION STYLES
   *********************/
-  /* .menu is clearfixed inside mixins.scss */
-  .menu {
-    /* end .menu ul */ }
-    .menu ul {
-      /* end .menu ul li */
-      /* highlight current page */
-      /* end current highlighters */ }
-      .menu ul li {
-        /*
-        plan your menus and drop-downs wisely.
-        */ }
-        .menu ul li a {
+  body {
+    /* .menu is clearfixed inside mixins.scss */
+    /* end .menu */
+    	/*********************
+        POSTS & CONTENT STYLES
+        *********************/
+    /* entry content */
+    /* end .entry-content */
+    	/*********************
+        FOOTER STYLES
+        *********************/
+    	/*
+        check your menus here. do they look good?
+        do they need tweaking?
+        */
+    /* end .footer-links */ }
+    body .menu {
+      /* end .menu ul */ }
+      body .menu ul {
+        /* end .menu ul li */
+        /* highlight current page */
+        /* end current highlighters */ }
+        body .menu ul li {
           /*
-          you can use hover styles here even though this size
-          has the possibility of being a mobile device.
+          plan your menus and drop-downs wisely.
           */ }
-
-  /* end .menu */
-  /*********************
-  POSTS & CONTENT STYLES
-  *********************/
-  /* entry content */
-  .entry-content {
-    /* at this larger size, we can start to align images */ }
-    .entry-content .alignleft, .entry-content img.alignleft {
-      margin-right: 1.5em;
-      display: inline;
-      float: left; }
-    .entry-content .alignright, .entry-content img.alignright {
-      margin-left: 1.5em;
-      display: inline;
-      float: right; }
-    .entry-content .aligncenter, .entry-content img.aligncenter {
-      margin-right: auto;
-      margin-left: auto;
-      display: block;
-      clear: both; }
-
-  /* end .entry-content */
-  /*********************
-  FOOTER STYLES
-  *********************/
-  /*
-  check your menus here. do they look good?
-  do they need tweaking?
-  */
-  /* end .footer-links */ }
+          body .menu ul li a {
+            /*
+            you can use hover styles here even though this size
+            has the possibility of being a mobile device.
+            */ }
+    body .entry-content {
+      /* at this larger size, we can start to align images */ }
+      body .entry-content .alignleft, body .entry-content img.alignleft {
+        margin-right: 1.5em;
+        display: inline;
+        float: left; }
+      body .entry-content .alignright, body .entry-content img.alignright {
+        margin-left: 1.5em;
+        display: inline;
+        float: right; }
+      body .entry-content .aligncenter, body .entry-content img.aligncenter {
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+        clear: both; } }
 @media only screen and (max-width: 768px) {
   /******************************************************************
   Site Name: 
@@ -1998,7 +2006,10 @@ you can add resource intensive styles.
     the footer.
     */ }
 
-  /* end .footer-links */ }
+  /* end .footer-links */
+  .testimonialContent {
+    font-size: 1.5em;
+    font-style: italic; } }
 @media only screen and (max-width: 992px) {
   /******************************************************************
   Site Name: 
@@ -2603,7 +2614,7 @@ body {
     position: relative;
     text-align: right; }
     body.page-template-Service article h3 {
-      font-size: 3em; }
+      font-size: 5em; }
     body.page-template-Service article p {
       text-align: inherit;
       z-index: 1;
@@ -2614,7 +2625,9 @@ body {
       font-weight: 900;
       top: 0;
       color: whitesmoke;
-      text-align: left; }
+      text-align: left;
+      -ms-word-break: break-all;
+      word-break: break-all; }
     body.page-template-Service article:nth-of-type(odd) .descriptionContainer {
       float: right;
       text-align: left; }
@@ -2672,6 +2685,8 @@ body {
     /*&.grid-item--2 {
     	width:48%;
     }*/ }
+  body.page-template-testimonial h2 {
+    text-align: center; }
   body.page-template-testimonial .testimonials {
     background-color: whitesmoke;
     padding-bottom: 160px; }
@@ -2698,14 +2713,6 @@ body {
         color: #e8ded5;
         float: right;
         transform: translateY(-45px) translateX(35px); }
-      body.page-template-testimonial .testimonials .testimonialDescription .testimonialContent {
-        display: block;
-        width: 100%;
-        font-size: 1.5em;
-        font-style: italic;
-        font-weight: 100;
-        line-height: 1.5;
-        margin-bottom: 20px; }
       body.page-template-testimonial .testimonials .testimonialDescription .tesimonialPerson {
         font-size: 1.1em; }
     body.page-template-testimonial .testimonials .bx-wrapper {
@@ -2728,14 +2735,6 @@ body {
             color: transparent; }
             body.page-template-testimonial .testimonials .bx-wrapper .bx-pager .bx-pager-item a.active {
               opacity: 1; }
-  body.page-template-testimonial .rightAlign {
-    width: 50%;
-    float: right;
-    text-align: center; }
-  body.page-template-testimonial .leftAlign {
-    width: 50%;
-    float: left;
-    text-align: center; }
   body.page-template-testimonial .pressSingle {
     height: 150px;
     line-height: 150px;

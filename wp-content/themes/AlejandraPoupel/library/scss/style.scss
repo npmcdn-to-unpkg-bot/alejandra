@@ -669,7 +669,7 @@ body {
 			position: relative;
 			text-align:right;
 			h3 {
-				font-size:3em;
+				font-size:5em;
 			}
 			p {
 				text-align: inherit;
@@ -683,6 +683,8 @@ body {
 				top: 0;
 				color: whitesmoke;
 				text-align: left;
+				-ms-word-break:break-all;
+				word-break: break-all;
 			}
 			&:nth-of-type(odd) .descriptionContainer {
 				float: right;
@@ -770,6 +772,9 @@ body {
 	}
 	/******PAGE REFERENCES************/
 	&.page-template-testimonial {
+		h2 {
+			text-align:center;
+		}
 		.testimonials {
 			background-color:whitesmoke;
 			padding-bottom:160px;
@@ -799,15 +804,7 @@ body {
 					float: right;
 					transform: translateY(-45px) translateX(35px);
 				}
-				.testimonialContent {
-					display: block;
-					width: 100%;
-					font-size: 1.5em;
-					font-style: italic;
-					font-weight: 100;
-					line-height: 1.5;
-					margin-bottom: 20px;
-				}
+
 				.tesimonialPerson {
 					font-size: 1.1em;
 				}
@@ -839,16 +836,7 @@ body {
 			}
 
 		}
-		.rightAlign {
-			width: 50%;
-			float: right;
-			text-align: center;
-		}
-		.leftAlign {
-			width: 50%;
-			float: left;
-			text-align: center ;
-		}
+
 		.pressSingle {
 			height:150px;
 			line-height:150px;

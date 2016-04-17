@@ -25,18 +25,20 @@
         <section class="testimonials">
             <div class="container">
             <div class="row">
-                <h2 class="rightAlign"><?php the_field('testimonials_title');?></h2>
+                <h2 class="col-xs-12 col-sm-12 col-md-6 col-md-offset-6"><?php the_field('testimonials_title');?></h2>
             </div>
             <div class="row testimonialsSlider">
+
                 <?php if( have_rows('testimonials') ):
                     while ( have_rows('testimonials') ) : the_row();?>
+
                         <article>
-                            <div class="col-lg-6 testimonialImage" >
+                            <div class="col-xs-2 col-sm-4 col-md-4 col-lg-6 testimonialImage" >
                                 <?php $thumb = wp_get_attachment_image_src(get_sub_field('testimonial_image'), 'testimonials' ); ?>
                                 <img src="<?php echo $thumb[0];?>">
                             </div>
 
-                            <div class="col-lg-5 testimonialDescription" data-scroll-speed="-20">
+                            <div class="col-xs-10 col-sm-8 col-md-7 col-lg-5 testimonialDescription" data-scroll-speed="-20">
                                 <span class="testimonialKind">
                                     <?php $term = get_sub_field('event_category');
                                         echo $term->name;?>
@@ -76,12 +78,12 @@
         <div class="row">
 
             <div class="row">
-            <h2 class="leftAlign"><?php the_field('press_title');?></h2>
+            <h2 class="col-xs-12 col-sm-12 col-md-3"><?php the_field('press_title');?></h2>
            </div>
             <div class="row">
             <?php if( have_rows('press_single') ):
                 while ( have_rows('press_single') ) : the_row();?>
-                    <article class="pressSingle lightboxSingle col-lg-3" data-image="<?php the_sub_field('press_img');?>">
+                    <article class="col-xs-4 col-sm-3 col-md-3 col-lg-3 pressSingle lightboxSingle " data-image="<?php the_sub_field('press_img');?>">
                     <img src="<?php the_sub_field('press_logo');?>" class="logo" />
                     <div class="pressSingleInfos">
                         <div class="pressSingleInfosWrapper">

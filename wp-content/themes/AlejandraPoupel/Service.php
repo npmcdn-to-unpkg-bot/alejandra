@@ -30,19 +30,16 @@
                 while ( have_rows('services') ) : the_row();?>
                     <article class="row">
 
-                        <div class="col-lg-8 descriptionContainer">
+                        <div class="col-sm-12 col-sm-8 col-md-8 col-lg-8 descriptionContainer">
 
                             <h3><?php the_sub_field('service_title');?></h3>
                             <p><?php the_sub_field('service_description');?></p>
 
                         </div>
 
-                        <div class="col-lg-4 sliderContainer">
+                        <div class="col-sm-12 col-sm-4 col-md-4 col-lg-4 quoteContainer">
                             <blockquote><?php the_sub_field('service_quote');?></blockquote>
                         </div>
-
-
-
                     </article>
                     <div class="separator" data-image="<?php the_sub_field('service_image');?>"></div>
                 <?php endwhile;
