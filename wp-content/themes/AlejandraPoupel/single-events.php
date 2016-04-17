@@ -71,8 +71,8 @@
 									</footer>
 							</article>
 						<?php endif; ?>
-						<?php previous_post_link('%link');?>
-						<?php next_post_link('%link'); ?>
+						<?php /*previous_post_link('%link');*/?><!--
+						--><?php /*next_post_link('%link'); */?>
 
 
 					</main>

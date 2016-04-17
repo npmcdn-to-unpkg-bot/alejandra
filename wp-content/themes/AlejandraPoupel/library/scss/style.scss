@@ -261,12 +261,12 @@ body {
 	}
 .header {
 	#logo {
-		transition: $basicTransition;
+
 		&:hover {
 			fill: $orange;
+			transition: $basicTransition;
 			.alterColor {
-				fill:$black;
-				transition: $basicTransition;
+				fill:$white;
 			}
 		}
 	}
@@ -285,6 +285,7 @@ body {
 		}
 		#logo {
 			fill: $orange;
+			transition: $basicTransition;
 			.alterColor {
 				fill:$black;
 			}

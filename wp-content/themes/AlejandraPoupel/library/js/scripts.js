@@ -120,6 +120,12 @@ jQuery(document).ready(function($) {
 		console.log(slideImage);
 		$(this).css('background-image', 'url('+slideImage+')');
 	});
+
+	$('.portfolioSlider > li').each(function(){
+		var slideImage = $(this).data('img');
+		console.log(slideImage);
+		$(this).css('background-image', 'url('+slideImage+')');
+	});
     $(window).trigger('scroll');
   /*
    * Let's fire off the gravatar function
@@ -128,14 +134,13 @@ jQuery(document).ready(function($) {
   loadGravatars();
 
 	$('.portfolioSlider').bxSlider({
-			controls: false,
-			auto: true,
-			mode: 'fade',
-			captions: false,
-			pager: false
+		controls: false,
+		auto: true,
+		mode: 'fade',
+		captions: false,
+		pager: false
 		}
 	);
-
 
 	$('.homepageSlider').bxSlider({
 		controls: false,
@@ -145,7 +150,6 @@ jQuery(document).ready(function($) {
 		   pager: false
 		}
 	);
-
 
 	$('.testimonialsSlider').bxSlider({
 			controls: false,
@@ -244,8 +248,6 @@ jQuery(document).ready(function($) {
 	var prevImg;
 	var pressReleasesCount = $(".lightboxSingle").length;
 	$(".lightboxSingle").click(function(){
-		/*viewedImage = $(this);
-		hiddenAmount = viewedImage.nextUntil('.lightboxSingle:not(.isotope-hidden)').length;*/
 		var src = $(this).attr("data-image");//récupère l'attribut src de l'img sur laquelle on clique
 		$(".lightbox img").attr("src",src);//remplace l'attribut src de l'img qui se trouve dans .lightbox par l'attribut src de l'img sur laquelle on clique
 		$(".lightbox").fadeIn(500);//ouvre la lightbox en fondu et remet la lightbox en display table
@@ -255,7 +257,7 @@ jQuery(document).ready(function($) {
 		$(".lightbox").fadeOut(500);
 	});
 
-	$(".navNext").click(function(e){
+	$(".navNext").click(function(){
 		if(index>=pressReleasesCount-1) {
 			index=0;
 		}
@@ -270,7 +272,7 @@ jQuery(document).ready(function($) {
 
 	});
 
-	$(".navPrev").click(function(e){
+	$(".navPrev").click(function(){
 		if(index<=0) {
 			index=pressReleasesCount-1 ;
 		}
@@ -283,17 +285,9 @@ jQuery(document).ready(function($) {
 		$(".lightbox img").fadeOut(300, function() {
 			$(".lightbox img").attr("src",srcImg);
 		}).fadeIn(300);
-
-
 		//$(".legende").text(legende);
 	});
 
-
-
-
 }); /* end of as page load scripts */
-
-jQuery(window).load(function($) {
-});
 
 

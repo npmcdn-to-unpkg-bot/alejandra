@@ -183,8 +183,11 @@ HEADER STYLES
 
 	#logo {
 		margin: 0.75em 0;
-		fill:$white;
+		fill:$orange;
 		width:230px;
+		.alterColor {
+			fill: $black;
+		}
 	}
 
 	nav {
@@ -1344,6 +1347,16 @@ FOOTER STYLES
 
 /******PAGE PORTFOLIO ALTERNATIVE************/
 .page-template-portfolioAlter {
+	.portfolioSlider {
+		height: calc(100% + 60px);
+		margin: 0;
+		li {
+			background-size: cover;
+			height: 670px;
+			background-position: center;
+		}
+	}
+
 	.portfolioAlter {
 		#gallery-content-center img {
 			width: calc(50% - 10px);

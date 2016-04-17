@@ -12,3 +12,12 @@ be seen on the Desktop.
 .menuOpener {
   display:none;
 }
+
+.header {
+  #logo {
+    fill:$white;
+    .alterColor{
+      fill:$white ;
+    }
+  }
+}

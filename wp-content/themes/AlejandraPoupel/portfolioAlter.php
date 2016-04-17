@@ -12,14 +12,11 @@
 
 
 <div class="heroSlider" xmlns="http://www.w3.org/1999/html">
-    <ul class="portfolioSlider">
+    <ul class="portfolioSlider" data-scroll-speed="-4">
         <?php
-        if( have_rows('portfolio_slides') ):
-            while ( have_rows('portfolio_slides') ) : the_row();?>
-                <?php
-                $slideThumbs = wp_get_attachment_image_src(get_sub_field('portfolio_image'), 'portfolio-thumb' );
-                ?>
-                <li><img src="<?php the_sub_field('portfolio_single_slide');?>"></li>
+        if( have_rows('slider_portfolio') ):
+            while ( have_rows('slider_portfolio')) : the_row();?>
+                <li data-img="<?php the_sub_field('slider_portfolio_image');?>"></li>
             <?php endwhile;
         else :?>
         <?php endif; ?>

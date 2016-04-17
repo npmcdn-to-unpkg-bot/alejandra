@@ -1226,8 +1226,10 @@ HEADER STYLES
   font-family: "Montserrat", Helvetica Neue, Helvetica, Arial, sans-serif; }
   .header #logo {
     margin: 0.75em 0;
-    fill: #fff;
+    fill: #F4920A;
     width: 230px; }
+    .header #logo .alterColor {
+      fill: #323944; }
   .header nav {
     float: right;
     margin: 1.5em 0; }
@@ -1935,6 +1937,13 @@ view.
   box-sizing: border-box; }
 
 /******PAGE PORTFOLIO ALTERNATIVE************/
+.page-template-portfolioAlter .portfolioSlider {
+  height: calc(100% + 60px);
+  margin: 0; }
+  .page-template-portfolioAlter .portfolioSlider li {
+    background-size: cover;
+    height: 670px;
+    background-position: center; }
 .page-template-portfolioAlter .portfolioAlter #gallery-content-center img {
   width: calc(50% - 10px);
   margin-bottom: 10px;
@@ -2326,8 +2335,6 @@ you can add resource intensive styles.
     body .header {
       background-color: #fff;
       background-image: none; }
-      body .header #logo {
-        fill: #F4920A; }
       body .header nav {
         display: none;
         float: none;
@@ -2415,7 +2422,12 @@ you can add resource intensive styles.
   
   ******************************************************************/
   .menuOpener {
-    display: none; } }
+    display: none; }
+
+  .header #logo {
+    fill: #fff; }
+    .header #logo .alterColor {
+      fill: #fff; } }
 /*********************
 LARGE VIEWING SIZE
 This is for the larger monitors and possibly full screen viewers.
@@ -2642,13 +2654,11 @@ body {
     bottom: 0;
     left: 0;
     z-index: 130; }
-  body .header #logo {
+  body .header #logo:hover {
+    fill: #F4920A;
     transition: all ease-in-out 0.2s; }
-    body .header #logo:hover {
-      fill: #F4920A; }
-      body .header #logo:hover .alterColor {
-        fill: #323944;
-        transition: all ease-in-out 0.2s; }
+    body .header #logo:hover .alterColor {
+      fill: #fff; }
   body .header.whiteHeader {
     background-image: none;
     background-color: #fff;
@@ -2661,7 +2671,8 @@ body {
     body .header.whiteHeader a {
       color: #323944; }
     body .header.whiteHeader #logo {
-      fill: #F4920A; }
+      fill: #F4920A;
+      transition: all ease-in-out 0.2s; }
       body .header.whiteHeader #logo .alterColor {
         fill: #323944; }
       body .header.whiteHeader #logo:hover {
