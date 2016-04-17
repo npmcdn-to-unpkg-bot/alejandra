@@ -21,8 +21,33 @@ body {
 	h1 {
 		width: 70%;
 		margin-left: 15%;
-
 		font-size: 6em;
 	}
+}
+
+/*********************
+PAGE AGENCE
+*********************/
+
+.page-template-Agency {
+	.meetAlejandraSingle {
+		> div {
+			min-height: 500px;
+			line-height: 500px;
+			&.meetAlejandraText {
+				margin:0;
+			}
+			> p {
+				padding: 70px;
+			}
+		}
+		&:nth-child(odd) .imgContainer {
+			img {
+			}
+		}
+		img {
+		}
+	}
+
 }
 

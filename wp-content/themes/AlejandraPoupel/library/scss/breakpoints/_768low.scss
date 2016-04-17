@@ -59,14 +59,4 @@ body {
       }
     }
   }
-  &.page-template-Agency {
-    .imgContainer {
-      &:nth-child(2){
-        display:block;
-      }
-      img {
-        width:100%;
-      }
-    }
-  }
 }
