@@ -367,6 +367,13 @@ mobile. Make sure to double check these!
   */ }
 
 /* end .footer-links */
+.page-template-homepage .portfolioSingle {
+  margin-left: 0; }
+.page-template-homepage .alejandraDescription img {
+  width: 410px; }
+.page-template-homepage .alejandraDescription .descriptionContent {
+  margin-top: 200px; }
+
 .testimonialContent {
   font-size: 1.5em;
   font-style: italic; }
@@ -379,6 +386,9 @@ mobile. Make sure to double check these!
   float: left;
   margin-bottom: 5px; }
 
+.page-template-Agency .imgContainer {
+  display: block; }
+
 /******************************************************************
 Site Name:
 Author:
@@ -389,8 +399,8 @@ This is the desktop size. It's larger than an iPad so it will only
 be seen on the Desktop.
 
 ******************************************************************/
-.wrap {
-  width: 1040px; }
+.menuOpener {
+  display: none; }
 
 /*
 you can call the larger styles if you want, but there's really no need

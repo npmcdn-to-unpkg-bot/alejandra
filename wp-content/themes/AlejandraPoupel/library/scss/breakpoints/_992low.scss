@@ -38,12 +38,7 @@ body {
       }
     }
   }
-  h1 {
-    width:90%;
-    margin-left:5%;
-    margin-top: 10px;
-    font-size: 5em;
-  }
+
 
   &.page-template-homepage {
     .eventKind {
@@ -56,11 +51,7 @@ body {
         }
       }
     }
-    .alejandraDescription {
-      .descriptionContent {
-        margin-top:200px;
-      }
-    }
+
     .lastEvents{
       &::before {
         display:none;

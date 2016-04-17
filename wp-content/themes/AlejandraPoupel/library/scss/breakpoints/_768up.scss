@@ -288,6 +288,19 @@ mobile. Make sure to double check these!
 		}
 	}
 } /* end .footer-links */
+.page-template-homepage {
+	.portfolioSingle {
+		margin-left: 0;
+	}
+	.alejandraDescription {
+		img {
+			width: 410px;
+		}
+		.descriptionContent {
+			margin-top:200px;
+		}
+	}
+}
 
 	.testimonialContent {
 		font-size: 1.5em;
@@ -306,3 +319,9 @@ mobile. Make sure to double check these!
 			margin-bottom: 5px;
 		}
 	}
+
+.page-template-Agency {
+	.imgContainer {
+		display: block ;
+	}
+}

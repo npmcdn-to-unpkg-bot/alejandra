@@ -100,17 +100,21 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 }
 
 h1 {
-	width: 50%;
-	margin-left: 25%;
+
+
+}
+h1 {
+	width:90%;
+	margin-left:5%;
+	margin-top: 10px;
+	top: 20%;
 	position: absolute;
 	z-index: 99;
 	height: 50%;
-	top: 20%;
 	font-family: $playfair;
 	color: $white;
-	color: #fff;
 	font-weight: 900;
-	font-size: 6em;
+	font-size: 5em;
 	line-height: 1.2;
 	text-align: center;
 	&::before, &::after {
@@ -1100,6 +1104,7 @@ FOOTER STYLES
 		font-size: 0.8rem;
 	}
 
+/******PAGE TEMOIGNAGES************/
 .testimonialContent {
 	display: block;
 	width: 100%;
@@ -1136,6 +1141,29 @@ FOOTER STYLES
 			color:$white;
 			font-size: 1.5rem;
 			margin: 0 5px;
+		}
+	}
+}
+
+/******PAGE AGENCE************/
+.page-template-Agency {
+	.imgContainer {
+		display: none;
+	}
+}
+
+/******PAGE ACCUEIL************/
+.page-template-homepage {
+	.portfolioSingle {
+		margin-left: 16.66666667%;
+	}
+	.alejandraDescription {
+			img {
+				width: 100%;
+			}
+		.descriptionContent {
+			margin-top:-200px;
+			text-align: center;
 		}
 	}
 }

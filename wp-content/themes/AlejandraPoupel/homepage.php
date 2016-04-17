@@ -70,10 +70,10 @@
                <div class="col-md-4 col-md-offset-8 col-lg-4 col-lg-offset-8 descriptionTitle">
                    <h2><?php the_sub_field('meet_title');?></h2>
                </div>
-                <div class="col-xs-4 col-sm-4 col-md-3 col-md-offset-1 col-lg-3 col-lg-offset-1 descriptionImage" data-scroll-speed="17" data-scroll-style="lerp">
+                <div class="col-xs-12 col-sm-4 col-md-3 col-md-offset-1 col-lg-3 col-lg-offset-1 descriptionImage" data-scroll-speed="17" data-scroll-style="lerp">
                     <img src="<?php the_sub_field('meet_img');?>" alt="Alejandra Poupel Portrait">
                 </div>
-                <div class="col-xs-8 col-sm-7 col-sm-offset-1 col-md-7 col-md-offset-0 col-lg-7 col-lg-offset-0 descriptionContent" data-scroll-speed="8">
+                <div class="col-xs-10 col-xs-offset-1 col-sm-7 col-sm-offset-1 col-md-7 col-md-offset-0 descriptionContent" data-scroll-speed="8">
                     <p><?php the_sub_field('meet_content');?></p>
 
                     <?php if( have_rows('cta_page_agence') ):
