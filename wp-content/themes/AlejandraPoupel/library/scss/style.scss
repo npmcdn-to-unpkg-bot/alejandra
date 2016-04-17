@@ -613,43 +613,18 @@ body {
 	/******PAGE SERVICES************/
 
 	&.page-template-Service {
-		h2 {
-			width:50%;
-			text-align:center;
-			margin: 0 auto;
-		}
+
 		.service {
 			padding-bottom: 80px;
 		}
 		article {
-			padding:50px 0;
-			position: relative;
-			text-align:right;
-			h3 {
-				font-size:5em;
-			}
+
+
 			p {
 				text-align: inherit;
 				z-index: 1;
 				position: relative;
 				}
-			blockquote {
-				font-size: 5em;
-				font-family: $playfair;
-				font-weight: 900;
-				top: 0;
-				color: whitesmoke;
-				text-align: left;
-				-ms-word-break:break-all;
-				word-break: break-all;
-			}
-			&:nth-of-type(odd) .descriptionContainer {
-				float: right;
-				text-align:left;
-				blockquote {
-					text-align:right;
-				}
-			}
 		}
 		.separator {
 			height: 350px;

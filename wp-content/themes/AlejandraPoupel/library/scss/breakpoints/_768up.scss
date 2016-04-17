@@ -288,6 +288,8 @@ mobile. Make sure to double check these!
 		}
 	}
 } /* end .footer-links */
+
+
 .page-template-homepage {
 	.portfolioSingle {
 		margin-left: 0;
@@ -301,7 +303,6 @@ mobile. Make sure to double check these!
 		}
 	}
 }
-
 	.testimonialContent {
 		font-size: 1.5em;
 		font-style: italic;
@@ -323,5 +324,30 @@ mobile. Make sure to double check these!
 .page-template-Agency {
 	.imgContainer {
 		display: block ;
+	}
+}
+
+.page-template-Service  {
+	h2 {
+		width:50%;
+	}
+	article {
+		padding:50px 0;
+		position: relative;
+		text-align:right;
+		blockquote {
+			font-size: 5em;
+			text-align: left;
+			-ms-word-break:break-all;
+			word-break: break-all;
+		}
+		&:nth-of-type(odd) .descriptionContainer {
+			float: right;
+			text-align:left;
+			blockquote {
+				text-align:right;
+			}
+		}
+
 	}
 }

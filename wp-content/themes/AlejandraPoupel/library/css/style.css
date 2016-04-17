@@ -1738,6 +1738,60 @@ view.
 .copyright {
   font-size: 0.8rem; }
 
+/******PAGE ACCUEIL************/
+.page-template-homepage .portfolioSingle {
+  margin-left: 16.66666667%; }
+.page-template-homepage .alejandraDescription img {
+  width: 100%; }
+.page-template-homepage .alejandraDescription .descriptionContent {
+  margin-top: -200px;
+  text-align: center; }
+
+/******PAGE SAVOIR FAIRE************/
+.page-template-Service h2 {
+  width: 90%;
+  text-align: center;
+  margin: 0 auto; }
+.page-template-Service article h3 {
+  font-size: 5em;
+  text-align: center; }
+.page-template-Service article blockquote {
+  font-size: 4em;
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  top: 0;
+  color: whitesmoke;
+  text-align: center; }
+
+/******PAGE AGENCE************/
+.page-template-Agency .imgContainer {
+  display: none; }
+.page-template-Agency .meetAlejandra {
+  background-color: whitesmoke; }
+  .page-template-Agency .meetAlejandra::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 10px;
+    border-bottom: 50px solid whitesmoke;
+    border-left: calc( 100vw - 80px ) solid transparent;
+    margin-top: -120px; }
+  .page-template-Agency .meetAlejandra .meetAlejandraSingle > div.meetAlejandraText {
+    z-index: 10;
+    margin: 40px 0; }
+  .page-template-Agency .meetAlejandra .meetAlejandraSingle > div > p {
+    vertical-align: middle;
+    display: inline-block;
+    background-color: white;
+    padding: 20px; }
+  .page-template-Agency .meetAlejandra .meetAlejandraSingle:nth-child(odd) .imgContainer {
+    float: right; }
+    .page-template-Agency .meetAlejandra .meetAlejandraSingle:nth-child(odd) .imgContainer img {
+      position: absolute;
+      right: 15px; }
+  .page-template-Agency .meetAlejandra .meetAlejandraSingle img {
+    max-width: 120%; }
+
 /******PAGE TEMOIGNAGES************/
 .testimonialContent {
   display: block;
@@ -1771,44 +1825,6 @@ view.
     color: #fff;
     font-size: 1.5rem;
     margin: 0 5px; }
-
-/******PAGE AGENCE************/
-.page-template-Agency .imgContainer {
-  display: none; }
-.page-template-Agency .meetAlejandra {
-  background-color: whitesmoke; }
-  .page-template-Agency .meetAlejandra::before {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 10px;
-    border-bottom: 50px solid whitesmoke;
-    border-left: calc( 100vw - 80px ) solid transparent;
-    margin-top: -120px; }
-  .page-template-Agency .meetAlejandra .meetAlejandraSingle > div.meetAlejandraText {
-    z-index: 10;
-    margin: 40px 0; }
-  .page-template-Agency .meetAlejandra .meetAlejandraSingle > div > p {
-    vertical-align: middle;
-    display: inline-block;
-    background-color: white;
-    padding: 20px; }
-  .page-template-Agency .meetAlejandra .meetAlejandraSingle:nth-child(odd) .imgContainer {
-    float: right; }
-    .page-template-Agency .meetAlejandra .meetAlejandraSingle:nth-child(odd) .imgContainer img {
-      position: absolute;
-      right: 15px; }
-  .page-template-Agency .meetAlejandra .meetAlejandraSingle img {
-    max-width: 120%; }
-
-/******PAGE ACCUEIL************/
-.page-template-homepage .portfolioSingle {
-  margin-left: 16.66666667%; }
-.page-template-homepage .alejandraDescription img {
-  width: 100%; }
-.page-template-homepage .alejandraDescription .descriptionContent {
-  margin-top: -200px;
-  text-align: center; }
 
 /*********************
 LARGER MOBILE DEVICES
@@ -2082,7 +2098,24 @@ you can add resource intensive styles.
     margin-bottom: 5px; }
 
   .page-template-Agency .imgContainer {
-    display: block; } }
+    display: block; }
+
+  .page-template-Service h2 {
+    width: 50%; }
+  .page-template-Service article {
+    padding: 50px 0;
+    position: relative;
+    text-align: right; }
+    .page-template-Service article blockquote {
+      font-size: 5em;
+      text-align: left;
+      -ms-word-break: break-all;
+      word-break: break-all; }
+    .page-template-Service article:nth-of-type(odd) .descriptionContainer {
+      float: right;
+      text-align: left; }
+      .page-template-Service article:nth-of-type(odd) .descriptionContainer blockquote {
+        text-align: right; } }
 @media only screen and (max-width: 992px) {
   /******************************************************************
   Site Name: 
@@ -2648,36 +2681,12 @@ body {
     body.page-template-Contact .contact .formContainer .btn, body.page-template-Contact .contact .formContainer .blue-btn, body.page-template-Contact .contact .formContainer .comment-reply-link, body.page-template-Contact .contact .formContainer #submit {
       float: left;
       margin: 0; }
-  body.page-template-Service h2 {
-    width: 50%;
-    text-align: center;
-    margin: 0 auto; }
   body.page-template-Service .service {
     padding-bottom: 80px; }
-  body.page-template-Service article {
-    padding: 50px 0;
-    position: relative;
-    text-align: right; }
-    body.page-template-Service article h3 {
-      font-size: 5em; }
-    body.page-template-Service article p {
-      text-align: inherit;
-      z-index: 1;
-      position: relative; }
-    body.page-template-Service article blockquote {
-      font-size: 5em;
-      font-family: "Playfair Display", serif;
-      font-weight: 900;
-      top: 0;
-      color: whitesmoke;
-      text-align: left;
-      -ms-word-break: break-all;
-      word-break: break-all; }
-    body.page-template-Service article:nth-of-type(odd) .descriptionContainer {
-      float: right;
-      text-align: left; }
-      body.page-template-Service article:nth-of-type(odd) .descriptionContainer blockquote {
-        text-align: right; }
+  body.page-template-Service article p {
+    text-align: inherit;
+    z-index: 1;
+    position: relative; }
   body.page-template-Service .separator {
     height: 350px;
     background-size: cover;
