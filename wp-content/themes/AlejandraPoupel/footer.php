@@ -6,7 +6,7 @@
 
 	<?php echo do_shortcode('[instagram-feed id="1399041279"]');?>
 
-				<div id="inner-footer" class="wrap cf container">
+				<div id="inner-footer" class="cf container">
 
 
 					<div class="row">

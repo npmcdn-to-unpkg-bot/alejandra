@@ -25,9 +25,10 @@
         <section class="container ourDna">
             <div class="row">
                 <h2><?php the_field('dna_title');?></h2>
+                </div>
+            <div class="row">
                 <blockquote  data-scroll-speed="9"><?php the_field('dna_quote');?></blockquote>
-                <p class="col-lg-9 col-lg-offset-3"><?php the_field('dna_content');?></p>
-
+                <p class="col-xs-10 col-xs-offset-1 col-md-9 col-md-offset-3"><?php the_field('dna_content');?></p>
 
             </div>
         </section>

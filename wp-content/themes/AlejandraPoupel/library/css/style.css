@@ -2575,7 +2575,7 @@ body {
       float: right; }
       body.page-template-Agency .meetAlejandra .meetAlejandraSingle:nth-child(odd) .imgContainer img {
         position: absolute;
-        right: 0; }
+        right: 15px; }
     body.page-template-Agency .meetAlejandra .meetAlejandraSingle img {
       max-width: 120%; }
   body.page-template-Contact main {
