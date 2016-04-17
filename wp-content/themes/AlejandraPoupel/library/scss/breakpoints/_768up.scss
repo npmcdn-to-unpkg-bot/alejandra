@@ -293,3 +293,16 @@ mobile. Make sure to double check these!
 		font-size: 1.5em;
 		font-style: italic;
 	}
+
+	.page-template-blog {
+		.hentry:nth-child(2), .hentry:nth-child(3){
+			width:50%;
+			float:left;
+		}
+
+		.hentry:nth-child(N + 5) {
+			width:33.33333333%;
+			float:left;
+			margin-bottom: 5px;
+		}
+	}

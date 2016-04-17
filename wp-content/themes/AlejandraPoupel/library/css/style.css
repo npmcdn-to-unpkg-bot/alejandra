@@ -1747,6 +1747,30 @@ view.
   line-height: 1.5;
   margin-bottom: 20px; }
 
+/******PAGE BLOG************/
+.page-template-blog .paginationContainer {
+  clear: both;
+  text-align: center;
+  padding: 30px;
+  background-color: #e8ded5;
+  width: calc(100% - 10px);
+  margin: 0 auto;
+  margin-bottom: 10px; }
+  .page-template-blog .paginationContainer .current {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    color: #e8ded5;
+    background-color: #fff;
+    line-height: 20px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    margin: 0 5px; }
+  .page-template-blog .paginationContainer a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 5px; }
+
 /*********************
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's
@@ -2009,7 +2033,15 @@ you can add resource intensive styles.
   /* end .footer-links */
   .testimonialContent {
     font-size: 1.5em;
-    font-style: italic; } }
+    font-style: italic; }
+
+  .page-template-blog .hentry:nth-child(2), .page-template-blog .hentry:nth-child(3) {
+    width: 50%;
+    float: left; }
+  .page-template-blog .hentry:nth-child(N + 5) {
+    width: 33.33333333%;
+    float: left;
+    margin-bottom: 5px; } }
 @media only screen and (max-width: 992px) {
   /******************************************************************
   Site Name: 
@@ -2255,7 +2287,6 @@ body {
   /******PAGE SERVICES************/
   /******PAGE PORTFOLIO************/
   /******PAGE PORTFOLIO ALTERNATIVE************/
-  /******PAGE REFERENCES************/
   /******PAGE REFERENCES************/ }
   body.page-template-homepage {
     opacity: 0;
@@ -2752,34 +2783,5 @@ body {
     body.page-template-testimonial .pressSingle .logo {
       width: 80%;
       margin-left: 10%; }
-  body.page-template-blog .hentry:nth-child(2), body.page-template-blog .hentry:nth-child(3) {
-    width: 50%;
-    float: left; }
-  body.page-template-blog .hentry:nth-child(N + 5) {
-    width: 33.33333333%;
-    float: left;
-    margin-bottom: 5px; }
-  body.page-template-blog .paginationContainer {
-    clear: both;
-    text-align: center;
-    padding: 30px;
-    background-color: #e8ded5;
-    width: calc(100% - 10px);
-    margin: 0 auto;
-    margin-bottom: 10px; }
-    body.page-template-blog .paginationContainer .current {
-      width: 20px;
-      height: 20px;
-      display: inline-block;
-      color: #e8ded5;
-      background-color: #fff;
-      line-height: 20px;
-      border-radius: 50%;
-      font-size: 1.5rem;
-      margin: 0 5px; }
-    body.page-template-blog .paginationContainer a {
-      color: #fff;
-      font-size: 1.5rem;
-      margin: 0 5px; }
 
 /*# sourceMappingURL=style.css.map */
