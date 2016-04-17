@@ -635,12 +635,7 @@ body {
 				}
 			}
 			.formContainer {
-				h2 {
-					text-align:left;
-					&::after, &::before {
-						margin: 15px 0;
-					}
-				}
+
 				> p {
 					text-align: left;
 					margin-bottom:58px;

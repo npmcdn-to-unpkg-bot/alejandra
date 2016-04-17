@@ -2593,10 +2593,6 @@ body {
       margin: 0 10px; }
       body.page-template-Contact .contact .btn::after, body.page-template-Contact .contact .blue-btn::after, body.page-template-Contact .contact .comment-reply-link::after, body.page-template-Contact .contact #submit::after, body.page-template-Contact .contact .btn::before, body.page-template-Contact .contact .blue-btn::before, body.page-template-Contact .contact .comment-reply-link::before, body.page-template-Contact .contact #submit::before {
         display: none; }
-    body.page-template-Contact .contact .formContainer h2 {
-      text-align: left; }
-      body.page-template-Contact .contact .formContainer h2::after, body.page-template-Contact .contact .formContainer h2::before {
-        margin: 15px 0; }
     body.page-template-Contact .contact .formContainer > p {
       text-align: left;
       margin-bottom: 58px; }

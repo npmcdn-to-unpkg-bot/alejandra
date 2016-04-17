@@ -23,7 +23,7 @@
 
         <section class="container contact">
         <div class="row">
-            <div class="col-lg-5">
+            <div class="col-xs-12 col-md-5">
                 <h2><?php the_field('adresses_title');?></h2>
             <?php if( have_rows('adresses') ):
                 while ( have_rows('adresses') ) : the_row();?>
@@ -57,7 +57,7 @@
 
             </div>
 
-            <div class="col-lg-6 formContainer">
+            <div class="col-xs-12 col-md-6 formContainer">
                 <h2><?php the_field('form_title');?></h2>
                 <p><?php the_field('form_description');?></p>
                 <?php the_field('form');?>
