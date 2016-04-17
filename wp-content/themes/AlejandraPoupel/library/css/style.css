@@ -1828,6 +1828,60 @@ view.
     font-size: 1.5rem;
     margin: 0 5px; }
 
+/******PAGE CONTACT************/
+.page-template-Contact main {
+  background-color: whitesmoke; }
+.page-template-Contact h2 {
+  font-size: 3em;
+  text-align: center; }
+  .page-template-Contact h2::before, .page-template-Contact h2::after {
+    width: 30px;
+    height: 1px;
+    margin: 15px auto; }
+.page-template-Contact .contact {
+  text-align: center;
+  transform: translateY(-80px);
+  background-color: white;
+  z-index: 100;
+  padding: 50px;
+  position: relative; }
+  .page-template-Contact .contact .adressSingle {
+    position: relative;
+    margin: 40px 0; }
+    .page-template-Contact .contact .adressSingle h3 {
+      position: absolute;
+      font-size: 6em;
+      top: 0;
+      line-height: 0.7;
+      margin: 0;
+      width: 100%;
+      opacity: 0.5; }
+    .page-template-Contact .contact .adressSingle p {
+      position: relative;
+      z-index: 2;
+      font-weight: bold; }
+  .page-template-Contact .contact .menu-social-media-container {
+    position: relative;
+    transform: none; }
+    .page-template-Contact .contact .menu-social-media-container li {
+      display: inline-block;
+      margin: 10px; }
+      .page-template-Contact .contact .menu-social-media-container li a::before {
+        width: 50px; }
+  .page-template-Contact .contact .btn, .page-template-Contact .contact .blue-btn, .page-template-Contact .contact .comment-reply-link, .page-template-Contact .contact #submit {
+    padding: 12px 30px;
+    border: 2px solid #323944;
+    border-radius: 0;
+    margin: 0 10px; }
+    .page-template-Contact .contact .btn::after, .page-template-Contact .contact .blue-btn::after, .page-template-Contact .contact .comment-reply-link::after, .page-template-Contact .contact #submit::after, .page-template-Contact .contact .btn::before, .page-template-Contact .contact .blue-btn::before, .page-template-Contact .contact .comment-reply-link::before, .page-template-Contact .contact #submit::before {
+      display: none; }
+  .page-template-Contact .contact .formContainer > p {
+    text-align: left;
+    margin-bottom: 58px; }
+  .page-template-Contact .contact .formContainer .btn, .page-template-Contact .contact .formContainer .blue-btn, .page-template-Contact .contact .formContainer .comment-reply-link, .page-template-Contact .contact .formContainer #submit {
+    float: left;
+    margin: 0; }
+
 /*********************
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's
@@ -2364,7 +2418,6 @@ html, body {
 
 body {
   /******PAGE AGENCE************/
-  /******PAGE CONTACT************/
   /******PAGE SERVICES************/
   /******PAGE PORTFOLIO************/
   /******PAGE PORTFOLIO ALTERNATIVE************/
@@ -2630,58 +2683,6 @@ body {
     margin-top: 200px; }
   body.page-template-Agency .ourDna p {
     text-align: left; }
-  body.page-template-Contact main {
-    background-color: whitesmoke; }
-  body.page-template-Contact h2 {
-    font-size: 3em;
-    text-align: center; }
-    body.page-template-Contact h2::before, body.page-template-Contact h2::after {
-      width: 30px;
-      height: 1px;
-      margin: 15px auto; }
-  body.page-template-Contact .contact {
-    text-align: center;
-    transform: translateY(-80px);
-    background-color: white;
-    z-index: 100;
-    padding: 50px;
-    position: relative; }
-    body.page-template-Contact .contact .adressSingle {
-      position: relative;
-      margin: 40px 0; }
-      body.page-template-Contact .contact .adressSingle h3 {
-        position: absolute;
-        font-size: 6em;
-        top: 0;
-        line-height: 0.7;
-        margin: 0;
-        width: 100%;
-        opacity: 0.5; }
-      body.page-template-Contact .contact .adressSingle p {
-        position: relative;
-        z-index: 2;
-        font-weight: bold; }
-    body.page-template-Contact .contact .menu-social-media-container {
-      position: relative;
-      transform: none; }
-      body.page-template-Contact .contact .menu-social-media-container li {
-        display: inline-block;
-        margin: 10px; }
-        body.page-template-Contact .contact .menu-social-media-container li a::before {
-          width: 50px; }
-    body.page-template-Contact .contact .btn, body.page-template-Contact .contact .blue-btn, body.page-template-Contact .contact .comment-reply-link, body.page-template-Contact .contact #submit {
-      padding: 12px 30px;
-      border: 2px solid #323944;
-      border-radius: 0;
-      margin: 0 10px; }
-      body.page-template-Contact .contact .btn::after, body.page-template-Contact .contact .blue-btn::after, body.page-template-Contact .contact .comment-reply-link::after, body.page-template-Contact .contact #submit::after, body.page-template-Contact .contact .btn::before, body.page-template-Contact .contact .blue-btn::before, body.page-template-Contact .contact .comment-reply-link::before, body.page-template-Contact .contact #submit::before {
-        display: none; }
-    body.page-template-Contact .contact .formContainer > p {
-      text-align: left;
-      margin-bottom: 58px; }
-    body.page-template-Contact .contact .formContainer .btn, body.page-template-Contact .contact .formContainer .blue-btn, body.page-template-Contact .contact .formContainer .comment-reply-link, body.page-template-Contact .contact .formContainer #submit {
-      float: left;
-      margin: 0; }
   body.page-template-Service .service {
     padding-bottom: 80px; }
   body.page-template-Service article p {
