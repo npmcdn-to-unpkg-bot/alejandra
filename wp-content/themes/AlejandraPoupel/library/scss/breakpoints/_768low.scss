@@ -10,31 +10,43 @@ on larger screens.
 ******************************************************************/
 
 body {
-  .header {
-    background-color:$white;
-    background-image:none;
-    #logo {
-      fill:$orange;
-    }
-    nav {
-      display:none;
-    }
-  }
+
   font-size:10px;
   p {
     font-size:1.1em;
   }
-  h1 {
-    width:90%;
-    margin-left:5%;
-    margin-top: -60px;
+  .header {
+    nav {
+      .nav {
+        li {
+          &.menu-item {
+            &.qtranxs-lang-menu {
+              > a {
+                background-color:$black;
+                color:$white;
+                display:inline-block;
+              }
+              ul {
+                display:inline-block;
+                margin:0;
+                li {
+                  display:inline-block;
+                  a{
+                    padding: 0.75em;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
   .btn {
     font-size:1.2em;
     &.firstBtn {
       width: 80%;
       transform: none;
-      margin-left: 10%;
     }
   }
   &.page-template-homepage {

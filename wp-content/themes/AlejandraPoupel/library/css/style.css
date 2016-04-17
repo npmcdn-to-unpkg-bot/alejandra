@@ -626,32 +626,29 @@ you hate oysters, then the world is your peanut butter & jelly sandwich.
 Site Name:
 Author:
 
-Stylesheet: Alert Styles
+Stylesheet: Lightbox
 
 If you want to use these alerts in your design, you can. If not,
 you can just remove this stylesheet.
 
 ******************************************************************/
-.alert-help, .alert-info, .alert-error, .alert-success {
-  margin: 10px;
-  padding: 5px 18px;
-  border: 1px solid; }
+.lightboxSingle {
+  cursor: pointer; }
 
-.alert-help {
-  border-color: #e8dc59;
-  background: #ebe16f; }
-
-.alert-info {
-  border-color: #bfe4f4;
-  background: #d5edf8; }
-
-.alert-error {
-  border-color: #f8cdce;
-  background: #fbe3e4; }
-
-.alert-success {
-  border-color: #deeaae;
-  background: #e6efc2; }
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.95); }
+  .lightbox img {
+    max-height: 80%;
+    margin-top: 5%;
+    max-width: 80%; }
 
 /******************************************************************
 Site Name:
@@ -1833,25 +1830,24 @@ tweeners.
   ******************************************************************/
   body {
     font-size: 10px; }
-    body .header {
-      background-color: #fff;
-      background-image: none; }
-      body .header #logo {
-        fill: #F4920A; }
-      body .header nav {
-        display: none; }
     body p {
       font-size: 1.1em; }
-    body h1 {
-      width: 90%;
-      margin-left: 5%;
-      margin-top: -60px; }
+    body .header nav .nav li.menu-item.qtranxs-lang-menu > a {
+      background-color: #323944;
+      color: #fff;
+      display: inline-block; }
+    body .header nav .nav li.menu-item.qtranxs-lang-menu ul {
+      display: inline-block;
+      margin: 0; }
+      body .header nav .nav li.menu-item.qtranxs-lang-menu ul li {
+        display: inline-block; }
+        body .header nav .nav li.menu-item.qtranxs-lang-menu ul li a {
+          padding: 0.75em; }
     body .btn, body .blue-btn, body .comment-reply-link, body #submit {
       font-size: 1.2em; }
       body .btn.firstBtn, body .firstBtn.blue-btn, body .firstBtn.comment-reply-link, body .firstBtn#submit {
         width: 80%;
-        transform: none;
-        margin-left: 10%; }
+        transform: none; }
     body.page-template-homepage .portfolioSingle {
       margin-left: 16.66666667%; }
     body.page-template-homepage .alejandraDescription .descriptionContent p {
@@ -1880,9 +1876,6 @@ you can add resource intensive styles.
   /*********************
   GENERAL STYLES
   *********************/
-  body .menuOpener {
-    display: none; }
-
   /*********************
   LAYOUT & GRID STYLES
   *********************/
@@ -2013,22 +2006,61 @@ you can add resource intensive styles.
   ******************************************************************/
   body {
     /* HOMEPAGE */ }
-    body .header .logoHeader {
-      display: block;
-      margin: 0 auto;
-      text-align: center;
-      width: 200px; }
-      body .header .logoHeader #logo {
-        width: 100%; }
-    body .header nav {
-      width: 100%;
-      float: none;
-      text-align: center; }
-      body .header nav .nav li {
+    body .header {
+      background-color: #fff;
+      background-image: none; }
+      body .header #logo {
+        fill: #F4920A; }
+      body .header nav {
+        display: none;
         float: none;
-        display: inline-block; }
+        width: 100%;
+        text-align: center; }
+        body .header nav .nav {
+          display: inline-block; }
+          body .header nav .nav li.qtranxs-lang-menu {
+            border-color: #323944; }
+            body .header nav .nav li.qtranxs-lang-menu a {
+              background-color: #fff; }
+          body .header nav .nav li a {
+            color: #323944; }
+    body h1 {
+      width: 90%;
+      margin-left: 5%;
+      margin-top: 10px;
+      font-size: 5em; }
+    body.page-template-homepage .eventKind .eventButton {
+      border-width: 5px; }
+    body.page-template-homepage .eventKind .eventTitleContainer h2 {
+      font-size: 2em; }
+    body.page-template-homepage .alejandraDescription .descriptionContent {
+      margin-top: 200px; }
     body.page-template-homepage .lastEvents::before {
-      display: none; } }
+      display: none; }
+    body.page-template-homepage .lastEvents h2::before {
+      background-color: #e8ded5; }
+    body.page-template-homepage h2 {
+      width: 80%;
+      margin: 0 auto; } }
+@media only screen and (min-width: 992px) {
+  /******************************************************************
+  Site Name:
+  Author:
+  
+  Stylesheet: Tablet & Small Desktop Stylesheet
+  
+  Here's where you can start getting into the good stuff.
+  This size will work on iPads, other tablets, and desktops.
+  So you can start working with more styles, background images,
+  and other resources. You'll also notice the grid starts to
+  come into play. Have fun!
+  
+  ******************************************************************/
+  /*********************
+  GENERAL STYLES
+  *********************/
+  body .menuOpener {
+    display: none; } }
 /*********************
 DESKTOP
 This is the average viewing window. So Desktops, Laptops, and
@@ -2372,17 +2404,19 @@ body {
       background-color: #e8ded5; }
   body .alejandraDescription img {
     width: 410px; }
-  body .alejandraDescription .descriptionContent p {
-    background-color: #e8ded5;
-    color: #fff;
-    padding: 50px;
-    font-family: "Montserrat", Helvetica Neue, Helvetica, Arial, sans-serif;
-    margin-top: 20%;
-    font-size: 1.5em;
-    letter-spacing: 2px; }
-  body .alejandraDescription .descriptionContent .btn, body .alejandraDescription .descriptionContent .blue-btn, body .alejandraDescription .descriptionContent .comment-reply-link, body .alejandraDescription .descriptionContent #submit {
-    margin: 0 auto;
-    transform: translateY(0px); }
+  body .alejandraDescription .descriptionContent {
+    margin-top: 150px; }
+    body .alejandraDescription .descriptionContent p {
+      background-color: #e8ded5;
+      color: #fff;
+      padding: 50px;
+      font-family: "Montserrat", Helvetica Neue, Helvetica, Arial, sans-serif;
+      margin-top: 20%;
+      font-size: 1.5em;
+      letter-spacing: 2px; }
+    body .alejandraDescription .descriptionContent .btn, body .alejandraDescription .descriptionContent .blue-btn, body .alejandraDescription .descriptionContent .comment-reply-link, body .alejandraDescription .descriptionContent #submit {
+      margin: 0 auto;
+      transform: translateY(0px); }
   body .lastEvents {
     background-color: #e8ded5;
     position: relative;
@@ -2618,22 +2652,20 @@ body {
     width: 49%; }
   body.single-events .grid-item:nth-child(1) {
     width: 48% !important; }
-  body.page-template-portfolioAlter .portfolioAlter .grid {
-    overflow: visible;
-    margin-top: 10px; }
-  body.page-template-portfolioAlter .portfolioAlter .grid-sizer {
-    width: 24%;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box; }
-  body.page-template-portfolioAlter .portfolioAlter .gutter-sizer {
-    width: 1%; }
-  body.page-template-portfolioAlter .portfolioAlter .grid-item {
+  body.page-template-portfolioAlter .portfolioAlter #gallery-content-center img {
     width: 24%;
     margin-bottom: 10px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    margin-left: 10px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    /*&.grid-item--2 {
+    	width:48%;
+    }*/ }
   body.page-template-testimonial .testimonials {
     background-color: whitesmoke;
     padding-bottom: 160px; }
@@ -2719,20 +2751,6 @@ body {
     body.page-template-testimonial .pressSingle .logo {
       width: 80%;
       margin-left: 10%; }
-  body.page-template-testimonial .lightbox {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.95); }
-    body.page-template-testimonial .lightbox img {
-      max-height: 80%;
-      margin-top: 5%;
-      max-width: 80%; }
   body.page-template-blog .hentry:nth-child(2), body.page-template-blog .hentry:nth-child(3) {
     width: 50%;
     float: left; }

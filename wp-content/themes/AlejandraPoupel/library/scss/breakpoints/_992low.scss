@@ -12,32 +12,69 @@ on larger screens.
 body {
   /* HOMEPAGE */
   .header {
-    .logoHeader {
-      display: block;
-      margin: 0 auto;
-      text-align: center;
-      width: 200px;
-      #logo {
-        width:100%;
-      }
+    background-color:$white;
+    background-image:none;
+    #logo {
+      fill:$orange;
     }
     nav {
-      width:100%;
+      display:none;
       float:none;
+      width:100%;
       text-align:center;
       .nav {
-        li {
-          float:none;
-          display:inline-block;
+        display: inline-block;
+        li{
+          &.qtranxs-lang-menu {
+            border-color:$black;
+            a{
+            background-color:$white;
+            }
+          }
+          a{
+            color:$black;
+          }
         }
-
       }
     }
   }
+  h1 {
+    width:90%;
+    margin-left:5%;
+    margin-top: 10px;
+    font-size: 5em;
+  }
 
   &.page-template-homepage {
-    .lastEvents::before {
-      display:none;
+    .eventKind {
+      .eventButton {
+        border-width:5px ;
+      }
+      .eventTitleContainer {
+        h2 {
+          font-size:2em;
+        }
+      }
+    }
+    .alejandraDescription {
+      .descriptionContent {
+        margin-top:200px;
+      }
+    }
+    .lastEvents{
+      &::before {
+        display:none;
+      }
+      h2 {
+        &::before {
+          background-color:$AlejandraGrey;
+        }
+      }
+    }
+
+    h2 {
+      width:80%;
+      margin:0 auto;
     }
 
   }

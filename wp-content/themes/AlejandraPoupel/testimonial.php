@@ -81,7 +81,7 @@
             <div class="row">
             <?php if( have_rows('press_single') ):
                 while ( have_rows('press_single') ) : the_row();?>
-                    <article class="pressSingle col-lg-3" data-image="<?php the_sub_field('press_img');?>">
+                    <article class="pressSingle lightboxSingle col-lg-3" data-image="<?php the_sub_field('press_img');?>">
                     <img src="<?php the_sub_field('press_logo');?>" class="logo" />
                     <div class="pressSingleInfos">
                         <div class="pressSingleInfosWrapper">

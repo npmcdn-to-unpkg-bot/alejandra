@@ -50,13 +50,15 @@ you hate oysters, then the world is your peanut butter & jelly sandwich.
 *********************/
 
 // alert boxes
-@import "modules/alerts";
+@import "modules/lightbox";
 
 // buttons
 @import "modules/buttons";
 
 // forms (inputs & labels)
 @import "modules/forms";
+
+
 
 /*********************
 BASE (MOBILE) SIZE
@@ -104,6 +106,13 @@ you can add resource intensive styles.
 
 	// styles in 1240up.scss
 	@import "breakpoints/992low";
+
+} // end of media query
+
+@media only screen and (min-width: 992px) {
+
+	// styles in 1240up.scss
+	@import "breakpoints/992up";
 
 } // end of media query
 
@@ -391,6 +400,7 @@ body {
 			width: 410px;
 		}
 		.descriptionContent {
+			margin-top:150px;
 			p{
 			background-color: $AlejandraGrey;
 			color: $white;
@@ -740,26 +750,22 @@ body {
 	/******PAGE PORTFOLIO ALTERNATIVE************/
 	&.page-template-portfolioAlter {
 		.portfolioAlter {
-				.grid {
-					overflow:visible;
-					margin-top: 10px;
-				}
-				.grid-sizer {
-					width:24%;
-					-webkit-box-sizing: border-box;
-					-moz-box-sizing: border-box;
-					box-sizing: border-box;
-				}
-				.gutter-sizer {
-				 	width: 1%;
-				 }
-				.grid-item{
-					width:24%;
-					margin-bottom:10px;
-					-webkit-box-sizing: border-box;
-					-moz-box-sizing: border-box;
-					box-sizing: border-box;
-				}
+
+			#gallery-content-center img {
+				width:24%;
+				margin-bottom: 10px;
+				-webkit-transition: all 0.5s;
+				-moz-transition: all 0.5s;
+				-o-transition: all 0.5s;
+				transition: all 0.5s;
+				margin-left: 10px;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+				/*&.grid-item--2 {
+					width:48%;
+				}*/
+			}
 		}
 	}
 	/******PAGE REFERENCES************/
@@ -869,27 +875,6 @@ body {
 				margin-left:10%;
 			}
 		}
-		.lightbox {
-			display:none;
-			position: fixed;
-			z-index: 1000;
-			width: 100%;
-			height: 100%;
-			top: 0;
-			left: 0;
-			text-align: center;
-			background: rgba(255,255,255,0.95);
-			img {
-				max-height:80%;
-				margin-top:5%;
-				max-width:80%;
-			}
-			.navigators {
-
-			}
-
-		}
-
 	}
 	/******PAGE REFERENCES************/
 	&.page-template-blog {
