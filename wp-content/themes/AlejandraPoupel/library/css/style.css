@@ -2334,8 +2334,7 @@ you can add resource intensive styles.
     /* HOMEPAGE */ }
     body .header {
       background-color: #fff;
-      background-image: none;
-      position: fixed; }
+      background-image: none; }
       body .header nav {
         display: none;
         float: none;
