@@ -266,9 +266,9 @@ jQuery(document).ready(function($) {
 		}
 		nextImg=index+1;
 		var srcImg = $(".lightboxSingle:nth-child("+nextImg+")").attr("data-image");
-		$(".lightbox img").fadeOut(300, function() {
+		$(".lightbox img").fadeOut(500, function() {
 			$(".lightbox img").attr("src",srcImg);
-		}).fadeIn(300);
+		}).fadeIn(500);
 
 	});
 
@@ -290,4 +290,8 @@ jQuery(document).ready(function($) {
 
 }); /* end of as page load scripts */
 
+jQuery(window).load(function() {
 
+	jQuery('#gallery-content-center').isotope('reLayout');
+
+});
