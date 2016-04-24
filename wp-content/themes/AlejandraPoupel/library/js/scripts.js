@@ -243,49 +243,61 @@ jQuery(document).ready(function($) {
 
 
 	/* LIGHTBOX */
-	var index;
+	var hideLightbox = function() {
+		$(".lightbox").fadeOut(500);
+	};
+	var updateImageSrc = function(imgSrc) {
+		srcImg = $(images[imgSrc]).attr("data-image");
+		$(".lightbox img").fadeOut(500, function() {
+			$(".lightbox img").attr("src",srcImg);
+		}).fadeIn(500);
+	};
+	var index = null;
 	var nextImg;
 	var prevImg;
-	var pressReleasesCount = $(".lightboxSingle").length;
+	var images = [];
 	$(".lightboxSingle").click(function(){
-		var src = $(this).attr("data-image");//récupère l'attribut src de l'img sur laquelle on clique
+		images = $('.lightboxSingle').not('.isotope-hidden');
+		var src = $(this).data("image");//récupère l'attribut src de l'img sur laquelle on clique
 		$(".lightbox img").attr("src",src);//remplace l'attribut src de l'img qui se trouve dans .lightbox par l'attribut src de l'img sur laquelle on clique
 		$(".lightbox").fadeIn(500);//ouvre la lightbox en fondu et remet la lightbox en display table
-		index = $(".lightboxSingle").index($(this));
+		$(document).keyup(function(e){
+			if (e.keyCode == 27) {
+				hideLightbox();
+			}
+		});
+		for (var i = 0; i < images.length; i++) {
+			var img = images[i];
+			if (src == $(img).data('image')) {
+				index = i;
+			}
+		}
 	});
 	$(".close").click(function(){
-		$(".lightbox").fadeOut(500);
+		hideLightbox();
 	});
 
 	$(".navNext").click(function(){
-		if(index>=pressReleasesCount-1) {
+
+		if(index>=images.length-1) {
 			index=0;
 		}
 		else {
 			index++;
 		}
-		nextImg=index+1;
-		var srcImg = $(".lightboxSingle:nth-child("+nextImg+")").attr("data-image");
-		$(".lightbox img").fadeOut(500, function() {
-			$(".lightbox img").attr("src",srcImg);
-		}).fadeIn(500);
-
+		nextImg=index;
+		updateImageSrc(nextImg);
 	});
 
 	$(".navPrev").click(function(){
 		if(index<=0) {
-			index=pressReleasesCount-1 ;
+			index=images.length-1 ;
 		}
 		else {
 			index--;
 		}
-		nextImg=index+1;
-		var srcImg = $(".lightboxSingle:nth-child("+nextImg+")").attr("data-image");
-		//var legende = $(".container div:nth-child("+nextImg+")").children("img").attr("alt");
-		$(".lightbox img").fadeOut(300, function() {
-			$(".lightbox img").attr("src",srcImg);
-		}).fadeIn(300);
-		//$(".legende").text(legende);
+		nextImg=index;
+		updateImageSrc(nextImg);
 	});
 
 }); /* end of as page load scripts */

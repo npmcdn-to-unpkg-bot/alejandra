@@ -420,13 +420,21 @@ This is the desktop size. It's larger than an iPad so it will only
 be seen on the Desktop.
 
 ******************************************************************/
-.menuOpener {
-  display: none; }
-
-.header #logo {
-  fill: #fff; }
-  .header #logo .alterColor {
+.header {
+  background-color: transparent;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, transparent 90%);
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: calc(100% - 60px); }
+  .header nav {
+    display: block; }
+  .header .menuOpener {
+    display: none; }
+  .header #logo {
     fill: #fff; }
+    .header #logo .alterColor {
+      fill: #fff; }
 
 /*
 you can call the larger styles if you want, but there's really no need

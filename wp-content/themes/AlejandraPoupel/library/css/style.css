@@ -1217,23 +1217,101 @@ p {
 /*********************
 HEADER STYLES
 *********************/
+.header #logo {
+  margin: 0.75em 0;
+  fill: #F4920A;
+  width: 190px;
+  /*230px*/ }
+  .header #logo .alterColor {
+    fill: #323944; }
+.header nav {
+  float: right;
+  margin: 1.5em 0; }
+
 .header {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, transparent 90%);
-  position: absolute;
-  top: 30px;
-  left: 30px;
-  width: calc(100% - 60px);
   z-index: 120;
-  font-family: "Montserrat", Helvetica Neue, Helvetica, Arial, sans-serif; }
-  .header #logo {
-    margin: 0.75em 0;
-    fill: #F4920A;
-    width: 230px; }
-    .header #logo .alterColor {
-      fill: #323944; }
+  font-family: "Montserrat", Helvetica Neue, Helvetica, Arial, sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-image: none;
+  background-color: #fff; }
   .header nav {
-    float: right;
-    margin: 1.5em 0; }
+    display: none; }
+    .header nav li a {
+      letter-spacing: 1px;
+      font-size: 1.3em;
+      text-transform: uppercase;
+      position: relative;
+      transition: all cubic-bezier(0, 0.92, 0.45, 1.02) 0.2s; }
+      .header nav li a:hover {
+        text-decoration: none;
+        color: #F4920A; }
+        .header nav li a:hover::before, .header nav li a:hover::after {
+          left: 50%;
+          opacity: 1;
+          transition: all cubic-bezier(0, 0.92, 0.45, 1.02) 0.2s; }
+      .header nav li a::before, .header nav li a::after {
+        content: '';
+        width: 30px;
+        height: 1px;
+        background-color: #F4920A;
+        display: block;
+        position: absolute;
+        margin-left: -15px;
+        opacity: 0;
+        margin-top: 4px; }
+      .header nav li a::before {
+        margin-top: -5px;
+        left: -100%; }
+      .header nav li a::after {
+        left: 100%; }
+    .header nav li.current_page_item a::before, .header nav li.current_page_item a::after {
+      left: 50%;
+      opacity: 1;
+      transition: all cubic-bezier(0, 0.92, 0.45, 1.02) 0.2s; }
+
+.nav {
+  border-bottom: 0;
+  margin: 0;
+  /* end .menu li */ }
+  .nav li.qtranxs-lang-menu {
+    border: 1px solid white; }
+  .nav li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.75em;
+    font-size: 1.3em;
+    /*
+    remember this is for mobile ONLY, so there's no need
+    to even declare hover styles here, you can do it in
+    the style.scss file where it's relevant. We want to
+    keep this file as small as possible!
+    */ }
+
+.menuOpener {
+  display: block;
+  width: 40px;
+  height: 4px;
+  background: #323944;
+  position: absolute;
+  top: 40px;
+  right: 30px;
+  cursor: pointer;
+  z-index: 1000; }
+  .menuOpener::before, .menuOpener::after {
+    display: block;
+    width: 40px;
+    height: 4px;
+    background: #323944;
+    content: '';
+    position: absolute; }
+  .menuOpener::before {
+    margin-top: -9px; }
+  .menuOpener::after {
+    margin-top: 9px; }
 
 /*********************
 NAVIGATION STYLES
@@ -1287,94 +1365,6 @@ and more scalable.
       content: "\65"; }
     .menu-social-media-container li.icon-instagram a::before {
       content: "\63"; }
-
-header nav li a {
-  letter-spacing: 1px;
-  font-size: 1.3em;
-  text-transform: uppercase;
-  position: relative;
-  transition: all cubic-bezier(0, 0.92, 0.45, 1.02) 0.2s; }
-  header nav li a:hover {
-    text-decoration: none;
-    color: #F4920A; }
-    header nav li a:hover::before, header nav li a:hover::after {
-      left: 50%;
-      opacity: 1;
-      transition: all cubic-bezier(0, 0.92, 0.45, 1.02) 0.2s; }
-  header nav li a::before, header nav li a::after {
-    content: '';
-    width: 30px;
-    height: 1px;
-    background-color: #F4920A;
-    display: block;
-    position: absolute;
-    margin-left: -15px;
-    opacity: 0;
-    margin-top: 4px; }
-  header nav li a::before {
-    margin-top: -5px;
-    left: -100%; }
-  header nav li a::after {
-    left: 100%; }
-header nav li.current_page_item a::before, header nav li.current_page_item a::after {
-  left: 50%;
-  opacity: 1;
-  transition: all cubic-bezier(0, 0.92, 0.45, 1.02) 0.2s; }
-
-.nav {
-  border-bottom: 0;
-  margin: 0;
-  /* end .menu li */
-  /* highlight current page */
-  /* end current highlighters */ }
-  .nav li {
-    /*
-    so you really have to rethink your dropdowns for mobile.
-    you don't want to have it expand too much because the
-    screen is so small. How you manage your menu should
-    depend on the project. Here's some great info on it:
-    http://www.alistapart.com/articles/organizing-mobile/
-    */ }
-    .nav li.qtranxs-lang-menu {
-      border: 1px solid white; }
-    .nav li a {
-      display: block;
-      color: #fff;
-      text-decoration: none;
-      padding: 0.75em;
-      font-size: 1.3em;
-      /*
-      remember this is for mobile ONLY, so there's no need
-      to even declare hover styles here, you can do it in
-      the style.scss file where it's relevant. We want to
-      keep this file as small as possible!
-      */ }
-    .nav li ul.sub-menu li a,
-    .nav li ul.children li a {
-      padding-left: 30px; }
-
-/* end .nav */
-.menuOpener {
-  display: block;
-  width: 40px;
-  height: 4px;
-  background: #323944;
-  position: absolute;
-  top: 40px;
-  right: 30px;
-  cursor: pointer;
-  z-index: 1000; }
-  .menuOpener::before, .menuOpener::after {
-    display: block;
-    width: 40px;
-    height: 4px;
-    background: #323944;
-    content: '';
-    position: absolute; }
-  .menuOpener::before {
-    margin-top: -9px; }
-  .menuOpener::after {
-    margin-top: 9px; }
 
 /*********************
 POSTS & CONTENT STYLES
@@ -2333,22 +2323,6 @@ you can add resource intensive styles.
   ******************************************************************/
   body {
     /* HOMEPAGE */ }
-    body .header {
-      background-color: #fff;
-      background-image: none; }
-      body .header nav {
-        display: none;
-        float: none;
-        width: 100%;
-        text-align: center; }
-        body .header nav .nav {
-          display: inline-block; }
-          body .header nav .nav li.qtranxs-lang-menu {
-            border-color: #323944; }
-            body .header nav .nav li.qtranxs-lang-menu a {
-              background-color: #fff; }
-          body .header nav .nav li a {
-            color: #323944; }
     body.page-template-homepage .eventKind .eventButton {
       border-width: 5px; }
     body.page-template-homepage .eventKind .eventTitleContainer h2 {
@@ -2422,13 +2396,21 @@ you can add resource intensive styles.
   be seen on the Desktop.
   
   ******************************************************************/
-  .menuOpener {
-    display: none; }
-
-  .header #logo {
-    fill: #fff; }
-    .header #logo .alterColor {
-      fill: #fff; } }
+  .header {
+    background-color: transparent;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, transparent 90%);
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: calc(100% - 60px); }
+    .header nav {
+      display: block; }
+    .header .menuOpener {
+      display: none; }
+    .header #logo {
+      fill: #fff; }
+      .header #logo .alterColor {
+        fill: #fff; } }
 /*********************
 LARGE VIEWING SIZE
 This is for the larger monitors and possibly full screen viewers.
