@@ -20,7 +20,20 @@ be seen on the Desktop.
   width: calc(100% - 60px);
   nav {
     display: block;
+    float:right ;
+    .nav {
+
+    li {
+      &.qtranxs-lang-menu {
+        border-color: $white;
+      }
+      a{
+        color:$white;
+      }
+    }
   }
+  }
+
   .menuOpener {
     display:none;
   }
@@ -28,6 +41,17 @@ be seen on the Desktop.
     fill:$white;
     .alterColor{
       fill:$white ;
+    }
+  }
+  &.whiteHeader {
+    nav {
+      .nav {
+        li {
+          a {
+            color:$black;
+          }
+        }
+      }
     }
   }
 }

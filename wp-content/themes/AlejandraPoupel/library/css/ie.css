@@ -428,13 +428,20 @@ be seen on the Desktop.
   left: 30px;
   width: calc(100% - 60px); }
   .header nav {
-    display: block; }
+    display: block;
+    float: right; }
+    .header nav .nav li.qtranxs-lang-menu {
+      border-color: #fff; }
+    .header nav .nav li a {
+      color: #fff; }
   .header .menuOpener {
     display: none; }
   .header #logo {
     fill: #fff; }
     .header #logo .alterColor {
       fill: #fff; }
+  .header.whiteHeader nav .nav li a {
+    color: #323944; }
 
 /*
 you can call the larger styles if you want, but there's really no need
