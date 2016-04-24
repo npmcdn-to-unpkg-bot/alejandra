@@ -14,6 +14,10 @@ and will be used across all viewports.
 /*********************
 GENERAL STYLES
 *********************/
+html{
+	height:calc(100% + 60px);
+	margin:0;
+}
 
 body {
 	font-family: $montserrat;
@@ -24,62 +28,20 @@ body {
   	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
 	padding: 30px;
-
+	height:calc(100% + 60px);
+	margin:0;
+	&::after{
+		content:'';
+		width:100%;
+		display:block;
+		height:30px;
+		background-color: $white;
+		position:fixed;
+		bottom:0;
+		left:0;
+		z-index:130;
+	}
 }
-
-/********************
-WORDPRESS  CLASSES
-style a page via class
-********************/
-
-.rtl {}                           /* for sites that are read right to left (i.e. hebrew) */
-.home {}                          /* home page */
-.blog {}                          /* blog template page */
-.archive {}                       /* archive page */
-.date {}                          /* date archive page */
-	.date-paged-1 {}                /* replace the number to the corresponding page number */
-.search {}                        /* search page */
-	.search-results {}              /* search result page */
-	.search-no-results {}           /* no results search page */
-	.search-paged-1 {}              /* individual paged search (i.e. body.search-paged-3) */
-.error404 {}                      /* 404 page */
-.single {}                        /* single post page */
-	.postid-1 {}                    /* individual post page by id (i.e. body.postid-73) */
-	.single-paged-1 {}              /* individual paged single (i.e. body.single-paged-3) */
-.attachment {}                    /* attatchment page */
-	.attachmentid-1 {}              /* individual attatchment page (i.e. body.attachmentid-763) */
-	.attachment-mime-type {}        /* style mime type pages */
-.author {}                        /* author page */
-	.author-nicename {}             /* user nicename (i.e. body.author-samueladams) */
-	.author-paged-1 {}              /* paged author archives (i.e. body.author-paged-4) for page 4 */
-.category {}                      /* category page */
-	.category-1 {}                  /* individual category page (i.e. body.category-6) */
-	.category-paged-1 {}            /* replace the number to the corresponding page number */
-.tag {}                           /* tag page */
-	.tag-slug {}                    /* individual tag page (i.e. body.tag-news) */
-	.tag-paged-1 {}                 /* replace the number to the corresponding page number */
-.page-template {}                 /* custom page template page */
-	.page-template-page-php {}      /* individual page template (i.e. body.page-template-contact-php */
-	.page-paged-1 {}                /* replace the number to the corresponding page number */
-	.page-parent {}                 /* parent page template */
-	.page-child {}                  /* child page template */
-	.parent-pageid-1 {}             /* replace the number to the corresponding page number */
-.logged-in {}                     /* if user is logged in */
-.paged {}                         /* paged items like search results or archives */
-	.paged-1 {}                     /* individual paged (i.e. body.paged-3) */
-
-/*********************
-LAYOUT & GRID STYLES
-*********************/
-
-.wrap {
-	width: 96%;
-	margin: 0 auto;
-}
-
-/*********************
-LINK STYLES
-*********************/
 
 /******************************************************************
 H1, H2, H3, H4, H5 STYLES
@@ -88,20 +50,10 @@ H1, H2, H3, H4, H5 STYLES
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 	text-rendering: optimizelegibility;
 	font-weight: 500;
-	/*
-	if you're going to use webfonts, be sure to check your weights
-	http://css-tricks.com/watch-your-font-weight/
-	*/
 
-	/* removing text decoration from all headline links */
 	a {
 		text-decoration: none;
 	}
-}
-
-h1 {
-
-
 }
 h1 {
 	width:90%;
@@ -126,7 +78,6 @@ h1 {
 		margin: 10px auto;
 	}
 }
-
 h2 {
 	font-family: "Playfair Display", serif;
 	color: $black;
@@ -142,26 +93,22 @@ h2 {
 		margin: 40px auto;
 	}
 }
-
 h3, .h3 {
 	font-size: 2.5em;
 	font-family: $playfair;
 	font-weight:900;
 	color: $AlejandraGrey;
 }
-
 h4, .h4 {
 	font-size: 1.1em;
 	font-weight: 700;
 }
-
 h5, .h5 {
 	font-size: 0.846em;
 	line-height: 2.09em;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 }
-
 p {
 	font-size: 1.3em;
 	text-align: center;
@@ -254,33 +201,31 @@ HEADER STYLES
 			}
 		}
 	}
-}
-
-.menuOpener{
-	display: block;
-	width: 40px;
-	height: 4px;
-	background: $black;
-	position: absolute;
-	top: 40px;
-	right: 30px;
-	cursor:pointer;
-	z-index: 1000;
-	&::before, &::after {
+	.menuOpener{
 		display: block;
 		width: 40px;
 		height: 4px;
 		background: $black;
-		content:'';
-		position:absolute;
+		position: absolute;
+		top: 40px;
+		right: 30px;
+		cursor:pointer;
+		z-index: 1000;
+		&::before, &::after {
+			display: block;
+			width: 40px;
+			height: 4px;
+			background: $black;
+			content:'';
+			position:absolute;
+		}
+		&::before{
+			margin-top:-9px;
+		}	&::after{
+				 margin-top:9px;
+			 }
 	}
-	&::before{
-		margin-top:-9px;
-	}	&::after{
-			 margin-top:9px;
-		 }
 }
-
 
 /*********************
 NAVIGATION STYLES
@@ -301,7 +246,6 @@ and more scalable.
 	Z-index: 130;
 	top: 50%;
 	transform: translateY(-125px);
-
 	li {
 		background-color: $AlejandraGrey;
 		margin: 10px 0;
@@ -348,10 +292,10 @@ and more scalable.
 }
 
 
-
 /*********************
 POSTS & CONTENT STYLES
 *********************/
+
 .btnContainer {
 	text-align:center;
 	padding-top:100px ;
@@ -365,7 +309,6 @@ POSTS & CONTENT STYLES
 	.hentry {
 		background-color:$white;
 	}
-
 }
 		.hentry {
 			padding: 190px 50px;
@@ -425,24 +368,6 @@ POSTS & CONTENT STYLES
 			margin: 0;
 		}
 
-		.single-title {}
-
-		.page-title {}
-
-		.entry-title {}
-
-		.archive-title {}
-
-		/* want to style individual post classes? Booya! */
-		.post-id {}         /* post by id (i.e. post-3) */
-		.post {}            /* general post style */
-		.page {}            /* general article on a page style */
-		.attachment {}      /* general style on an attatchment */
-		.sticky {}          /* sticky post style */
-		.hentry {}          /* hentry class */
-		.category-slug {}   /* style by category (i.e. category-videos) */
-		.tag-slug {}        /* style by tag (i.e. tag-news) */
-
 		/* post meta */
 		.byline {
 			color: $meta-gray;
@@ -458,27 +383,6 @@ POSTS & CONTENT STYLES
 
 			p {
 				margin: 0 0 1.5em;
-			}
-
-
-			ul, ol, table, dl {}
-
-			ul, ol {
-
-				li {}
-
-			}
-
-			ul {
-
-				li {}
-
-			}
-
-			ol {
-
-				li {}
-
 			}
 
 			table {
@@ -549,16 +453,6 @@ POSTS & CONTENT STYLES
 				max-width: 100%;
 				height: auto;
 			}
-
-			/*
-			image alignment on a screen this size may be
-			a bit difficult. It's set to start aligning
-			and floating images at the next breakpoint,
-			but it's up to you. Feel free to change it up.
-			*/
-			.alignleft, img.alignleft {}
-			.alignright, img.alignright {}
-			.aligncenter, img.aligncenter {}
 
 			.size-auto,
 			.size-full,
@@ -713,20 +607,8 @@ COMMENT STYLES
 	padding: 0.75em;
 	margin: 0;
 	border-top: 1px solid $light-gray;
-
-	/* number of comments span */
-	span {}
-
 }
 
-.comment-nav {
-
-	ul {
-
-		li {}
-
-	}
-}
 
 
 .commentlist {
@@ -961,44 +843,6 @@ COMMENT FORM STYLES
 	}
 
 /*********************
-SIDEBARS & ASIDES
-*********************/
-
-.sidebar {}
-
-	.widgettitle {}
-
-	.widget {
-
-		ul {
-
-			li {
-
-				&:first-child {}
-
-				&:last-child {}
-
-				a {}
-
-				/* deep nesting */
-				ul {}
-
-			}
-
-		}
-
-	}
-
-	.no-widgets {
-		background-color: $white;
-		padding: 1.5em;
-		text-align: center;
-		border: 1px solid $border-color;
-		border-radius: 2px;
-		margin-bottom: 1.5em;
-	}
-
-/*********************
 FOOTER STYLES
 *********************/
 
@@ -1072,6 +916,192 @@ FOOTER STYLES
 			margin-top:-200px;
 			text-align: center;
 		}
+	}
+	.homepageSlider {
+		height: calc(100% + 60px);
+		margin: 0;
+		li {
+			background-size: cover;
+			height: 670px;
+			background-position: center;
+		}
+	}
+	.eventKind {
+		z-index: 100;
+		position: relative;
+		background: $light-gray;
+
+		> div {
+			transform: translateY(-60px);
+			.eventButton {
+				background-color: $black;
+				border: 10px solid $white;
+				width: 80%;
+				margin: 0 auto;
+				position: relative;
+				a {
+					&::after {
+						display: block;
+						width: 100%;
+						height: 100%;
+						background-color: rgba(0, 0, 0, 0.5);
+						content: attr(data-category);
+						color: white;
+						position: absolute;
+						top: 0;
+						left: 0;
+						line-height: 402px;
+						text-align: center;
+						font-size: 16px;
+						letter-spacing: 2px;
+						opacity: 0;
+						transform: scale(0.8);
+						transition: $basicTransition;
+					}
+					&:hover::after, &:active::after {
+						opacity: 1;
+						transform: scale(1);
+					}
+				}
+
+				img {
+					width: 100%;
+					position: relative;
+				}
+			}
+
+			.eventTitleContainer {
+				h2 {
+					text-transform: none;
+					text-align: center;
+					font-size: 2.6em;
+					padding: 10px 0;
+					&::after, &::before {
+						display: none;
+					}
+				}
+			}
+		}
+		.eventsDescription {
+			margin-top: 3em;
+			margin-bottom: 3em;
+		}
+	}
+	.alejandraDescription {
+		h2 {
+			margin-bottom: 120px;
+			text-align: center;
+			position: relative;
+			z-index: 10;
+			&::before, &::after {
+				margin: 20px auto;
+				background-color: $AlejandraGrey;
+			}
+		}
+
+		.descriptionContent {
+			  p {
+				background-color: $AlejandraGrey;
+				color: $white;
+				padding: 50px;
+				font-family: $montserrat;
+				margin-top: 20%;
+				font-size: 1.5em;
+				letter-spacing: 2px;
+			}
+			.btn {
+				margin: 0 auto;
+				transform: translateY(0px);
+			}
+		}
+	}
+	.lastEvents {
+		background-color: $AlejandraGrey;
+		position: relative;
+		padding: 50px 0;
+		&::before {
+			height: 100%;
+			top: 0;
+			content: '';
+			width: 13%;
+			background-color: $white;
+			position: absolute;
+		}
+		h2 {
+			text-align: center;
+			&::before, &::after {
+				background: $white;
+				margin: 20px auto;
+			}
+		}
+	}
+	.portfolioSingle {
+		.post-categories {
+			text-align: center;
+			position: absolute;
+			width: calc(100% - 30px);
+			z-index: 2;
+			margin-top: 5px;
+			a {
+				color: white;
+				font-family: $montserrat;
+				text-transform: uppercase;
+				z-index: 10;
+				font-size: 1em;
+				letter-spacing: 2px;
+			}
+		}
+		a {
+			&:hover, &:focus {
+				text-decoration: none;
+				.articleInfos {
+					opacity: 1;
+					top: 8%;
+				}
+			}
+
+		}
+		.articleContainer {
+			width: 90%;
+			margin: 0 auto;
+			position: relative;
+			text-align: center;
+			img {
+				max-width: 100%;
+				height: auto;
+			}
+			.articleInfos {
+				width: 78%;
+				height: 84%;
+				top: 16%;
+				left: 11%;
+				background: #fff;
+				padding: 20px 0;
+				transition: $basicTransition;
+				position: absolute;
+				opacity: 0;
+				h3 {
+					font-family: $playfair;
+					color: $orange;
+					text-transform: uppercase;
+					font-size: 2em;
+					line-height: 1;
+					position: relative;
+					font-weight: 900;
+					color: $black;
+					text-align: center;
+					min-height: 60px;
+				}
+				time {
+					color: $AlejandraGrey;
+					font-family: $montserrat;
+					text-transform: uppercase;
+					letter-spacing: 2px;
+				}
+			}
+
+		}
+
 	}
 }
 

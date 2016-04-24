@@ -44,13 +44,34 @@ be seen on the Desktop.
     }
   }
   &.whiteHeader {
+    background-image: none;
+    background-color: $white;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    box-shadow: 0px 5px 0 0 rgba(0,0,0,0.1);
+    transition: background-color ease-in-out 0.2s;
     nav {
       .nav {
         li {
-          a {
+          &.qtranxs-lang-menu {
+            border-color: $black;
+          }
+          > a {
             color:$black;
           }
         }
+      }
+    }
+    #logo {
+      fill: $orange;
+      transition: $basicTransition;
+      .alterColor {
+        fill:$black;
+      }
+      &:hover {
+        fill: $black;
       }
     }
   }

@@ -440,8 +440,26 @@ be seen on the Desktop.
     fill: #fff; }
     .header #logo .alterColor {
       fill: #fff; }
-  .header.whiteHeader nav .nav li a {
-    color: #323944; }
+  .header.whiteHeader {
+    background-image: none;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px 5px 0 0 rgba(0, 0, 0, 0.1);
+    transition: background-color ease-in-out 0.2s; }
+    .header.whiteHeader nav .nav li.qtranxs-lang-menu {
+      border-color: #323944; }
+    .header.whiteHeader nav .nav li > a {
+      color: #323944; }
+    .header.whiteHeader #logo {
+      fill: #F4920A;
+      transition: all ease-in-out 0.2s; }
+      .header.whiteHeader #logo .alterColor {
+        fill: #323944; }
+      .header.whiteHeader #logo:hover {
+        fill: #323944; }
 
 /*
 you can call the larger styles if you want, but there's really no need

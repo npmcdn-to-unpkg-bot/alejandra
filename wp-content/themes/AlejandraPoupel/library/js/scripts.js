@@ -117,13 +117,11 @@ jQuery(document).ready(function($) {
 
 	$('.homepageSlider > li').each(function(){
 		var slideImage = $(this).data('img');
-		console.log(slideImage);
 		$(this).css('background-image', 'url('+slideImage+')');
 	});
 
 	$('.portfolioSlider > li').each(function(){
 		var slideImage = $(this).data('img');
-		console.log(slideImage);
 		$(this).css('background-image', 'url('+slideImage+')');
 	});
     $(window).trigger('scroll');

@@ -142,7 +142,10 @@
 					</nav>
 					<span class="menuOpener"></span>
 				</div>
+
+				<?php wp_nav_menu( array( 'theme_location' => 'Social_Links' ) ); ?>
+
 			</header>
 
-			<?php wp_nav_menu( array( 'theme_location' => 'Social_Links' ) ); ?>
+
 

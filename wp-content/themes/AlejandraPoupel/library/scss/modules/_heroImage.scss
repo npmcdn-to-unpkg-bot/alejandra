@@ -1,0 +1,47 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Heroe Image
+
+If you want to use these alerts in your design, you can. If not,
+you can just remove this stylesheet.
+
+******************************************************************/
+
+
+.heroSlider {
+  position: relative;
+  height: 670px;
+  overflow: hidden;
+  background-color: $black;
+  &::before {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    content: '';
+    top: 0;
+    z-index: 90;
+    left: 0;
+  }
+  .heroSliderImage {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  img {
+    opacity: 1;
+    max-width: none;
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+}
