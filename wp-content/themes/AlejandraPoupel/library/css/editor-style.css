@@ -399,9 +399,8 @@ body#tinymce.wp-editor {
   body#tinymce.wp-editor body {
     margin: 0; }
   body#tinymce.wp-editor a {
-    background: transparent; }
-  body#tinymce.wp-editor a:focus {
-    outline: thin dotted; }
+    background: transparent;
+    outline: 0; }
   body#tinymce.wp-editor a:active,
   body#tinymce.wp-editor a:hover {
     outline: 0; }
