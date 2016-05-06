@@ -27,12 +27,21 @@ them in here, they won't work.
 NAVIGATION STYLES
 *********************/
 body {
-
+	font-size: 100%;
+	.header {
+		.menuOpener {
+			top:35px;
+		}
+	}
+	p {
+		font-size:1.1em;
+	}
 	.nav {
 	}
 
 	/* .menu is clearfixed inside mixins.scss */
 	.menu {
+
 		ul {
 			li {
 				a {
@@ -146,6 +155,41 @@ body {
 	.portfolioAlter {
 		#gallery-content-center img {
 			width: calc(33% - 10px);
+		}
+	}
+}
+
+.page-template-Agency{
+	h2 {
+	}
+	.ourDna {
+		blockquote {
+			font-size: 13em;
+			text-align: left;
+		}
+	}
+
+}
+
+.page-template-Service {
+	.separator {
+		background-attachment: fixed;
+	}
+}
+
+.page-template-testimonial {
+	.testimonials {
+		padding-bottom: 100px;
+		.testimonialDescription {
+			text-align: left;
+			.testimonialKind {
+				float: right;
+				transform: translateY(-45px) translateX(35px);
+			}
+		}
+		.testimonialImage {
+			margin-right: -40px;
+			text-align:right;
 		}
 	}
 }

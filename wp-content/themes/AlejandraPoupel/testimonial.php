@@ -83,7 +83,7 @@
             <div class="row">
             <?php if( have_rows('press_single') ):
                 while ( have_rows('press_single') ) : the_row();?>
-                    <article class="col-xs-4 col-sm-3 col-md-3 col-lg-3 pressSingle lightboxSingle " data-image="<?php the_sub_field('press_img');?>">
+                    <article class="col-xs-6 col-sm-3  pressSingle lightboxSingle " data-image="<?php the_sub_field('press_img');?>">
                     <img src="<?php the_sub_field('press_logo');?>" class="logo" />
                     <div class="pressSingleInfos">
                         <div class="pressSingleInfosWrapper">
@@ -98,10 +98,10 @@
             <div class="lightbox">
                 <img src="" />
                 <div class="controls">
-                    <span class="close">close</span>
+                    <span class="close">x</span>
                     <div class="navigators">
-                        <span class="navPrev">prev</span>
-                        <span class="navNext">next</span>
+                        <span class="navPrev"></span>
+                        <span class="navNext"></span>
                     </div>
                 </div>
             </div>

@@ -21,7 +21,7 @@ html{
 
 body {
 	font-family: $montserrat;
-	font-size: 100%;
+	font-size: 70%;
 	line-height: 1.5;
 	color: $text-color;
 	background-color: $white;
@@ -110,7 +110,7 @@ h5, .h5 {
 	letter-spacing: 2px;
 }
 p {
-	font-size: 1.3em;
+	font-size: 1.4em;
 	text-align: center;
 	line-height: 1.9;
 	letter-spacing: 2px;
@@ -207,7 +207,7 @@ HEADER STYLES
 		height: 4px;
 		background: $black;
 		position: absolute;
-		top: 40px;
+		top:30px;
 		right: 30px;
 		cursor:pointer;
 		z-index: 1000;
@@ -258,6 +258,7 @@ and more scalable.
 			height: 50px;
 			overflow: hidden;
 			display: block;
+			position: relative;
 			&::before {
 				font-family: "untitled-font-1" !important;
 				font-style: normal !important;
@@ -274,6 +275,7 @@ and more scalable.
 				width: 100%;
 				line-height: 50px;
 				color:white;
+				left:0;
 			}
 		}
 		&.icon-facebook a::before{
@@ -1105,6 +1107,34 @@ FOOTER STYLES
 	}
 }
 
+.page-template-Agency{
+	section {
+		padding: 70px 0 130px;
+	}
+
+	h2 {
+		text-align:center;
+	}
+	.ourDna {
+		blockquote {
+			position: absolute;
+			color: $AlejandraGrey;
+			font-size: 9em;
+			font-family: $playfair;
+			width: 50%;
+			font-weight: 900;
+			line-height: 1;
+			opacity: 0.5;
+			margin-top: 200px;
+			text-align: center;
+		}
+		p {
+			text-align:left;
+		}
+	}
+
+}
+
 /******PAGE SAVOIR FAIRE************/
 .page-template-Service  {
 	h2 {
@@ -1266,6 +1296,7 @@ FOOTER STYLES
 			li {
 				display: inline-block;
 				margin:10px;
+				vertical-align: middle;
 				a::before {
 					width: 50px;
 				}
@@ -1275,16 +1306,12 @@ FOOTER STYLES
 			padding: 12px 30px;
 			border: 2px solid $black;
 			border-radius: 0;
-			margin: 0 10px;
+			margin: 5px 10px;
 			&::after, &::before {
 				display:none;
 			}
-			&:hover{
-
-			}
 		}
 		.formContainer {
-
 			> p {
 				text-align: left;
 				margin-bottom:58px;
@@ -1292,6 +1319,7 @@ FOOTER STYLES
 			.btn {
 				float:left;
 				margin:0;
+				width:100%;
 			}
 		}
 	}
@@ -1336,7 +1364,7 @@ FOOTER STYLES
 
 	.portfolioAlter {
 		#gallery-content-center img {
-			width: calc(50% - 10px);
+			width: calc(50% - 15px);
 			margin-bottom: 10px;
 			-webkit-transition: all 0.5s;
 			-moz-transition: all 0.5s;
@@ -1442,5 +1470,112 @@ FOOTER STYLES
 	}
 }
 
+.page-template-Service {
 
+	.service {
+		padding-bottom: 80px;
+	}
+	article {
+
+
+		p {
+			text-align: inherit;
+			z-index: 1;
+			position: relative;
+		}
+	}
+	.separator {
+		height: 350px;
+		background-size: cover;
+		background-position:center;
+	}
+}
+
+/*______________________________________
+__________Page : TESTIMONIALS___________
+_______________________________________*/
+
+.page-template-testimonial {
+	.testimonials {
+		background-color:whitesmoke;
+		padding-bottom:50px;
+
+		.testimonialDescription {
+			background-color: $white;
+			padding:20px;
+			margin-top:50px;
+			text-align: center;
+			&::after {
+				content: '”';
+				display: block;
+				font-family: $serif;
+				font-size: 25em;
+				position: absolute;
+				right: 0;
+				margin-top: -100px;
+				opacity: 0.2;
+			}
+			.testimonialKind {
+				font-family:$playfair;
+				font-size:3em;
+				font-weight:900;
+				color:$AlejandraGrey;
+			}
+
+			.tesimonialPerson {
+				font-size: 1.1em;
+			}
+		}
+		.bx-wrapper {
+			position:relative;
+			.bx-pager {
+				text-align: center;
+				position: absolute;
+				top: -30px;
+				width: 100%;
+				.bx-pager-item {
+					display:inline-block;
+					margin: 0 3px;
+					a {
+						width:16px;
+						height:16px;
+						border-radius:50%;
+						background-color:$AlejandraGrey;
+						opacity:0.5;
+						display:block;
+						color:transparent;
+						&.active {
+							opacity:1;
+						}
+					}
+				}
+			}
+		}
+	}
+	.pressSingle {
+		height:150px;
+		line-height:150px;
+		position:relative;
+		cursor:pointer;
+		&:hover .pressSingleInfos {
+			opacity:1;
+		}
+		.pressSingleInfos {
+			position:absolute;
+			width:100%;
+			height:100%;
+			top:0;
+			left:0;
+			background-color:rgba(255,255,255,0.9);
+			opacity:0;
+			transition:$basicTransition;
+			text-align:center;
+			color:$orange;
+		}
+		.logo {
+			width:80%;
+			margin-left:10%;
+		}
+	}
+}
 

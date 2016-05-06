@@ -35,17 +35,17 @@ you can just remove this stylesheet.
   .controls {
     .close{
       position: absolute;
-      bottom: 0;
-      height: 5%;
       display: block;
-      width: 100%;
       z-index: 100;
-      font-size: 1.5em;
       text-transform: uppercase;
+      cursor: pointer;
+      height: 40px;
+      width: 40px;
+      line-height: 40px;
+      top: 5px;
+      right: 5px;
       color: $black;
-      letter-spacing: 5px;
-      cursor:pointer;
-      padding-top: 10px;
+      border: 1px solid $black;
     }
     .navPrev, .navNext {
       position: absolute;

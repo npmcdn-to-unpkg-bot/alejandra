@@ -188,6 +188,7 @@ them in here, they won't work.
 NAVIGATION STYLES
 *********************/
 body {
+  font-size: 100%;
   /* .menu is clearfixed inside mixins.scss */
   /* end .menu */
   	/*********************
@@ -203,6 +204,10 @@ body {
       do they need tweaking?
       */
   /* end .footer-links */ }
+  body .header .menuOpener {
+    top: 35px; }
+  body p {
+    font-size: 1.1em; }
   body .menu {
     /* end .menu ul */ }
     body .menu ul {
@@ -241,6 +246,24 @@ body {
 
 .page-template-portfolioAlter .portfolioAlter #gallery-content-center img {
   width: calc(33% - 10px); }
+
+.page-template-Agency .ourDna blockquote {
+  font-size: 13em;
+  text-align: left; }
+
+.page-template-Service .separator {
+  background-attachment: fixed; }
+
+.page-template-testimonial .testimonials {
+  padding-bottom: 100px; }
+  .page-template-testimonial .testimonials .testimonialDescription {
+    text-align: left; }
+    .page-template-testimonial .testimonials .testimonialDescription .testimonialKind {
+      float: right;
+      transform: translateY(-45px) translateX(35px); }
+  .page-template-testimonial .testimonials .testimonialImage {
+    margin-right: -40px;
+    text-align: right; }
 
 /******************************************************************
 Site Name:

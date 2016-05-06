@@ -57,9 +57,9 @@
             <div class="lightbox">
                 <img src="" class="lightboxedImage"/>
                 <div class="controls">
-                    <span class="close">close</span>
-                        <span class="navPrev">prev</span>
-                        <span class="navNext">next</span>
+                    <span class="close"></span>
+                        <span class="navPrev"></span>
+                        <span class="navNext"></span>
                 </div>
             </div>
 
