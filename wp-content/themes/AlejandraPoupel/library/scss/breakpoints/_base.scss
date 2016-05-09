@@ -66,7 +66,7 @@ h1 {
 	font-family: $playfair;
 	color: $white;
 	font-weight: 900;
-	font-size: 5em;
+	font-size: 3em;
 	line-height: 1.2;
 	text-align: center;
 	&::before, &::after {
@@ -850,7 +850,7 @@ FOOTER STYLES
 
 .footer {
 	clear: both;
-	background-color: #323944;
+	background-color:$AlejandraSoften;
 	color: #fff;
 	padding: 0 0 30px 0;
 	#inner-footer {
@@ -864,7 +864,7 @@ FOOTER STYLES
 		vertical-align: middle;
 		margin: 0 30px;
 		.alterColor {
-			fill:$white;
+			fill:$black;
 		}
 	}
 	nav {
@@ -889,6 +889,10 @@ FOOTER STYLES
 			li {
 				float: none;
 				display: inline-block;
+				a {
+					color:$black;
+					margin: 0 5px;
+				}
 				&.qtranxs-lang-menu {
 					display:none;
 				}
@@ -901,6 +905,10 @@ FOOTER STYLES
 
 	.copyright{
 		font-size: 0.8rem;
+		color: $black;
+		a {
+			color:$black;
+		}
 	}
 
 /******PAGE ACCUEIL************/
@@ -931,7 +939,7 @@ FOOTER STYLES
 	.eventKind {
 		z-index: 100;
 		position: relative;
-		background: $light-gray;
+		background: $AlejandraSoften;
 
 		> div {
 			transform: translateY(-60px);
@@ -1018,7 +1026,7 @@ FOOTER STYLES
 		}
 	}
 	.lastEvents {
-		background-color: $AlejandraGrey;
+		background-color: $AlejandraSoften;
 		position: relative;
 		padding: 50px 0;
 		&::before {
@@ -1166,13 +1174,13 @@ FOOTER STYLES
 		display:none;
 	}
 	.meetAlejandra {
-		background-color: $light-gray;
+		background-color: $AlejandraSoften;
 		&::before {
 			content: '';
 			display: block;
 			width: 100%;
 			height: 10px;
-			border-bottom: 50px solid whitesmoke;
+			border-bottom: 50px solid $AlejandraSoften;
 			border-left: calc( 100vw - 80px ) solid transparent;
 			margin-top: -120px;
 		}
@@ -1227,7 +1235,7 @@ FOOTER STYLES
 		clear: both;
 		text-align: center;
 		padding: 30px;
-		background-color:$AlejandraGrey;
+		background-color:$AlejandraSoften;
 		width: calc(100% - 10px);
 		margin: 0 auto;
 		margin-bottom: 10px;
@@ -1254,7 +1262,7 @@ FOOTER STYLES
 
 .page-template-Contact {
 	main {
-		background-color: $light-gray;
+		background-color: $AlejandraSoften;
 	}
 	h2 {
 		font-size:3em;
@@ -1497,7 +1505,7 @@ _______________________________________*/
 
 .page-template-testimonial {
 	.testimonials {
-		background-color:whitesmoke;
+		background-color:$AlejandraSoften;
 		padding-bottom:50px;
 
 		.testimonialDescription {
@@ -1540,7 +1548,7 @@ _______________________________________*/
 						width:16px;
 						height:16px;
 						border-radius:50%;
-						background-color:$AlejandraGrey;
+						background-color:$white;
 						opacity:0.5;
 						display:block;
 						color:transparent;
@@ -1579,3 +1587,22 @@ _______________________________________*/
 	}
 }
 
+.single-events {
+	h2 {
+		text-align: center;
+		color: $white;
+		font-size: 3em;
+		&::after, &::before {
+			background-color: $white;
+			margin: 20px auto;
+		}
+	}
+	.eventDescription {
+		background-color: $AlejandraGrey;
+		padding: 50px 0;
+		p {
+			text-align: left;
+			margin-top: 40px;
+		}
+	}
+}

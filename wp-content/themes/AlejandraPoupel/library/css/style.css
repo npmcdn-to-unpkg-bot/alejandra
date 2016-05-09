@@ -1250,7 +1250,7 @@ h1 {
   font-family: "Playfair Display", serif;
   color: #fff;
   font-weight: 900;
-  font-size: 5em;
+  font-size: 3em;
   line-height: 1.2;
   text-align: center; }
   h1::before, h1::after {
@@ -1774,7 +1774,7 @@ FOOTER STYLES
 *********************/
 .footer {
   clear: both;
-  background-color: #323944;
+  background-color: rgba(232, 222, 213, 0.4);
   color: #fff;
   padding: 0 0 30px 0; }
   .footer #inner-footer {
@@ -1787,7 +1787,7 @@ FOOTER STYLES
     vertical-align: middle;
     margin: 0 30px; }
     .footer svg .alterColor {
-      fill: #fff; }
+      fill: #323944; }
   .footer nav {
     display: inline-block;
     vertical-align: middle; }
@@ -1804,12 +1804,18 @@ view.
 .footer-links ul li {
   float: none;
   display: inline-block; }
+  .footer-links ul li a {
+    color: #323944;
+    margin: 0 5px; }
   .footer-links ul li.qtranxs-lang-menu {
     display: none; }
 
 /* end .footer-links */
 .copyright {
-  font-size: 0.8rem; }
+  font-size: 0.8rem;
+  color: #323944; }
+  .copyright a {
+    color: #323944; }
 
 /******PAGE ACCUEIL************/
 .page-template-homepage .portfolioSingle {
@@ -1830,7 +1836,7 @@ view.
 .page-template-homepage .eventKind {
   z-index: 100;
   position: relative;
-  background: whitesmoke; }
+  background: rgba(232, 222, 213, 0.4); }
   .page-template-homepage .eventKind > div {
     transform: translateY(-60px); }
     .page-template-homepage .eventKind > div .eventButton {
@@ -1892,7 +1898,7 @@ view.
   margin: 0 auto;
   transform: translateY(0px); }
 .page-template-homepage .lastEvents {
-  background-color: #e8ded5;
+  background-color: rgba(232, 222, 213, 0.4);
   position: relative;
   padding: 50px 0; }
   .page-template-homepage .lastEvents::before {
@@ -1998,13 +2004,13 @@ view.
 .page-template-Agency .imgContainer {
   display: none; }
 .page-template-Agency .meetAlejandra {
-  background-color: whitesmoke; }
+  background-color: rgba(232, 222, 213, 0.4); }
   .page-template-Agency .meetAlejandra::before {
     content: '';
     display: block;
     width: 100%;
     height: 10px;
-    border-bottom: 50px solid whitesmoke;
+    border-bottom: 50px solid rgba(232, 222, 213, 0.4);
     border-left: calc( 100vw - 80px ) solid transparent;
     margin-top: -120px; }
   .page-template-Agency .meetAlejandra .meetAlejandraSingle > div.meetAlejandraText {
@@ -2040,7 +2046,7 @@ view.
   clear: both;
   text-align: center;
   padding: 30px;
-  background-color: #e8ded5;
+  background-color: rgba(232, 222, 213, 0.4);
   width: calc(100% - 10px);
   margin: 0 auto;
   margin-bottom: 10px; }
@@ -2061,7 +2067,7 @@ view.
 
 /******PAGE CONTACT************/
 .page-template-Contact main {
-  background-color: whitesmoke; }
+  background-color: rgba(232, 222, 213, 0.4); }
 .page-template-Contact h2 {
   font-size: 3em;
   text-align: center; }
@@ -2237,7 +2243,7 @@ view.
 __________Page : TESTIMONIALS___________
 _______________________________________*/
 .page-template-testimonial .testimonials {
-  background-color: whitesmoke;
+  background-color: rgba(232, 222, 213, 0.4);
   padding-bottom: 50px; }
   .page-template-testimonial .testimonials .testimonialDescription {
     background-color: #fff;
@@ -2274,7 +2280,7 @@ _______________________________________*/
           width: 16px;
           height: 16px;
           border-radius: 50%;
-          background-color: #e8ded5;
+          background-color: #fff;
           opacity: 0.5;
           display: block;
           color: transparent; }
@@ -2301,6 +2307,20 @@ _______________________________________*/
   .page-template-testimonial .pressSingle .logo {
     width: 80%;
     margin-left: 10%; }
+
+.single-events h2 {
+  text-align: center;
+  color: #fff;
+  font-size: 3em; }
+  .single-events h2::after, .single-events h2::before {
+    background-color: #fff;
+    margin: 20px auto; }
+.single-events .eventDescription {
+  background-color: #e8ded5;
+  padding: 50px 0; }
+  .single-events .eventDescription p {
+    text-align: left;
+    margin-top: 40px; }
 
 /*********************
 LARGER MOBILE DEVICES
@@ -2581,6 +2601,10 @@ you can add resource intensive styles.
     */ }
 
   /* end .footer-links */
+  h1 {
+    width: 70%;
+    margin-left: 15%; }
+
   .page-template-homepage .portfolioSingle {
     margin: 25px 0 0 0; }
   .page-template-homepage .alejandraDescription img {
@@ -2659,7 +2683,7 @@ you can add resource intensive styles.
   body h1 {
     width: 50%;
     margin-left: 25%;
-    font-size: 6em; }
+    font-size: 4em; }
 
   /*********************
   PAGE AGENCE

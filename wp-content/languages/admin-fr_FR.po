@@ -2,12 +2,12 @@
 # This file is distributed under the same license as the Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2016-04-12 21:15:03+0000\n"
+"PO-Revision-Date: 2016-04-26 10:56:36+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: GlotPress/1.1.0-alpha\n"
+"X-Generator: GlotPress/2.1.0-alpha\n"
 "Project-Id-Version: Administration\n"
 
 #. translators: default start of the week. 0 = Sunday, 1 = Monday
@@ -363,7 +363,7 @@ msgstr "<a href=\"https://codex.wordpress.org/Version_%1$s\">WordPress %1$s</a> 
 
 #: wp-admin/includes/plugin-install.php:340
 msgid "You are using a development version of WordPress. These feature plugins are also under development. <a href=\"%s\">Learn more</a>."
-msgstr "Vous utilisez une version en développement de Wordpress. Ces fonctionalités d'extensions sont aussi en développement. <a href=\"%s\">En savoir plus</a>."
+msgstr "Vous utilisez une version en développement de WordPress. Ces fonctionnalités d'extensions sont aussi en développement. <a href=\"%s\">En savoir plus</a>."
 
 #: wp-admin/includes/plugin-install.php:581
 msgid "Reviews"
@@ -2188,7 +2188,7 @@ msgstr "En réponse à"
 
 #: wp-admin/user-edit.php:547
 msgid "You are only logged in at this location."
-msgstr "Vous n'êtes connecté qu'à cet endroit."
+msgstr "Vous n’êtes connecté qu’à cet endroit."
 
 #: wp-admin/includes/plugin-install.php:336
 msgid "These suggestions are based on the plugins you and other users have installed."
@@ -2196,7 +2196,7 @@ msgstr "Ces suggestions sont basées sur les extensions que vous et d'autres uti
 
 #: wp-admin/edit-form-advanced.php:369
 msgid "You can enable distraction-free writing mode using the icon to the right. This feature is not available for old browsers or devices with small screens, and requires that the full-height editor be enabled in Screen Options."
-msgstr "Vous pouvez activer le mode d'écriture sans distraction en cliquant sur l'icône à droite. Cette fonctionnalité n'est pas disponible pour les anciens navigateurs ou les appareils à petits écrans, et requiert l'activation l'éditeur plein-écran dans les options de l'écran."
+msgstr "Vous pouvez activer le mode d'’écriture sans distraction en cliquant sur l’icône à droite. Cette fonctionnalité n’est pas disponible pour les anciens navigateurs ou les appareils à petits écrans, et requiert l’activation l'éditeur plein-écran dans les options de l’écran."
 
 #: wp-admin/user-edit.php:565
 msgid "Log Out Everywhere"
@@ -2637,7 +2637,7 @@ msgstr "Derniers en date"
 
 #: wp-admin/users.php:52
 msgid "Remove allows you to remove a user from your site. It does not delete their content. You can also remove multiple users at once by using Bulk Actions."
-msgstr "« Retirer » vous permet de retirer un utilisateur de votre site. Cela ne supprime pas son contenu. Vous pouvez également retirer plus utilisateurs à la fois avec les Actions Groupées."
+msgstr "« Supprimer » vous permet de retirer un utilisateur de votre site. Cela ne supprime pas son contenu. Vous pouvez également supprimer plusieurs utilisateurs à la fois avec les Actions Groupées."
 
 #: wp-admin/edit-tags.php:74
 msgid "You are not allowed to add this item."
@@ -2782,7 +2782,7 @@ msgstr "Bienvenue dans WordPress&nbsp;%s"
 
 #: wp-admin/themes.php:92
 msgid "If you would like to see more themes to choose from, click on the &#8220;Add New&#8221; button and you will be able to browse or search for additional themes from the <a href=\"%s\" target=\"_blank\">WordPress.org Theme Directory</a>. Themes in the WordPress.org Theme Directory are designed and developed by third parties, and are compatible with the license WordPress uses. Oh, and they&#8217;re free!"
-msgstr "Si vous souhaitez choisir parmi plus de thèmes, cliquez sur le bouton \"Ajouter\" et vous pourrez parcourir le <a href=\"%s\" target=\"_blank\">répertoire de thème de WordPress.org</a> et y chercher des thèmes supplémentaires. Les thèmes du répertoire de thèmes de WordPress.org sont conçus et développés par des tiers, et sont compatibles avec la licence de WordPress. Oh, et ils sont gratuits !"
+msgstr "Si vous souhaitez choisir parmi plus de thèmes, cliquez sur le bouton \"Ajouter\" et vous pourrez parcourir le <a href=\"%s\" target=\"_blank\">répertoire de thème de WordPress.org</a> et y chercher des thèmes supplémentaires. Les thèmes du répertoire de thèmes de WordPress.org sont conçus et développés par des tiers, et sont compatibles avec la licence de WordPress. Oh, et ils sont gratuits !"
 
 #: wp-admin/includes/theme.php:235
 msgid "Fixed Layout"
@@ -2957,9 +2957,9 @@ msgid ""
 "\n"
 "Click 'Cancel' to go back, 'OK' to confirm the delete."
 msgstr ""
-"Êtes-vous sûr(e) de vouloir supprimer ce thème.\n"
+"Confirmez-vous la suppression de ce thème ?\n"
 "\n"
-"« Annuler » pour abandonner, « OK » pour confirmer la suppression."
+"« Annuler » pour abandonner, « OK » pour supprimer."
 
 #: wp-admin/theme-install.php:46 wp-admin/themes.php:138
 msgid "Add New Theme"
@@ -5710,7 +5710,7 @@ msgstr "Ajouter"
 #: wp-admin/includes/template.php:560 wp-admin/includes/widgets.php:253
 #: wp-admin/themes.php:328 wp-admin/themes.php:458 wp-admin/widgets.php:318
 msgid "Delete"
-msgstr "Supprimer "
+msgstr "Supprimer"
 
 #: wp-admin/menu.php:221
 msgid "All Users"
@@ -6478,7 +6478,7 @@ msgstr "Si vous ne vous souvenez pas de votre identifiant, vous devriez contacte
 #. translators: %s: /wp-content/themes
 #: wp-admin/theme-install.php:85
 msgid "You can Upload a theme manually if you have already downloaded its ZIP archive onto your computer (make sure it is from a trusted and original source). You can also do it the old-fashioned way and copy a downloaded theme&#8217;s folder via FTP into your %s directory."
-msgstr "Si vous mettre un thème en ligne manuellement si vous avez déjà téléchargé son archive Zip sur votre ordinateur (assurez-vous que le thème vient d&rsquo;une source de confiance). Vous pouvez également le faire à l&rsquo;ancienne, c&rsquo;est-à-dire passer par un client FTP pour mettre le dossier du thème dans le dossier %s."
+msgstr "Vous pouvez mettre un thème en ligne manuellement si vous avez déjà téléchargé son archive Zip sur votre ordinateur (assurez-vous que le thème vient d&rsquo;une source de confiance). Vous pouvez également le faire à l&rsquo;ancienne, c&rsquo;est-à-dire passer par un client FTP pour mettre le dossier du thème dans le dossier %s."
 
 #: wp-admin/user-edit.php:39
 msgid "Your profile contains information about you (your &#8220;account&#8221;) as well as some personal options related to using WordPress."
@@ -6901,7 +6901,7 @@ msgstr "Marquer comme indésirable"
 
 #: wp-admin/custom-background.php:245
 msgid "Remove Background Image"
-msgstr "Supprimer l&rsquo;image d&rsquo;arrière-plan"
+msgstr "Retirer l&rsquo;image d&rsquo;arrière-plan"
 
 #. translators: %s: post title
 #. translators: %s: link to post
@@ -7375,7 +7375,7 @@ msgstr "Supprimer l&rsquo;extension"
 
 #: wp-admin/plugins.php:317
 msgid "Are you sure you wish to delete these files and data?"
-msgstr "Vouslez-vous vraiment supprimer ces fichiers et données&nbsp;?"
+msgstr "Voulez-vous vraiment supprimer ces fichiers et données&nbsp;?"
 
 #: wp-admin/plugins.php:330
 msgid "Yes, delete these files and data"

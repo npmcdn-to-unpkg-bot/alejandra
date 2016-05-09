@@ -15,10 +15,10 @@
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 						<section class="eventDescription">
 							<div class="container">
-							<div class="col-lg-4">
+							<div class="col-xs-4">
 							<h2><?php the_field('event_description_title');?></h2>
 							</div>
-							<div class="col-lg-8">
+							<div class="col-xs-8">
 								<?php the_content();?>
 							</div>
 							</div>
