@@ -45,9 +45,9 @@
                 <?php endwhile;
             else :?>
             <?php endif; ?>
-                <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 eventsDescription">
-                    <p><?php the_field('events_description');?></p>
-                </div>
+               <!-- <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 eventsDescription">
+                    <p><?php /*the_field('events_description');*/?></p>
+                </div>-->
                 <?php if( have_rows('page_event_link') ):
                     while ( have_rows('page_event_link') ) : the_row();?>
                         <a class="btn firstBtn" href="<?php the_sub_field('page_link');?>"><?php the_sub_field('page_link_name');?></a>
