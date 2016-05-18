@@ -83,14 +83,15 @@
             <div class="row">
             <?php if( have_rows('press_single') ):
                 while ( have_rows('press_single') ) : the_row();?>
+
                     <article class="col-xs-6 col-sm-3  pressSingle lightboxSingle " data-image="<?php the_sub_field('press_img');?>">
-                    <img src="<?php the_sub_field('press_logo');?>" class="logo" />
-                    <div class="pressSingleInfos">
-                        <div class="pressSingleInfosWrapper">
-                            <?php the_sub_field('press_name');?>
-                            <?php the_sub_field('press_date');?>
+                        <div class="pressSingleInfos">
+                            <div class="pressSingleInfosWrapper">
+                                <?php the_sub_field('press_name');?><br />
+                                <?php the_sub_field('press_date');?>
+                            </div>
                         </div>
-                    </div>
+                    <img src="<?php the_sub_field('press_img');?>" class="logo" />
                     </article>
                 <?php endwhile;
                 endif; ?>

@@ -93,59 +93,50 @@
 
 
 
-
+<!--
     <section class="lastEvents">
         <div class="container">
             <div class="row">
-            <h2 class="col-md-4" data-scroll-speed="20"><?php the_field('latestArticles_title');?></h2>
+            <h2 class="col-md-4" data-scroll-speed="20"><?php /*the_field('latestArticles_title');*/?></h2>
 
-
-
-            <?php query_posts( 'post_type=events&posts_per_page=4' ); ?>
-               <?php $count = 0;?>
-            <?php while ( have_posts() ) : the_post(); ?>
+            <?php /*query_posts( 'post_type=events&posts_per_page=4' ); */?>
+               <?php /*$count = 0;*/?>
+            <?php /*while ( have_posts() ) : the_post(); */?>
                 <article class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-md-4 portfolioSingle">
-                    <?php echo the_category();?>
-                    <a href="<?php echo get_permalink();?>">
+                    <?php /*echo the_category();*/?>
+                    <a href="<?php /*echo get_permalink();*/?>">
                         <div class="articleContainer">
 
-                        <?php the_post_thumbnail('bones-thumb-square');?>
+                        <?php /*the_post_thumbnail('bones-thumb-square');*/?>
                             <div class="articleInfos">
-                                <h3><?php the_title();?></h3>
-                                <time><?php the_date();?></time>
+                                <h3><?php /*the_title();*/?></h3>
+                                <time><?php /*the_date();*/?></time>
                             </div>
                     </div>
                     </a>
                 </article>
-                <?php if ($count===1):?>
+                <?php /*if ($count===1):*/?>
                     </div><div class="row">
-                <?php elseif($count===3):?>
+                <?php /*elseif($count===3):*/?>
                 <article class="col-lg-4 col-md-4 col-sm-12 col-xs-12 btnContainer">
 
-
-
-                <?php endif;?>
-                <?php $count++;?>
-            <?php endwhile; ?>
-            <?php wp_reset_query();?>
-            <?php if( have_rows('page_portfolio_links') ):
-                while ( have_rows('page_portfolio_links') ) : the_row();?>
-                    <a class="btn" href="<?php the_sub_field('page_portfolio_link');?>"><?php the_sub_field('page_portfolio_name');?></a>
-                <?php endwhile;
-            else :?>
-            <?php endif; ?>
+                <?php /*endif;*/?>
+                <?php /*$count++;*/?>
+            <?php /*endwhile; */?>
+            <?php /*wp_reset_query();*/?>
+            <?php /*if( have_rows('page_portfolio_links') ):
+                while ( have_rows('page_portfolio_links') ) : the_row();*/?>
+                    <a class="btn" href="<?php /*the_sub_field('page_portfolio_link');*/?>"><?php /*the_sub_field('page_portfolio_name');*/?></a>
+                <?php /*endwhile;
+            else :*/?>
+            <?php /*endif; */?>
                 </article>
             </div>
-
-
-
-
-
         </div>
 
         </div>
 
-    </section>
+    </section>-->
 
 
 <?php get_footer();?>

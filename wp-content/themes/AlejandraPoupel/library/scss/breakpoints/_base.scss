@@ -43,6 +43,32 @@ body {
 	}
 }
 
+#preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: white;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	.loader {
+		width: 50px;
+		transform: translate3d(50%, 50%, 0);
+		top: 30%;
+		left: 48%;
+		position: absolute;
+	}
+	#preloaderLogo {
+		height: 80px;
+		width: auto;
+		position: absolute;
+		left: 50%;
+		transform: translate3d(-50%, -50%, 0);
+		top: 50%;
+		margin: 0;
+		fill: #333;
+	}
+}
 /******************************************************************
 H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
@@ -59,13 +85,13 @@ h1 {
 	width:90%;
 	margin-left:5%;
 	margin-top: 10px;
-	top: 20%;
+	top: 30%;
 	position: absolute;
 	z-index: 99;
 	height: 50%;
 	font-family: $playfair;
 	color: $white;
-	font-weight: 900;
+	font-weight: 700;
 	font-size: 3em;
 	line-height: 1.2;
 	text-align: center;
@@ -82,7 +108,7 @@ h2 {
 	font-family: "Playfair Display", serif;
 	color: $black;
 	font-size: 5em;
-	font-weight: 900;
+	font-weight: 700;
 	line-height: 1;
 	&::before, &::after {
 		width: 50px;
@@ -946,7 +972,6 @@ FOOTER STYLES
 			.eventButton {
 				background-color: $black;
 				border: 10px solid $white;
-				width: 80%;
 				margin: 0 auto;
 				position: relative;
 				a {
@@ -1561,24 +1586,16 @@ _______________________________________*/
 		}
 	}
 	.pressSingle {
-		height:150px;
-		line-height:150px;
 		position:relative;
 		cursor:pointer;
+		margin-bottom:20px;
 		&:hover .pressSingleInfos {
 			opacity:1;
 		}
 		.pressSingleInfos {
-			position:absolute;
-			width:100%;
-			height:100%;
-			top:0;
-			left:0;
-			background-color:rgba(255,255,255,0.9);
-			opacity:0;
-			transition:$basicTransition;
 			text-align:center;
-			color:$orange;
+			text-align: center;
+			margin: 10px auto;
 		}
 		.logo {
 			width:80%;

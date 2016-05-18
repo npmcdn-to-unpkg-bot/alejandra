@@ -1230,6 +1230,30 @@ body {
     left: 0;
     z-index: 130; }
 
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white;
+  width: 100%;
+  height: 100%;
+  z-index: 1000; }
+  #preloader .loader {
+    width: 50px;
+    transform: translate3d(50%, 50%, 0);
+    top: 30%;
+    left: 48%;
+    position: absolute; }
+  #preloader #preloaderLogo {
+    height: 80px;
+    width: auto;
+    position: absolute;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    top: 50%;
+    margin: 0;
+    fill: #333; }
+
 /******************************************************************
 H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
@@ -1243,13 +1267,13 @@ h1 {
   width: 90%;
   margin-left: 5%;
   margin-top: 10px;
-  top: 20%;
+  top: 30%;
   position: absolute;
   z-index: 99;
   height: 50%;
   font-family: "Playfair Display", serif;
   color: #fff;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 3em;
   line-height: 1.2;
   text-align: center; }
@@ -1265,7 +1289,7 @@ h2 {
   font-family: "Playfair Display", serif;
   color: #323944;
   font-size: 5em;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1; }
   h2::before, h2::after {
     width: 50px;
@@ -1842,7 +1866,6 @@ view.
     .page-template-homepage .eventKind > div .eventButton {
       background-color: #323944;
       border: 10px solid #fff;
-      width: 80%;
       margin: 0 auto;
       position: relative; }
       .page-template-homepage .eventKind > div .eventButton a::after {
@@ -2287,23 +2310,15 @@ _______________________________________*/
           .page-template-testimonial .testimonials .bx-wrapper .bx-pager .bx-pager-item a.active {
             opacity: 1; }
 .page-template-testimonial .pressSingle {
-  height: 150px;
-  line-height: 150px;
   position: relative;
-  cursor: pointer; }
+  cursor: pointer;
+  margin-bottom: 20px; }
   .page-template-testimonial .pressSingle:hover .pressSingleInfos {
     opacity: 1; }
   .page-template-testimonial .pressSingle .pressSingleInfos {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(255, 255, 255, 0.9);
-    opacity: 0;
-    transition: all ease-in-out 0.2s;
     text-align: center;
-    color: #F4920A; }
+    text-align: center;
+    margin: 10px auto; }
   .page-template-testimonial .pressSingle .logo {
     width: 80%;
     margin-left: 10%; }

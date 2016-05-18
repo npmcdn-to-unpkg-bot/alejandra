@@ -303,5 +303,6 @@ jQuery(document).ready(function($) {
 jQuery(window).load(function() {
 
 	jQuery('#gallery-content-center').isotope('reLayout');
+	jQuery('#preloader').fadeOut(500);
 
 });
