@@ -1154,7 +1154,8 @@ you can just remove this stylesheet.
 ******************************************************************/
 .heroSlider {
   position: relative;
-  height: 670px;
+  height: 90vh;
+  min-height: 670px;
   overflow: hidden;
   background-color: #323944; }
   .heroSlider::before {
@@ -1166,6 +1167,11 @@ you can just remove this stylesheet.
     top: 0;
     z-index: 90;
     left: 0; }
+    .heroSlider::before li {
+      background-size: cover;
+      height: 90vh;
+      min-height: 670px;
+      background-position: center; }
   .heroSlider .heroSliderImage {
     height: 100%;
     background-size: cover;
@@ -1871,7 +1877,8 @@ view.
   margin: 0; }
   .page-template-homepage .homepageSlider li {
     background-size: cover;
-    height: 670px;
+    height: 90vh;
+    min-height: 670px;
     background-position: center; }
 .page-template-homepage .eventKind {
   z-index: 100;
@@ -1894,7 +1901,7 @@ view.
         position: absolute;
         top: 0;
         left: 0;
-        line-height: 402px;
+        line-height: 460px;
         text-align: center;
         font-size: 16px;
         letter-spacing: 2px;
@@ -2229,7 +2236,8 @@ view.
   margin: 0; }
   .page-template-portfolioAlter .portfolioSlider li {
     background-size: cover;
-    height: 670px;
+    height: 90vh;
+    min-height: 670px;
     background-position: center; }
 .page-template-portfolioAlter .portfolioAlter #gallery-content-center img {
   width: calc(50% - 15px);

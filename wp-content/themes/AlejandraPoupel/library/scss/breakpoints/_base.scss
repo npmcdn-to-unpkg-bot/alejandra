@@ -979,7 +979,8 @@ FOOTER STYLES
 		margin: 0;
 		li {
 			background-size: cover;
-			height: 670px;
+			height: 90vh;
+			min-height:670px;
 			background-position: center;
 		}
 	}
@@ -1006,7 +1007,7 @@ FOOTER STYLES
 						position: absolute;
 						top: 0;
 						left: 0;
-						line-height: 402px;
+						line-height: 460px;
 						text-align: center;
 						font-size: 16px;
 						letter-spacing: 2px;
@@ -1470,7 +1471,8 @@ FOOTER STYLES
 		margin: 0;
 		li {
 			background-size: cover;
-			height: 670px;
+			height:90vh;
+			min-height: 670px;
 			background-position: center;
 		}
 	}

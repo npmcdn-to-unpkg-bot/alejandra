@@ -12,7 +12,8 @@ you can just remove this stylesheet.
 
 .heroSlider {
   position: relative;
-  height: 670px;
+  height: 90vh;
+  min-height:670px;
   overflow: hidden;
   background-color: $black;
   &::before {
@@ -24,6 +25,12 @@ you can just remove this stylesheet.
     top: 0;
     z-index: 90;
     left: 0;
+    li {
+      background-size: cover;
+      height: 90vh;
+      min-height:670px;
+      background-position: center;
+    }
   }
   .heroSliderImage {
     height: 100%;
