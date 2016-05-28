@@ -90,10 +90,38 @@
 							'fallback_cb' => 'bones_footer_links_fallback'  // fallback function
 							)); ?>
 						</nav>
+					<section class="footerBtn-container">
+						<a href="tel:+0033140810337" class="footerBtn">
+							<svg version="1.1" id="callIcon" class="footerIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+								 viewBox="0 0 79.8 80" style="enable-background:new 0 0 79.8 80;" xml:space="preserve">
+<g>
+	<path d="M64.2,80C48.6,80,32.5,72.8,20,60.3C6.8,47.1-0.4,30.6,0,14.7v-0.6l0.4-0.5c1.1-1.4,2.2-2.6,3.3-3.8
+		c4.2-4.2,9.1-7.4,14.6-9.5C18.8,0.1,19.4,0,20,0c1.9,0,5.1,1,5.7,2.9c2,5.4,4.4,12.5,6.2,19.2c0.3,1.3,0,5.1-1.9,6.2l-6.4,4
+		c-0.4,0.3-0.6,0.7-0.7,1.1c-0.2,1.1,0.2,2.5,1,3.7c2.5,3.5,5.4,6.9,8.7,10.2c3.3,3.2,6.7,6.1,10.1,8.6c1.7,1.3,4.1,1.4,4.7,0.4
+		l4.1-6.4c1-1.6,4.1-2,5.2-2c0.4,0,0.7,0,1,0.1c8.2,1.8,13.1,3.4,19.4,6.3c1.9,0.9,3.3,5.1,2.4,7.4c-2.1,5.5-5.3,10.4-9.5,14.6
+		c-1.2,1.2-2.5,2.3-3.8,3.3L65.9,80H64.2L64.2,80z M3.6,15.4c-0.2,14.8,6.6,30.1,18.7,42.1l0.3,0.3c11.8,11.8,27,18.6,41.6,18.6h0.5
+		c1.1-0.9,2.1-1.8,3-2.7c3.8-3.8,6.7-8.3,8.7-13.4c0.2-0.6-0.3-2.5-0.8-2.9c-5.8-2.6-10.5-4.1-18.5-5.9c-1.1,0-2.2,0.3-2.5,0.5
+		l-3.9,6.2c-1.7,2.8-6.5,3.1-9.9,0.6c-3.6-2.6-7.1-5.6-10.5-9s-6.4-7-9-10.6c-1.5-2-2.1-4.4-1.7-6.5c0.3-1.5,1.1-2.7,2.3-3.5l6.4-4
+		c0.1-0.3,0.4-1.8,0.3-2.3C26.9,16.3,24.4,9.3,22.5,4c-0.2-0.1-1.4-0.5-2.3-0.5c-0.3,0-0.4,0-0.4,0c-5.1,2-9.6,4.9-13.4,8.7
+		C5.4,13.3,4.5,14.3,3.6,15.4L3.6,15.4z"/>
+</g>
+</svg>
 
+
+						</a>
+						<a href="mailto:alejandra@alejandrap.com" class="footerBtn">
+							<svg version="1.1" id="mailIcon" class="footerIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+								 viewBox="0 0 50.3 34.8" style="enable-background:new 0 0 50.3 34.8;" xml:space="preserve">
+<path d="M46.3,0H4C1.8,0,0,1.8,0,4v26.8c0,2.2,1.8,4,4,4h42.3c2.2,0,4-1.8,4-4V4C50.3,1.8,48.5,0,46.3,0z M24.8,23.1
+	c-0.1,0.1-0.1,0.1-0.2,0.1c0,0-0.1-0.1-0.1-0.1L5.9,3.4H44L24.8,23.1z M15.9,18.9L3.4,29.6V5.7L15.9,18.9z M18.2,21.4l3.9,4.1
+	c0.8,0.8,1.7,1.2,2.5,1.2c0.9,0,1.8-0.4,2.6-1.2l4.6-4.7l12.1,10.6H6.5L18.2,21.4z M46.9,29.5L34.2,18.4L46.9,5.3V29.5z"/>
+</svg>
+
+						</a>
+					</section>
 
 					</div>
-					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?> | Designed by <a href="mailto:hello@tsg1986.com">Thibault Saint Germain</a></p>
+					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?> | Crafted by <a href="mailto:hello@tsg1986.com">Thibault Saint Germain</a></p>
 				</div>
 
 			</footer>

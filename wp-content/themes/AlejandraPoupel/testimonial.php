@@ -58,21 +58,22 @@
         </section>
 
 
-    <!--<section class="container videos">
+    <section class="container videos">
         <div class="row">
 
-            <h2><?php /*the_field('videos_title');*/?></h2>
+            <h2><?php the_field('videos_title');?></h2>
 
-            <?php /*if( have_rows('videos') ):
-                while ( have_rows('videos') ) : the_row();*/?>
-                    <iframe width="560" height="315" src="<?php /*the_sub_field('video_url'); */?>" frameborder="0" allowfullscreen></iframe>
-
-                <?php /*endwhile;
-            else :*/?>
-            <?php /*endif; */?>
+            <?php if( have_rows('videos') ):
+                while ( have_rows('videos') ) : the_row();?>
+            <div class="videoWrapper">
+                    <iframe width="560" height="315" src="<?php the_sub_field('video_url'); ?>" frameborder="0" allowfullscreen></iframe>
+            </div>
+                <?php endwhile;
+            else :?>
+            <?php endif;?>
 
         </div>
-    </section>-->
+    </section>
 
     <section class="container pressReleases">
         <div class="row">

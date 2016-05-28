@@ -327,7 +327,7 @@ h1 {
 	}
 }
 
-.page-template-Service  {
+.page-template-Service, .page-template-ServiceSingle  {
 	h2 {
 		width:50%;
 	}
@@ -349,5 +349,23 @@ h1 {
 			}
 		}
 
+	}
+}
+.page-template-testimonial {
+	.videoWrapper {
+		width: 47%;
+		overflow: hidden;
+		height: 200px;
+		position: relative;
+		float: left;
+		margin: 10px 1.5%;
+		padding: 0;
+		iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
 	}
 }

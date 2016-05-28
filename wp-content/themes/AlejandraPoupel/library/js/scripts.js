@@ -156,6 +156,15 @@ jQuery(document).ready(function($) {
 		}
 	);
 
+	$('.agencySlider').bxSlider({
+			controls: true,
+				auto: true,
+			   pager: false,
+			nextText: "",
+			prevText: ""
+		}
+	);
+
 	$('.grid').masonry({
 		columnWidth: '.grid-sizer',
 		gutter: '.gutter-sizer',

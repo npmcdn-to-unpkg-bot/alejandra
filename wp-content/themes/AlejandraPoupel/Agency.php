@@ -35,7 +35,7 @@
 
     <section class="meetAlejandra">
             <div class="container">
-            <h2><?php the_field('alejandra_title');?></h2>
+            <h2 class="col-xs-12 col-md-6 col-md-offset-6"><?php the_field('alejandra_title');?></h2>
             <?php if( have_rows('alejandra') ):
                 while ( have_rows('alejandra') ) : the_row();?>
 
@@ -54,6 +54,32 @@
 
 
             </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+
+            <h2 class="col-xs-12 col-md-6">Ils ont pu apprécier notre savoir-faire</h2>
+
+        <div class="agencySlider">
+
+            <?php if( have_rows('testimonials_excerpt') ):
+                while ( have_rows('testimonials_excerpt') ) : the_row();?>
+
+                    <article>
+                                <span class="testimonialContent">
+                                    <?php the_sub_field('testimonial_content');?>
+                                </span>
+                                <span class="tesimonialPerson">
+                                    <?php the_sub_field('testimonail_author');?>
+                                </span>
+                    </article>
+
+                <?php endwhile;?>
+            <?php endif; ?>
+        </div>
+        </div>
+
     </section>
 
 

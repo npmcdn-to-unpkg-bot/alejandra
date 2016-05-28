@@ -1302,7 +1302,7 @@ h2 {
 h3, .h3 {
   font-size: 2.5em;
   font-family: "Playfair Display", serif;
-  font-weight: 900;
+  font-weight: 700;
   color: #e8ded5; }
 
 h4, .h4 {
@@ -1815,6 +1815,22 @@ FOOTER STYLES
   .footer nav {
     display: inline-block;
     vertical-align: middle; }
+  .footer .footerBtn-container {
+    text-align: center;
+    padding: 0; }
+    .footer .footerBtn-container .footerBtn {
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      background-color: #323944;
+      vertical-align: top;
+      line-height: 16px;
+      border-radius: 50%;
+      padding: 8px; }
+      .footer .footerBtn-container .footerBtn svg {
+        fill: #fff;
+        width: 100%;
+        margin: 0; }
 
 /*
 if you checked out the link above:
@@ -1991,6 +2007,30 @@ view.
 
 .page-template-Agency section {
   padding: 70px 0 130px; }
+.page-template-Agency .agencySlider article {
+  text-align: center;
+  font-size: 2em; }
+  .page-template-Agency .agencySlider article .tesimonialPerson {
+    font-family: "Playfair Display", serif;
+    display: block;
+    color: #e8ded5;
+    font-weight: 900; }
+.page-template-Agency .bx-controls {
+  position: relative; }
+  .page-template-Agency .bx-controls a {
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-top: 2px solid whitesmoke;
+    position: absolute;
+    top: -80px; }
+    .page-template-Agency .bx-controls a.bx-prev {
+      border-left: 2px solid whitesmoke;
+      transform: rotateZ(-45deg); }
+    .page-template-Agency .bx-controls a.bx-next {
+      border-right: 2px solid whitesmoke;
+      transform: rotateZ(45deg);
+      right: 0; }
 .page-template-Agency h2 {
   text-align: center; }
 .page-template-Agency .ourDna blockquote {
@@ -2008,14 +2048,35 @@ view.
   text-align: left; }
 
 /******PAGE SAVOIR FAIRE************/
-.page-template-Service h2 {
+.page-template-Service h2, .page-template-ServiceSingle h2 {
   width: 90%;
   text-align: center;
   margin: 0 auto; }
-.page-template-Service article h3 {
+.page-template-Service article.servicesLinks, .page-template-ServiceSingle article.servicesLinks {
+  overflow: hidden;
+  position: relative;
+  text-align: center; }
+  .page-template-Service article.servicesLinks h4, .page-template-ServiceSingle article.servicesLinks h4 {
+    color: #323944;
+    opacity: 0;
+    transition: all ease-in-out 0.2s;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    width: 100%;
+    font-size: 2em;
+    font-family: "Playfair Display", serif;
+    margin-top: -15px; }
+  .page-template-Service article.servicesLinks img, .page-template-ServiceSingle article.servicesLinks img {
+    transition: all ease-in-out 0.2s; }
+    .page-template-Service article.servicesLinks img:hover, .page-template-ServiceSingle article.servicesLinks img:hover {
+      opacity: 0.4; }
+      .page-template-Service article.servicesLinks img:hover + h4, .page-template-ServiceSingle article.servicesLinks img:hover + h4 {
+        opacity: 1; }
+.page-template-Service article h3, .page-template-ServiceSingle article h3 {
   font-size: 5em;
   text-align: center; }
-.page-template-Service article blockquote {
+.page-template-Service article blockquote, .page-template-ServiceSingle article blockquote {
   font-size: 4em;
   font-family: "Playfair Display", serif;
   font-weight: 900;
@@ -2251,16 +2312,17 @@ view.
   .single-post .articleMain article section h2::before, .single-post .articleMain article section h2::after {
     display: none; }
 
-.page-template-Service .service {
+.page-template-Service .service, .page-template-ServiceSingle .service {
   padding-bottom: 80px; }
-.page-template-Service article p {
+.page-template-Service article p, .page-template-ServiceSingle article p {
   text-align: inherit;
   z-index: 1;
   position: relative; }
-.page-template-Service .separator {
+.page-template-Service .separator, .page-template-ServiceSingle .separator {
   height: 350px;
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  margin-bottom: 100px; }
 
 /*______________________________________
 __________Page : TESTIMONIALS___________
@@ -2309,6 +2371,20 @@ _______________________________________*/
           color: transparent; }
           .page-template-testimonial .testimonials .bx-wrapper .bx-pager .bx-pager-item a.active {
             opacity: 1; }
+.page-template-testimonial .videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+  margin-bottom: 20px;
+  text-align: center; }
+  .page-template-testimonial .videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
 .page-template-testimonial .pressSingle {
   position: relative;
   cursor: pointer;
@@ -2433,7 +2509,7 @@ tweeners.
     font-size: 13em;
     text-align: left; }
 
-  .page-template-Service .separator {
+  .page-template-Service .separator, .page-template-ServiceSingle .separator {
     background-attachment: fixed; }
 
   .page-template-testimonial .testimonials {
@@ -2638,22 +2714,37 @@ you can add resource intensive styles.
   .page-template-Agency .imgContainer {
     display: block; }
 
-  .page-template-Service h2 {
+  .page-template-Service h2, .page-template-ServiceSingle h2 {
     width: 50%; }
-  .page-template-Service article {
+  .page-template-Service article, .page-template-ServiceSingle article {
     padding: 50px 0;
     position: relative;
     text-align: right; }
-    .page-template-Service article blockquote {
+    .page-template-Service article blockquote, .page-template-ServiceSingle article blockquote {
       font-size: 5em;
       text-align: left;
       -ms-word-break: break-all;
       word-break: break-all; }
-    .page-template-Service article:nth-of-type(odd) .descriptionContainer {
+    .page-template-Service article:nth-of-type(odd) .descriptionContainer, .page-template-ServiceSingle article:nth-of-type(odd) .descriptionContainer {
       float: right;
       text-align: left; }
-      .page-template-Service article:nth-of-type(odd) .descriptionContainer blockquote {
-        text-align: right; } }
+      .page-template-Service article:nth-of-type(odd) .descriptionContainer blockquote, .page-template-ServiceSingle article:nth-of-type(odd) .descriptionContainer blockquote {
+        text-align: right; }
+
+  .page-template-testimonial .videoWrapper {
+    width: 47%;
+    overflow: hidden;
+    height: 200px;
+    position: relative;
+    float: left;
+    margin: 10px 1.5%;
+    padding: 0; }
+    .page-template-testimonial .videoWrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; } }
 @media only screen and (max-width: 992px) {
   /******************************************************************
   Site Name: 
@@ -2716,6 +2807,8 @@ you can add resource intensive styles.
   *********************/
   .page-template-testimonial .testimonialContent {
     font-size: 1.5em; }
+  .page-template-testimonial .videoWrapper {
+    height: 250px; }
 
   /*********************
   PAGE PORTFOLIO
@@ -2803,7 +2896,10 @@ This is for the larger monitors and possibly full screen viewers.
     width: calc(25% - 10px); }
 
   .page-template-portfolioAlter .portfolioAlter #gallery-content-center img {
-    width: calc(25% - 10px); } }
+    width: calc(25% - 10px); }
+
+  .page-template-testimonial .videoWrapper {
+    width: 30%; } }
 /*********************
 RETINA (2x RESOLUTION DEVICES)
 This applies to the retina iPhone (4s) and iPad (2,3) along with

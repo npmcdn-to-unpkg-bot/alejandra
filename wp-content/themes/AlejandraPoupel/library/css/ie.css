@@ -251,7 +251,7 @@ body {
   font-size: 13em;
   text-align: left; }
 
-.page-template-Service .separator {
+.page-template-Service .separator, .page-template-ServiceSingle .separator {
   background-attachment: fixed; }
 
 .page-template-testimonial .testimonials {
@@ -420,22 +420,37 @@ h1 {
 .page-template-Agency .imgContainer {
   display: block; }
 
-.page-template-Service h2 {
+.page-template-Service h2, .page-template-ServiceSingle h2 {
   width: 50%; }
-.page-template-Service article {
+.page-template-Service article, .page-template-ServiceSingle article {
   padding: 50px 0;
   position: relative;
   text-align: right; }
-  .page-template-Service article blockquote {
+  .page-template-Service article blockquote, .page-template-ServiceSingle article blockquote {
     font-size: 5em;
     text-align: left;
     -ms-word-break: break-all;
     word-break: break-all; }
-  .page-template-Service article:nth-of-type(odd) .descriptionContainer {
+  .page-template-Service article:nth-of-type(odd) .descriptionContainer, .page-template-ServiceSingle article:nth-of-type(odd) .descriptionContainer {
     float: right;
     text-align: left; }
-    .page-template-Service article:nth-of-type(odd) .descriptionContainer blockquote {
+    .page-template-Service article:nth-of-type(odd) .descriptionContainer blockquote, .page-template-ServiceSingle article:nth-of-type(odd) .descriptionContainer blockquote {
       text-align: right; }
+
+.page-template-testimonial .videoWrapper {
+  width: 47%;
+  overflow: hidden;
+  height: 200px;
+  position: relative;
+  float: left;
+  margin: 10px 1.5%;
+  padding: 0; }
+  .page-template-testimonial .videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
 
 /******************************************************************
 Site Name:

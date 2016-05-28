@@ -76,6 +76,7 @@ if ( ! isset( $content_width ) ) {
 //add_image_size( 'bones-thumb-600', 600, 150, true );
 //add_image_size( 'bones-thumb-300', 300, 100, true );
 add_image_size( 'bones-thumb-square', 300, 300, array('center','center') );
+add_image_size( 'bones-thumb-skyscraper', 350, 515, array('center','center') );
 //add_image_size( 'bones-thumb-rectangle', 600, 300, array('center','center') );
 add_image_size( 'testimonials', 9999, 400, false);
 add_image_size('portfolio-thumb',300,9999,false);
@@ -105,6 +106,7 @@ add_filter( 'image_size_names_choose', 'bones_custom_image_sizes' );
 function bones_custom_image_sizes( $sizes ) {
     return array_merge( $sizes, array(
         'bones-thumb-square' => __('300px by 300px'),
+        'bones-thumb-skyscraper' => __('350px by 515px'),
         'testimonials' => __('700px by 400px'),
 
     ) );
