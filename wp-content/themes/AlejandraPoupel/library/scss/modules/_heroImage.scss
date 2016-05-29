@@ -53,7 +53,7 @@ you can just remove this stylesheet.
 
 }
 
-.frame { width: 100%; height: 90vh; padding: 0; box-sizing:border-box;}
-.frame .slidee { margin: 0; padding: 0; height: 100%; list-style: none; }
-.frame .slidee li { float: left; margin: 0 5px 0 0; padding: 0;width:auto; max-width:100%;height:100%;box-sizing:border-box; }
-.frame .slidee li img {max-height:100%}
+#frame { width: 100%; height: 90vh; padding: 0; box-sizing:border-box;}
+#frame .slidee { margin: 0; padding: 0; height: 100%; list-style: none; }
+#frame .slidee li { float: left; margin: 0 5px 0 0; padding: 0;width:auto; max-width:100%;height:100%;box-sizing:border-box; }
+#frame .slidee li img {height:100%}

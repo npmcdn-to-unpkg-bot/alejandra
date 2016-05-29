@@ -35,11 +35,13 @@
                 $content = apply_filters('the_content', $post->post_content);
                 echo $content;
                 ?></p>
+                <a href="<?php the_field('portfolio_link');?>" class="btn">Voir le portfolio</a>
 
             </div>
 
             <div class="col-sm-12 col-md-4 quoteContainer">
                 <blockquote><?php the_field('service_single_quote');?></blockquote>
+
             </div>
             </article>
             <div class="separator" data-image="<?php the_field('service_single_image');?>"></div>

@@ -338,6 +338,55 @@ jQuery(window).load(function() {
 		cycleInterval: 3000,  // Delay between cycles in milliseconds.
 		pauseOnHover:  true
 	};
-	jQuery('.frame').sly(options);
+	jQuery('#frame').sly(options);
+
+/*	function slyLazyLoader(attr, margin) {
+		attr = attr || 'data-src';
+		margin = margin | 0;
+
+		return function () {
+			var start = this.rel.firstItem - margin;
+			var end = this.lastItem + margin;
+			for (var i = start; i < end; i++) {
+				if (!this.items[i] || this.items[i].lazyLoaded) continue;
+				this.items[i].lazyLoaded = true;
+				setPaths(this.items[i].el);
+			}
+		}
+
+		function setPaths(el) {
+			var imgs = el.querySelectorAll('[' + attr + ']');
+			for (var i = 0; i < imgs.length; i++) {
+				imgs[i].src = imgs[i].dataset ? imgs[i].dataset.src : imgs[i].getAttribute(attr);
+			}
+		}
+	}
+	var options = {
+		horizontal: 1,
+		itemNav: 'basic',
+		smart: 1,
+		activateOn: 'click',
+		mouseDragging: 1,
+		touchDragging: 1,
+		releaseSwing: 1,
+		startAt: 0,
+		//scrollBar: $wrap.find('.scrollbar'),
+		scrollBy: 1,
+		//pagesBar: $wrap.find('.pages'),
+		activatePageOn: 'click',
+		speed: 300,
+		elasticBounds: 1,
+		//easing: 'easeOutExpo',
+		dragHandle: 1,
+		dynamicHandle: 1,
+		clickBar: 1,
+		cycleBy:       'items',  // Enable automatic cycling by 'items' or 'pages'.
+		cycleInterval: 3000,  // Delay between cycles in milliseconds.
+		pauseOnHover:  true
+	};
+
+	new Sly(document.getElementById('frame'), options)
+		.on('load change', slyLazyLoader('data-src', 1))
+		.init();*/
 
 });

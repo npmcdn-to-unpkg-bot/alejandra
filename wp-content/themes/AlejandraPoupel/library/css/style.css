@@ -1189,19 +1189,19 @@ you can just remove this stylesheet.
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
 
-.frame {
+#frame {
   width: 100%;
   height: 90vh;
   padding: 0;
   box-sizing: border-box; }
 
-.frame .slidee {
+#frame .slidee {
   margin: 0;
   padding: 0;
   height: 100%;
   list-style: none; }
 
-.frame .slidee li {
+#frame .slidee li {
   float: left;
   margin: 0 5px 0 0;
   padding: 0;
@@ -1210,8 +1210,8 @@ you can just remove this stylesheet.
   height: 100%;
   box-sizing: border-box; }
 
-.frame .slidee li img {
-  max-height: 100%; }
+#frame .slidee li img {
+  height: 100%; }
 
 /*********************
 BASE (MOBILE) SIZE
@@ -2502,7 +2502,8 @@ tweeners.
   .page-template-testimonial .testimonials {
     padding-bottom: 100px; }
     .page-template-testimonial .testimonials .testimonialDescription {
-      text-align: left; }
+      text-align: left;
+      box-shadow: 1px 1px 21px 0 rgba(0, 0, 0, 0.05); }
       .page-template-testimonial .testimonials .testimonialDescription .testimonialKind {
         float: right;
         transform: translateY(-45px) translateX(35px); }

@@ -38,7 +38,7 @@
                                 <img src="<?php echo $thumb[0];?>">
                             </div>
 
-                            <div class="col-xs-10 col-sm-8 col-md-7 col-lg-6 testimonialDescription" data-scroll-speed="-20">
+                            <div class="col-xs-10 col-sm-8 col-md-7 col-lg-6 testimonialDescription">
                                 <span class="testimonialKind">
                                     <?php $term = get_sub_field('event_category');
                                         echo $term->name;?>

@@ -24,12 +24,12 @@
 
 </div>-->
 
-<div class="frame">
+<div id="frame">
     <ul class="slidee">
         <?php
         if( have_rows('slider_portfolio') ):
             while ( have_rows('slider_portfolio')) : the_row();?>
-                <li><img src="<?php the_sub_field('slider_portfolio_image');?>" /></li>
+                <li><img src="<?php the_sub_field('slider_portfolio_image');?>" data-src="<?php the_sub_field('slider_portfolio_image');?>"/></li>
             <?php endwhile;
         else :?>
         <?php endif; ?>
