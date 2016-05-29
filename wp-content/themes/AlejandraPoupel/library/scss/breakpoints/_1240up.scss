@@ -21,13 +21,13 @@ on larger screens.
   }
 }
 
-.page-template-portfolioAlter {
-  .portfolioAlter {
+
     #gallery-content-center img {
       width: calc(25% - 10px);
+/*      &.grid-item--2 {
+       width:calc(50% - 10px);
+      }*/
     }
-  }
-}
 
 .page-template-testimonial {
   .videoWrapper {

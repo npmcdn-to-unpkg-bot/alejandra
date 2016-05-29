@@ -1189,6 +1189,30 @@ you can just remove this stylesheet.
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
 
+.frame {
+  width: 100%;
+  height: 90vh;
+  padding: 0;
+  box-sizing: border-box; }
+
+.frame .slidee {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  list-style: none; }
+
+.frame .slidee li {
+  float: left;
+  margin: 0 5px 0 0;
+  padding: 0;
+  width: auto;
+  max-width: 100%;
+  height: 100%;
+  box-sizing: border-box; }
+
+.frame .slidee li img {
+  max-height: 100%; }
+
 /*********************
 BASE (MOBILE) SIZE
 This are the mobile styles. It's what people see on their phones. If
@@ -1621,6 +1645,31 @@ POSTS & CONTENT STYLES
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
+.servicesLinks {
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  padding: 0;
+  background-color: white; }
+  .servicesLinks h4 {
+    color: #323944;
+    text-align: center;
+    width: 100%;
+    font-size: 2em;
+    font-family: "Playfair Display", serif; }
+    .servicesLinks h4.hiddenTitle {
+      opacity: 0;
+      transition: all ease-in-out 0.2s;
+      position: absolute;
+      top: 50%;
+      margin-top: -15px; }
+  .servicesLinks img {
+    transition: all ease-in-out 0.2s; }
+    .servicesLinks img:hover {
+      opacity: 0.4; }
+      .servicesLinks img:hover + h4 {
+        opacity: 1; }
+
 .pagination,
 .wp-prev-next {
   margin: 1.5em 0; }
@@ -1882,8 +1931,7 @@ view.
     background-position: center; }
 .page-template-homepage .eventKind {
   z-index: 100;
-  position: relative;
-  background: rgba(232, 222, 213, 0.4); }
+  position: relative; }
   .page-template-homepage .eventKind > div {
     transform: translateY(-60px); }
     .page-template-homepage .eventKind > div .eventButton {
@@ -2016,26 +2064,31 @@ view.
   padding: 70px 0 130px; }
 .page-template-Agency .agencySlider article {
   text-align: center;
-  font-size: 2em; }
+  font-size: 1.5em; }
+  .page-template-Agency .agencySlider article .testimonialContent {
+    width: 80%;
+    display: block;
+    margin: 0 auto; }
   .page-template-Agency .agencySlider article .tesimonialPerson {
     font-family: "Playfair Display", serif;
     display: block;
+    font-size: 2em;
     color: #e8ded5;
     font-weight: 900; }
 .page-template-Agency .bx-controls {
   position: relative; }
   .page-template-Agency .bx-controls a {
     display: block;
-    width: 60px;
-    height: 60px;
-    border-top: 2px solid whitesmoke;
+    width: 30px;
+    height: 30px;
+    border-top: 2px solid #e8ded5;
     position: absolute;
     top: -80px; }
     .page-template-Agency .bx-controls a.bx-prev {
-      border-left: 2px solid whitesmoke;
+      border-left: 2px solid #e8ded5;
       transform: rotateZ(-45deg); }
     .page-template-Agency .bx-controls a.bx-next {
-      border-right: 2px solid whitesmoke;
+      border-right: 2px solid #e8ded5;
       transform: rotateZ(45deg);
       right: 0; }
 .page-template-Agency h2 {
@@ -2059,27 +2112,6 @@ view.
   width: 90%;
   text-align: center;
   margin: 0 auto; }
-.page-template-Service article.servicesLinks, .page-template-ServiceSingle article.servicesLinks {
-  overflow: hidden;
-  position: relative;
-  text-align: center; }
-  .page-template-Service article.servicesLinks h4, .page-template-ServiceSingle article.servicesLinks h4 {
-    color: #323944;
-    opacity: 0;
-    transition: all ease-in-out 0.2s;
-    position: absolute;
-    top: 50%;
-    text-align: center;
-    width: 100%;
-    font-size: 2em;
-    font-family: "Playfair Display", serif;
-    margin-top: -15px; }
-  .page-template-Service article.servicesLinks img, .page-template-ServiceSingle article.servicesLinks img {
-    transition: all ease-in-out 0.2s; }
-    .page-template-Service article.servicesLinks img:hover, .page-template-ServiceSingle article.servicesLinks img:hover {
-      opacity: 0.4; }
-      .page-template-Service article.servicesLinks img:hover + h4, .page-template-ServiceSingle article.servicesLinks img:hover + h4 {
-        opacity: 1; }
 .page-template-Service article h3, .page-template-ServiceSingle article h3 {
   font-size: 5em;
   text-align: center; }
@@ -2230,16 +2262,26 @@ view.
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+/******PAGE PORTFOLIO NEWS************/
+.portfolioNew {
+  padding-bottom: 100px; }
+  .portfolioNew h2 {
+    text-align: center; }
+
 /******PAGE PORTFOLIO ALTERNATIVE************/
-.page-template-portfolioAlter .portfolioSlider {
+.portfolioSlider {
   height: calc(100% + 60px);
   margin: 0; }
-  .page-template-portfolioAlter .portfolioSlider li {
+  .portfolioSlider li {
     background-size: cover;
     height: 90vh;
     min-height: 670px;
     background-position: center; }
-.page-template-portfolioAlter .portfolioAlter #gallery-content-center img {
+
+#gallery {
+  padding: 10px 0; }
+
+#gallery-content-center img {
   width: calc(50% - 15px);
   margin-bottom: 10px;
   -webkit-transition: all 0.5s;
@@ -2250,75 +2292,9 @@ view.
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  			/*&.grid-item--2 {
-                  width:48%;
-              }*/ }
-.page-template-portfolioAlter .portfolioAlter .portfolioFilters {
-  transform: translateY(-50px);
-  position: relative;
-  z-index: 100; }
-  .page-template-portfolioAlter .portfolioAlter .portfolioFilters span:hover {
-    cursor: pointer; }
-  .page-template-portfolioAlter .portfolioAlter .portfolioFilters span a {
-    width: 100%;
-    display: block;
-    margin: 5px auto;
-    text-align: center;
-    padding: 20px 0;
-    background-color: white;
-    border: 5px solid #e8ded5;
-    font-family: "Playfair Display", serif;
-    font-weight: 900;
-    color: #323944;
-    font-size: 2em; }
-  .page-template-portfolioAlter .portfolioAlter .portfolioFilters #filter-all {
-    text-align: center;
-    width: 100%;
-    display: block;
-    font-family: "Playfair Display", serif;
-    font-weight: 900;
-    color: #323944;
-    font-size: 2em;
-    text-decoration: underline; }
-
-.single-post .articleMain footer {
-  text-align: center;
-  font-size: 0;
-  margin-bottom: 30px;
-  margin-top: 30px;
-  border-bottom: 1px solid #e8ded5;
-  border-top: 1px solid #e8ded5; }
-  .single-post .articleMain footer span {
-    display: inline-block;
-    vertical-align: top;
-    font-size: 1.3rem;
-    padding: 30px;
-    min-height: 81px; }
-    .single-post .articleMain footer span.previousLink, .single-post .articleMain footer span.nextLink {
-      width: 30%;
-      background-color: #e8ded5; }
-      .single-post .articleMain footer span.previousLink a, .single-post .articleMain footer span.nextLink a {
-        color: #fff; }
-    .single-post .articleMain footer span.previousLink a::before {
-      content: '';
-      border: 10px solid transparent;
-      border-right-color: white;
-      display: inline-block;
-      vertical-align: middle;
-      margin-right: 10px; }
-    .single-post .articleMain footer span.nextLink a::after {
-      content: '';
-      border: 10px solid transparent;
-      border-left-color: white;
-      display: inline-block;
-      vertical-align: middle;
-      margin-left: 10px; }
-    .single-post .articleMain footer span.postInfos {
-      width: 40%; }
-.single-post .articleMain article section h2 {
-  text-align: center; }
-  .single-post .articleMain article section h2::before, .single-post .articleMain article section h2::after {
-    display: none; }
+  	/*&.grid-item--2 {
+          width:48%;
+      }*/ }
 
 .page-template-Service .service, .page-template-ServiceSingle .service {
   padding-bottom: 80px; }
@@ -2473,7 +2449,7 @@ tweeners.
     body .header .menuOpener {
       top: 35px; }
     body p {
-      font-size: 1.1em; }
+      font-size: 1.2em; }
     body .menu {
       /* end .menu ul */ }
       body .menu ul {
@@ -2510,8 +2486,11 @@ tweeners.
   .single-events .grid-item {
     width: calc(33% - 10px); }
 
-  .page-template-portfolioAlter .portfolioAlter #gallery-content-center img {
-    width: calc(33% - 10px); }
+  #gallery-content-center img {
+    width: calc(33% - 10px);
+    /*			&.grid-item--2 {
+    				width:calc(66% - 10px);
+    			}*/ }
 
   .page-template-Agency .ourDna blockquote {
     font-size: 13em;
@@ -2722,6 +2701,13 @@ you can add resource intensive styles.
   .page-template-Agency .imgContainer {
     display: block; }
 
+  .mobileHelper {
+    display: none; }
+
+  .portfolioNew h2 {
+    width: 50%;
+    margin: 0 auto; }
+
   .page-template-Service h2, .page-template-ServiceSingle h2 {
     width: 50%; }
   .page-template-Service article, .page-template-ServiceSingle article {
@@ -2752,7 +2738,13 @@ you can add resource intensive styles.
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%; } }
+      height: 100%; }
+
+  .meetAlejandraSingle p {
+    box-shadow: 1px 1px 191px 0 rgba(0, 0, 0, 0.2); }
+
+  .eventKind .row {
+    box-shadow: 1px 1px 81px 11px rgba(0, 0, 0, 0.2); } }
 @media only screen and (max-width: 992px) {
   /******************************************************************
   Site Name: 
@@ -2903,8 +2895,11 @@ This is for the larger monitors and possibly full screen viewers.
   .single-events .grid-item {
     width: calc(25% - 10px); }
 
-  .page-template-portfolioAlter .portfolioAlter #gallery-content-center img {
-    width: calc(25% - 10px); }
+  #gallery-content-center img {
+    width: calc(25% - 10px);
+    /*      &.grid-item--2 {
+           width:calc(50% - 10px);
+          }*/ }
 
   .page-template-testimonial .videoWrapper {
     width: 30%; } }

@@ -34,7 +34,7 @@ body {
 		}
 	}
 	p {
-		font-size:1.1em;
+		font-size:1.2em;
 	}
 	.nav {
 	}
@@ -151,13 +151,13 @@ body {
 	}
 }
 
-.page-template-portfolioAlter {
-	.portfolioAlter {
+
 		#gallery-content-center img {
 			width: calc(33% - 10px);
+/*			&.grid-item--2 {
+				width:calc(66% - 10px);
+			}*/
 		}
-	}
-}
 
 .page-template-Agency{
 	h2 {

@@ -556,6 +556,38 @@ POSTS & CONTENT STYLES
 PAGE NAVI STYLES
 ******************************************************************/
 
+.servicesLinks {
+	overflow:hidden;
+	position:relative;
+	text-align:center;
+	padding: 0;
+	background-color: white;
+	h4 {
+		color: $black;
+		text-align: center;
+		width: 100%;
+		font-size: 2em;
+		font-family:$playfair;
+		&.hiddenTitle {
+			opacity: 0;
+			transition: $basicTransition;
+			position: absolute;
+			top: 50%;
+			margin-top:-15px;
+		}
+
+	}
+	img {
+		transition: $basicTransition;
+		&:hover {
+			opacity:0.4;
+			+ h4 {
+				opacity:1;
+			}
+		}
+	}
+}
+
 .pagination,
 .wp-prev-next {
 	margin: 1.5em 0;
@@ -960,6 +992,8 @@ FOOTER STYLES
 
 /******PAGE ACCUEIL************/
 
+
+
 .page-template-homepage {
 	.portfolioSingle {
 		margin-top:15px;
@@ -987,8 +1021,6 @@ FOOTER STYLES
 	.eventKind {
 		z-index: 100;
 		position: relative;
-		background: $AlejandraSoften;
-
 		> div {
 			transform: translateY(-60px);
 			.eventButton {
@@ -1169,11 +1201,16 @@ FOOTER STYLES
 	.agencySlider {
 		article {
 			text-align:center;
-			font-size: 2em;
+			font-size:1.5em;
+			.testimonialContent {
+				width:80%;
+				display:block;
+				margin:0 auto;
+			}
 			.tesimonialPerson {
 				font-family:$playfair;
 				display: block;
-
+				font-size: 2em;
 				color: $AlejandraGrey;
 				font-weight:900 ;
 			}
@@ -1183,17 +1220,17 @@ FOOTER STYLES
 		position:relative;
 		a {
 			display: block;
-			width: 60px;
-			height: 60px;
-			border-top: 2px solid whitesmoke;
+			width: 30px;
+			height: 30px;
+			border-top: 2px solid $AlejandraGrey;
 			position:absolute;
 			top:-80px;
 			&.bx-prev {
-				border-left: 2px solid whitesmoke;
+				border-left: 2px solid $AlejandraGrey;
 				transform: rotateZ(-45deg);
 			}
 			&.bx-next {
-				border-right: 2px solid whitesmoke;
+				border-right: 2px solid $AlejandraGrey ;
 				transform: rotateZ(45deg);
 				right:0;
 			}
@@ -1231,32 +1268,7 @@ FOOTER STYLES
 		margin: 0 auto;
 	}
 	article {
-		&.servicesLinks {
-			overflow:hidden;
-			position:relative;
-			text-align:center;
-			h4 {
-				color: $black;
-				opacity: 0;
-				transition: $basicTransition;
-				position: absolute;
-				top: 50%;
-				text-align: center;
-				width: 100%;
-				font-size: 2em;
-				font-family:$playfair;
-				margin-top:-15px;
-			}
-			img {
-				transition: $basicTransition;
-				&:hover {
-					opacity:0.4;
-					+ h4 {
-						opacity:1;
-					}
-				}
-			}
-		}
+
 		.descriptionContainer {
 		}
 		h3 {
@@ -1301,6 +1313,7 @@ FOOTER STYLES
 					display: inline-block;
 					background-color: white;
 					padding:20px;
+
 				}
 			}
 			&:nth-child(odd) .imgContainer {
@@ -1463,126 +1476,42 @@ FOOTER STYLES
 		box-sizing: border-box;
 	}
 }
-
-/******PAGE PORTFOLIO ALTERNATIVE************/
-.page-template-portfolioAlter {
-	.portfolioSlider {
-		height: calc(100% + 60px);
-		margin: 0;
-		li {
-			background-size: cover;
-			height:90vh;
-			min-height: 670px;
-			background-position: center;
-		}
-	}
-
-	.portfolioAlter {
-		#gallery-content-center img {
-			width: calc(50% - 15px);
-			margin-bottom: 10px;
-			-webkit-transition: all 0.5s;
-			-moz-transition: all 0.5s;
-			-o-transition: all 0.5s;
-			transition: all 0.5s;
-			margin-left: 10px;
-			-webkit-box-sizing: border-box;
-			-moz-box-sizing: border-box;
-			box-sizing: border-box;
-			/*&.grid-item--2 {
-                width:48%;
-            }*/
-		}
-		.portfolioFilters {
-			transform: translateY(-50px);
-			position:relative;
-			z-index:100;
-			span {
-				&:hover {
-					cursor:pointer;
-				}
-				a {
-					width: 100%;
-					display: block;
-					margin: 5px auto;
-					text-align: center;
-					padding: 20px 0;
-					background-color: white;
-					border: 5px solid $AlejandraGrey;
-					font-family:$playfair;
-					font-weight:900;
-					color:$black;
-					font-size:2em;
-				}
-			}
-			#filter-all {
-				text-align:center;
-				width:100%;
-				display:block;
-				font-family:$playfair;
-				font-weight:900;
-				color:$black;
-				font-size:2em;
-				text-decoration:underline;
-			}
-		}
+/******PAGE PORTFOLIO NEWS************/
+.portfolioNew {
+	padding-bottom:100px;
+	h2 {
+		text-align: center;
 	}
 }
 
-.single-post {
-	.articleMain {
-		footer {
-			text-align:center;
-			font-size:0;
-			margin-bottom: 30px;
-			margin-top: 30px;
-			border-bottom: 1px solid $AlejandraGrey;
-			border-top: 1px solid $AlejandraGrey;
-			span {
-				display:inline-block;
-				vertical-align:top;
-				font-size: 1.3rem;
-				padding:30px;
-				min-height:81px;
-				&.previousLink, &.nextLink {
-					width:30%;
-					background-color:$AlejandraGrey;
-					a {
-						color:$white;
-					}
-				}
-				&.previousLink a::before {
-					content:'';
-					border:10px solid transparent;
-					border-right-color: white;
-					display:inline-block;
-					vertical-align: middle;
-					margin-right: 10px;
-				}
-				&.nextLink a::after {
-					content:'';
-					border:10px solid transparent;
-					border-left-color: white;
-					display:inline-block;
-					vertical-align: middle;
-					margin-left: 10px;
-				}
-				&.postInfos {
-					width:40%;
-				}
-			}
-		}
-		article {
-			section {
-				h2 {
-					text-align:center;
-					&::before, &::after {
-						display:none;
-					}
-				}
-			}
-		}
+/******PAGE PORTFOLIO ALTERNATIVE************/
+.portfolioSlider {
+	height: calc(100% + 60px);
+	margin: 0;
+	li {
+		background-size: cover;
+		height:90vh;
+		min-height: 670px;
+		background-position: center;
 	}
+}
+#gallery {
+	padding: 10px 0;
+}
+#gallery-content-center img {
+	width: calc(50% - 15px);
+	margin-bottom: 10px;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+	margin-left: 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	/*&.grid-item--2 {
+        width:48%;
+    }*/
 }
 
 .page-template-Service, .page-template-ServiceSingle {

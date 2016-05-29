@@ -15,9 +15,9 @@
     $url = $thumb['0']; ?>
     <div data-scroll-speed="-4" class="heroSliderImage" style="background-image:url('<?php echo $url;?>');">
     </div>
- <!--   <h1 class="heroMessage" data-scroll-speed="-8">
-        <?php /*the_field('heading_message');*/?>
-    </h1>-->
+ <h1 class="heroMessage" data-scroll-speed="-8">
+        <?php the_field('heading_message');?>
+    </h1>
 </div>
 
 <main>
@@ -37,7 +37,7 @@
 
                     <?php $thumb = wp_get_attachment_image_src(get_sub_field('sublink_image'), 'bones-thumb-skyscraper' ); ?>
                     <img src="<?php echo $thumb[0];?>">
-                    <h4><?php the_sub_field('sublink_title');?></h4>
+                    <h4 class="hiddenTitle"><?php the_sub_field('sublink_title');?></h4>
                 </a>
             </article>
             <?php endwhile;?>

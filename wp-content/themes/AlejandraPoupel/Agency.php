@@ -59,7 +59,7 @@
     <section class="testimonials">
         <div class="container">
 
-            <h2 class="col-xs-12 col-md-6">Ils ont pu apprécier notre savoir-faire</h2>
+            <h2 class="col-xs-12 col-md-6 col-md-offset-3">Ils ont pu apprécier notre savoir-faire</h2>
 
         <div class="agencySlider">
 

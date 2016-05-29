@@ -207,7 +207,7 @@ body {
   body .header .menuOpener {
     top: 35px; }
   body p {
-    font-size: 1.1em; }
+    font-size: 1.2em; }
   body .menu {
     /* end .menu ul */ }
     body .menu ul {
@@ -244,8 +244,11 @@ body {
 .single-events .grid-item {
   width: calc(33% - 10px); }
 
-.page-template-portfolioAlter .portfolioAlter #gallery-content-center img {
-  width: calc(33% - 10px); }
+#gallery-content-center img {
+  width: calc(33% - 10px);
+  /*			&.grid-item--2 {
+  				width:calc(66% - 10px);
+  			}*/ }
 
 .page-template-Agency .ourDna blockquote {
   font-size: 13em;
@@ -420,6 +423,13 @@ h1 {
 .page-template-Agency .imgContainer {
   display: block; }
 
+.mobileHelper {
+  display: none; }
+
+.portfolioNew h2 {
+  width: 50%;
+  margin: 0 auto; }
+
 .page-template-Service h2, .page-template-ServiceSingle h2 {
   width: 50%; }
 .page-template-Service article, .page-template-ServiceSingle article {
@@ -451,6 +461,12 @@ h1 {
     left: 0;
     width: 100%;
     height: 100%; }
+
+.meetAlejandraSingle p {
+  box-shadow: 1px 1px 191px 0 rgba(0, 0, 0, 0.2); }
+
+.eventKind .row {
+  box-shadow: 1px 1px 81px 11px rgba(0, 0, 0, 0.2); }
 
 /******************************************************************
 Site Name:

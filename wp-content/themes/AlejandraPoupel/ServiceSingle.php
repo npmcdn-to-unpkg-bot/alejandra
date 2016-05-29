@@ -52,7 +52,7 @@
 
                             <?php $thumb = wp_get_attachment_image_src(get_sub_field('sublink_image'), 'bones-thumb-skyscraper' ); ?>
                             <img src="<?php echo $thumb[0];?>">
-                            <h4><?php the_sub_field('sublink_title');?></h4>
+                            <h4 class="hiddenTitle"><?php the_sub_field('sublink_title');?></h4>
                         </a>
                     </article>
                 <?php endwhile;?>

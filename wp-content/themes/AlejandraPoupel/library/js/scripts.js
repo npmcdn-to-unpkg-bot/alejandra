@@ -109,6 +109,7 @@ function loadGravatars() {
 */
 jQuery(document).ready(function($) {
 
+
 	$('.menuOpener').click(function(){
 		$('.header nav').slideToggle();
 	});
@@ -313,5 +314,30 @@ jQuery(window).load(function() {
 
 	jQuery('#gallery-content-center').isotope('reLayout');
 	jQuery('#preloader').fadeOut(500);
+
+	var options = {
+		horizontal: 1,
+		itemNav: 'basic',
+		smart: 1,
+		activateOn: 'click',
+		mouseDragging: 1,
+		touchDragging: 1,
+		releaseSwing: 1,
+		startAt: 0,
+		//scrollBar: $wrap.find('.scrollbar'),
+		scrollBy: 1,
+		//pagesBar: $wrap.find('.pages'),
+		activatePageOn: 'click',
+		speed: 300,
+		elasticBounds: 1,
+		//easing: 'easeOutExpo',
+		dragHandle: 1,
+		dynamicHandle: 1,
+		clickBar: 1,
+		cycleBy:       'items',  // Enable automatic cycling by 'items' or 'pages'.
+		cycleInterval: 3000,  // Delay between cycles in milliseconds.
+		pauseOnHover:  true
+	};
+	jQuery('.frame').sly(options);
 
 });

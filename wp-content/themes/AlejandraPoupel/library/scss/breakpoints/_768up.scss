@@ -326,7 +326,15 @@ h1 {
 		display: block ;
 	}
 }
-
+.mobileHelper {
+	display:none;
+}
+.portfolioNew {
+	h2 {
+		width: 50%;
+		margin: 0 auto;
+	}
+}
 .page-template-Service, .page-template-ServiceSingle  {
 	h2 {
 		width:50%;
@@ -367,5 +375,16 @@ h1 {
 			width: 100%;
 			height: 100%;
 		}
+	}
+}
+.meetAlejandraSingle {
+	p {
+		box-shadow: 1px 1px 191px 0 rgba(0, 0, 0, 0.2);
+	}
+}
+
+.eventKind {
+	.row {
+		box-shadow: 1px 1px 81px 11px rgba(0, 0, 0, 0.2);
 	}
 }
