@@ -36,6 +36,7 @@ HEADER STYLES
 .header.whiteHeader {
 	.nav .sub-menu {
 		background-color: $white;
+
 	}
 }
 
@@ -47,10 +48,15 @@ NAVIGATION STYLES
 
 .nav {
 	border: 0;
+	.sub-menu {
+		width: 200%;
+		left: -50%;
+	}
 	ul {
 		margin-top:0;
 		width:100%;
 	}
+
 	li {
 		float: left;
 		position: relative;
@@ -303,6 +309,9 @@ h1 {
 		}
 		.descriptionContent {
 			margin-top:200px;
+			p {
+				box-shadow: 1px 1px 81px 11px rgba(111, 111, 111, 0.15);
+			}
 		}
 	}
 }

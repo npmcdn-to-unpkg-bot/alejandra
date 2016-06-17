@@ -91,7 +91,7 @@
 							)); ?>
 						</nav>
 					<section class="footerBtn-container">
-						<a href="tel:+0033140810337" class="footerBtn">
+						<a href="tel:+33140810337" class="footerBtn">
 							<svg version="1.1" id="callIcon" class="footerIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 								 viewBox="0 0 79.8 80" style="enable-background:new 0 0 79.8 80;" xml:space="preserve">
 <g>
@@ -107,6 +107,8 @@
 </g>
 </svg>
 
+							+33140810337
+
 
 						</a>
 						<a href="mailto:alejandra@alejandrap.com" class="footerBtn">
@@ -116,7 +118,7 @@
 	c-0.1,0.1-0.1,0.1-0.2,0.1c0,0-0.1-0.1-0.1-0.1L5.9,3.4H44L24.8,23.1z M15.9,18.9L3.4,29.6V5.7L15.9,18.9z M18.2,21.4l3.9,4.1
 	c0.8,0.8,1.7,1.2,2.5,1.2c0.9,0,1.8-0.4,2.6-1.2l4.6-4.7l12.1,10.6H6.5L18.2,21.4z M46.9,29.5L34.2,18.4L46.9,5.3V29.5z"/>
 </svg>
-
+							alejandra@alejandrap.com
 						</a>
 					</section>
 

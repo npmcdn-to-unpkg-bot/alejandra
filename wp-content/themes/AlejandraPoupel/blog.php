@@ -12,7 +12,7 @@
 
 
 <div class="heroSlider" xmlns="http://www.w3.org/1999/html">
-    <?php /*the_post_thumbnail('full');*/?>
+    <?php the_post_thumbnail('full');?>
 
     <h1 class="heroMessage">
         <?php the_field('heading_message');?>

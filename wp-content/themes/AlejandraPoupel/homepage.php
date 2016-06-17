@@ -20,9 +20,7 @@
             else :?>
             <?php endif; ?>
     </ul>
-    <h1 class="heroMessage" data-scroll-speed="-8">
-        <?php the_field('heading_message');?>
-    </h1>
+
 </div>
 
 <main>
@@ -47,24 +45,11 @@
                 <?php endif;?>
 
 
-          <!--  <?php
-/*            if( have_rows('events_buttons') ):
-                while ( have_rows('events_buttons') ) : the_row();*/?>
-                    <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-0 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-0 eventSingle">
-                        <div class="eventButton" >
-                           <a href="<?php /*the_sub_field('event_link');*/?>" data-category="<?php /*the_sub_field('event_title');*/?>">
-                               <img src="<?php /*the_sub_field('event_image');*/?>">
-                           </a>
-                        </div>
-                        <div class="eventTitleContainer">
-                            <h2 class="event-<?php /*the_id();*/?>" data-kind="<?php /*the_sub_field('event_title');*/?>"><?php /*the_sub_field('event_title');*/?></h2>
-                        </div>
-                    </div>
-                <?php /*endwhile;
-            else :*/?>
-            --><?php /*endif; */?>
-
             </div>
+                <h1 class="heroMessage">
+                    <?php the_field('heading_message');?>
+                </h1>
+
             </div>
         </section>
 
@@ -74,9 +59,9 @@
 
         <?php if( have_rows('meet_alejandra') ):
             while ( have_rows('meet_alejandra') ) : the_row();?>
-               <div class="col-md-4 col-md-offset-8 col-lg-4 col-lg-offset-8 descriptionTitle">
-                   <h2><?php the_sub_field('meet_title');?></h2>
-               </div>
+              <!-- <div class="col-md-4 col-md-offset-8 col-lg-4 col-lg-offset-8 descriptionTitle">
+                   <h2><?php /*the_sub_field('meet_title');*/?></h2>
+               </div>-->
                 <div class="col-xs-12 col-sm-4 col-md-3 col-md-offset-1 col-lg-3 col-lg-offset-1 descriptionImage" data-scroll-speed="17" data-scroll-style="lerp">
                     <img src="<?php the_sub_field('meet_img');?>" alt="Alejandra Poupel Portrait">
                 </div>
