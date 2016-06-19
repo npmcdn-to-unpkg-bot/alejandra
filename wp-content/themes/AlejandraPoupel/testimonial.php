@@ -22,10 +22,10 @@
 
 <main>
 
-        <section class="testimonials">
-            <div class="container">
+    <section class="testimonials">
+        <div class="container">
             <div class="row">
-                <h2 class="col-xs-12 col-sm-12 col-md-6 col-md-offset-6"><?php the_field('testimonials_title');?></h2>
+                <h2 class="col-xs-12"><?php the_field('testimonials_title');?></h2>
             </div>
             <div class="row testimonialsSlider">
 
@@ -41,7 +41,7 @@
                             <div class="col-xs-10 col-sm-8 col-md-7 col-lg-6 testimonialDescription">
                                 <span class="testimonialKind">
                                     <?php $term = get_sub_field('event_category');
-                                        echo $term->name;?>
+                                    echo $term->name;?>
                                 </span>
                                 <span class="testimonialContent">
                                     <?php the_sub_field('testimonial_content');?>
@@ -53,9 +53,9 @@
                         </article>
                     <?php endwhile;?>
                 <?php endif; ?>
-</div>
             </div>
-        </section>
+        </div>
+    </section>
 
 
     <section class="container videos">
@@ -65,9 +65,9 @@
 
             <?php if( have_rows('videos') ):
                 while ( have_rows('videos') ) : the_row();?>
-            <div class="videoWrapper">
-                    <iframe width="560" height="315" src="<?php the_sub_field('video_url'); ?>" frameborder="0" allowfullscreen></iframe>
-            </div>
+                    <div class="videoWrapper">
+                        <iframe width="560" height="315" src="<?php the_sub_field('video_url'); ?>" frameborder="0" allowfullscreen></iframe>
+                    </div>
                 <?php endwhile;
             else :?>
             <?php endif;?>
@@ -79,22 +79,22 @@
         <div class="row">
 
             <div class="row">
-            <h2 class="col-xs-12 col-sm-12 col-md-3"><?php the_field('press_title');?></h2>
-           </div>
+                <h2 class="col-xs-12"><?php the_field('press_title');?></h2>
+            </div>
             <div class="row">
-            <?php if( have_rows('press_single') ):
-                while ( have_rows('press_single') ) : the_row();?>
+                <?php if( have_rows('press_single') ):
+                    while ( have_rows('press_single') ) : the_row();?>
 
-                    <article class="col-xs-6 col-sm-3  pressSingle lightboxSingle " data-image="<?php the_sub_field('press_img');?>">
-                        <div class="pressSingleInfos">
-                            <div class="pressSingleInfosWrapper">
-                                <?php the_sub_field('press_name');?><br />
-                                <?php the_sub_field('press_date');?>
+                        <article class="col-xs-6 col-sm-3  pressSingle lightboxSingle " data-image="<?php the_sub_field('press_img');?>">
+                            <div class="pressSingleInfos">
+                                <div class="pressSingleInfosWrapper">
+                                    <?php the_sub_field('press_name');?><br />
+                                    <?php the_sub_field('press_date');?>
+                                </div>
                             </div>
-                        </div>
-                    <img src="<?php the_sub_field('press_img');?>" class="logo" />
-                    </article>
-                <?php endwhile;
+                            <img src="<?php the_sub_field('press_img');?>" class="logo" />
+                        </article>
+                    <?php endwhile;
                 endif; ?>
             </div>
             <div class="lightbox">

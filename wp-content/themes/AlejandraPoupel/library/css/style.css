@@ -719,6 +719,11 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   letter-spacing: 2px;
   transition: all ease-in-out 0.2s;
   position: relative; }
+  .btn.fixed-btn, .fixed-btn.blue-btn, .fixed-btn.comment-reply-link, .fixed-btn#submit {
+    position: absolute;
+    margin-top: -150px;
+    margin-left: 20px;
+    z-index: 90; }
   .btn:hover, .blue-btn:hover, .comment-reply-link:hover, #submit:hover, .btn:focus, .blue-btn:focus, .comment-reply-link:focus, #submit:focus {
     background-color: transparent;
     color: #323944;
@@ -1169,17 +1174,9 @@ you can just remove this stylesheet.
     background-size: cover;
     background-position: center; }
   .heroSlider img {
-    opacity: 1;
-    max-width: none;
-    min-width: 100%;
-    min-height: 100%;
+    width: 100%;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); }
+    top: 30px; }
 
 #frame {
   width: 100%;
@@ -1374,7 +1371,10 @@ HEADER STYLES
       border-bottom: 0;
       margin: 0; }
       .header nav .nav li.qtranxs-lang-menu {
-        border: 1px solid #323944; }
+        border: none;
+        font-size: 0; }
+        .header nav .nav li.qtranxs-lang-menu a {
+          padding: 12px; }
       .header nav .nav li a {
         letter-spacing: 1px;
         font-size: 1.3em;
@@ -2079,22 +2079,6 @@ main h1 {
     font-size: 2em;
     color: #e8ded5;
     font-weight: 900; }
-.page-template-Agency .bx-controls {
-  position: relative; }
-  .page-template-Agency .bx-controls a {
-    display: block;
-    width: 30px;
-    height: 30px;
-    border-top: 2px solid #e8ded5;
-    position: absolute;
-    top: -80px; }
-    .page-template-Agency .bx-controls a.bx-prev {
-      border-left: 2px solid #e8ded5;
-      transform: rotateZ(-45deg); }
-    .page-template-Agency .bx-controls a.bx-next {
-      border-right: 2px solid #e8ded5;
-      transform: rotateZ(45deg);
-      right: 0; }
 .page-template-Agency h2 {
   text-align: center; }
 .page-template-Agency .ourDna blockquote {
@@ -2112,20 +2096,36 @@ main h1 {
   text-align: left; }
 
 /******PAGE SAVOIR FAIRE************/
-.page-template-Service h2, .page-template-ServiceSingle h2 {
+.page-template-Service h2 {
   width: 90%;
   text-align: center;
   margin: 0 auto; }
-.page-template-Service article h3, .page-template-ServiceSingle article h3 {
+.page-template-Service article .descriptionContainer ul li {
+  margin: 3px 20px;
+  font-size: inherit;
+  font-size: 1.2em;
+  letter-spacing: 2px; }
+  .page-template-Service article .descriptionContainer ul li:before {
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #e8ded5;
+    margin: 7px 5px;
+    float: right; }
+.page-template-Service article h3 {
   font-size: 5em;
   text-align: center; }
-.page-template-Service article blockquote, .page-template-ServiceSingle article blockquote {
+.page-template-Service article blockquote {
   font-size: 4em;
   font-family: "Playfair Display", serif;
   font-weight: 900;
   top: 0;
   color: whitesmoke;
   text-align: center; }
+.page-template-Service article:nth-of-type(odd) .descriptionContainer ul li:before {
+  float: left; }
 
 /******PAGE AGENCE************/
 .page-template-Agency .imgContainer {
@@ -2344,21 +2344,30 @@ _______________________________________*/
     .page-template-testimonial .testimonials .bx-wrapper .bx-pager {
       text-align: center;
       position: absolute;
-      top: -30px;
       width: 100%; }
       .page-template-testimonial .testimonials .bx-wrapper .bx-pager .bx-pager-item {
         display: inline-block;
-        margin: 0 3px; }
+        margin: 20px 3px; }
         .page-template-testimonial .testimonials .bx-wrapper .bx-pager .bx-pager-item a {
           width: 16px;
           height: 16px;
           border-radius: 50%;
-          background-color: #fff;
+          background-color: #323944;
           opacity: 0.5;
           display: block;
           color: transparent; }
           .page-template-testimonial .testimonials .bx-wrapper .bx-pager .bx-pager-item a.active {
             opacity: 1; }
+    .page-template-testimonial .testimonials .bx-wrapper .bx-controls-direction {
+      position: absolute;
+      width: 100%;
+      top: -200px; }
+      .page-template-testimonial .testimonials .bx-wrapper .bx-controls-direction a {
+        border-top: 2px solid #323944; }
+        .page-template-testimonial .testimonials .bx-wrapper .bx-controls-direction a.bx-prev {
+          border-left: 2px solid #323944; }
+        .page-template-testimonial .testimonials .bx-wrapper .bx-controls-direction a.bx-next {
+          border-right: 2px solid #323944; }
 .page-template-testimonial .videoWrapper {
   position: relative;
   padding-bottom: 56.25%;
@@ -2400,6 +2409,37 @@ _______________________________________*/
   .single-events .eventDescription p {
     text-align: left;
     margin-top: 40px; }
+
+.bx-controls {
+  position: relative; }
+  .bx-controls .bx-controls-direction a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-top: 2px solid #e8ded5;
+    position: absolute;
+    top: -80px; }
+    .bx-controls .bx-controls-direction a.bx-prev {
+      border-left: 2px solid #e8ded5;
+      transform: rotateZ(-45deg); }
+    .bx-controls .bx-controls-direction a.bx-next {
+      border-right: 2px solid #e8ded5;
+      transform: rotateZ(45deg);
+      right: 0; }
+
+.page-template-portfolioSingle .bx-controls, .page-template-portfolioNew .bx-controls {
+  position: absolute;
+  width: calc(100% - 100px);
+  margin: 0 50px;
+  z-index: 100;
+  font-size: 0;
+  margin-top: -31%; }
+  .page-template-portfolioSingle .bx-controls a, .page-template-portfolioNew .bx-controls a {
+    width: 40px;
+    height: 40px; }
+
+.page-template-portfolioSingle .heroSlider::before, .page-template-portfolioNew .heroSlider::before {
+  display: none; }
 
 /*********************
 LARGER MOBILE DEVICES
@@ -2513,7 +2553,9 @@ tweeners.
         transform: translateY(-45px) translateX(35px); }
     .page-template-testimonial .testimonials .testimonialImage {
       margin-right: -40px;
-      text-align: right; } }
+      text-align: right; }
+    .page-template-testimonial .testimonials .pressSingle {
+      min-height: 400px; } }
 @media only screen and (max-width: 768px) {
   /******************************************************************
   Site Name: 
@@ -2587,9 +2629,12 @@ you can add resource intensive styles.
     /* end .menu ul li */
     /* highlight current page */
     /* end current highlighters */ }
-    .nav .sub-menu {
+    .nav li .sub-menu {
       width: 200%;
       left: -50%; }
+    .nav li.qtranxs-lang-menu .sub-menu {
+      width: 100%;
+      left: auto; }
     .nav ul {
       margin-top: 0;
       width: 100%; }
@@ -2694,7 +2739,7 @@ you can add resource intensive styles.
   .page-template-homepage .portfolioSingle {
     margin: 25px 0 0 0; }
   .page-template-homepage .alejandraDescription img {
-    width: 410px; }
+    width: 790px; }
   .page-template-homepage .alejandraDescription .descriptionContent {
     margin-top: 200px; }
     .page-template-homepage .alejandraDescription .descriptionContent p {
@@ -2754,7 +2799,10 @@ you can add resource intensive styles.
     box-shadow: 1px 1px 191px 0 rgba(0, 0, 0, 0.2); }
 
   .eventKind .row {
-    box-shadow: 1px 1px 81px 11px rgba(0, 0, 0, 0.2); } }
+    box-shadow: 1px 1px 81px 11px rgba(0, 0, 0, 0.2); }
+
+  .page-template-testimonial .pressSingle {
+    min-height: 230px; } }
 @media only screen and (max-width: 992px) {
   /******************************************************************
   Site Name: 
@@ -2816,7 +2864,7 @@ you can add resource intensive styles.
   PAGE TEMOIGNAGES
   *********************/
   .page-template-testimonial .testimonialContent {
-    font-size: 1.5em; }
+    font-size: 1.3em; }
   .page-template-testimonial .videoWrapper {
     height: 250px; }
 
@@ -2825,7 +2873,10 @@ you can add resource intensive styles.
   *********************/
   .page-template-portfolioAlter .portfolioAlter .portfolioFilters span a {
     width: 70%;
-    padding: 60px 0; } }
+    padding: 60px 0; }
+
+  .page-template-testimonial .pressSingle {
+    min-height: 350px; } }
 /*********************
 DESKTOP
 This is the average viewing window. So Desktops, Laptops, and
@@ -2853,8 +2904,6 @@ you can add resource intensive styles.
     .header nav {
       display: block;
       float: right; }
-      .header nav .nav li.qtranxs-lang-menu {
-        border-color: #fff; }
       .header nav .nav li a {
         color: #fff; }
     .header .menuOpener {

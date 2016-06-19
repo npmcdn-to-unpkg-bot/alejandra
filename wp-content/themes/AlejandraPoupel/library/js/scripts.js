@@ -133,7 +133,6 @@ jQuery(document).ready(function($) {
   loadGravatars();
 
 	$('.portfolioSlider').bxSlider({
-		controls: false,
 		auto: true,
 		mode: 'fade',
 		captions: false,
@@ -151,9 +150,11 @@ jQuery(document).ready(function($) {
 	);
 
 	$('.testimonialsSlider').bxSlider({
-			controls: false,
+			controls: true,
 			captions: true,
-			pager: true
+			pager: true,
+			nextText: "",
+			prevText: ""
 		}
 	);
 
@@ -265,6 +266,7 @@ jQuery(document).ready(function($) {
 	var prevImg;
 	var images = [];
 	$(".lightboxSingle").click(function(){
+
 		images = $('.lightboxSingle').not('.isotope-hidden');
 		var src = $(this).data("image");//récupère l'attribut src de l'img sur laquelle on clique
 		$(".lightbox img").attr("src",src);//remplace l'attribut src de l'img qui se trouve dans .lightbox par l'attribut src de l'img sur laquelle on clique

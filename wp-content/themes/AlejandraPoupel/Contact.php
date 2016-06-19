@@ -13,16 +13,20 @@
 <div class="heroSlider" xmlns="http://www.w3.org/1999/html" >
     <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
     $url = $thumb['0']; ?>
+    <img src="('<?php echo $url;?>')" />
     <div data-scroll-speed="-4" class="heroSliderImage" style="background-image:url('<?php echo $url;?>');">
     </div>
-    <h1 class="heroMessage" data-scroll-speed="-8">
-        <?php the_field('heading_message');?>
-    </h1>
+
 </div>
 <main>
 
         <section class="container contact">
         <div class="row">
+
+            <h1 class="heroMessage">
+                <?php the_field('heading_message');?>
+            </h1>
+
             <div class="col-xs-12 col-md-5">
                 <h2><?php the_field('adresses_title');?></h2>
             <?php if( have_rows('adresses') ):
@@ -58,9 +62,18 @@
             </div>
 
             <div class="col-xs-12 col-md-6 formContainer">
-                <h2><?php the_field('form_title');?></h2>
+
                 <p><?php the_field('form_description');?></p>
-                <?php the_field('form');?>
+
+
+                <?php if(qtrans_getLanguage() == "fr") : ?>
+                    <?php echo do_shortcode('[contact-form-7 id="107" title="Formulaire de contact 1"]');?>
+                <?php endif ?>
+                <?php if(qtrans_getLanguage() == "en") : ?>
+                    <?php echo do_shortcode('[contact-form-7 id="479" title="Formulaire de contact anglais"]');?>
+                <?php endif ?>
+
+
             </div>
         </div>
     </section>

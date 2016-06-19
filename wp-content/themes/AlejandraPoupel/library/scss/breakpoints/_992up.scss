@@ -57,7 +57,7 @@ PAGE TEMOIGNAGES
 
 .page-template-testimonial {
 	.testimonialContent {
-		font-size: 1.5em;
+		font-size: 1.3em;
 	}
 	.videoWrapper {
 		height: 250px;
@@ -78,4 +78,10 @@ PAGE PORTFOLIO
 			}
 		}
 	}
+}
+.page-template-testimonial {
+	.pressSingle {
+		min-height: 350px;
+	}
+
 }

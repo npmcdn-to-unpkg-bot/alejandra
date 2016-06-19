@@ -268,6 +268,8 @@ body {
   .page-template-testimonial .testimonials .testimonialImage {
     margin-right: -40px;
     text-align: right; }
+  .page-template-testimonial .testimonials .pressSingle {
+    min-height: 400px; }
 
 /******************************************************************
 Site Name:
@@ -305,9 +307,12 @@ NAVIGATION STYLES
   /* end .menu ul li */
   /* highlight current page */
   /* end current highlighters */ }
-  .nav .sub-menu {
+  .nav li .sub-menu {
     width: 200%;
     left: -50%; }
+  .nav li.qtranxs-lang-menu .sub-menu {
+    width: 100%;
+    left: auto; }
   .nav ul {
     margin-top: 0;
     width: 100%; }
@@ -412,7 +417,7 @@ h1 {
 .page-template-homepage .portfolioSingle {
   margin: 25px 0 0 0; }
 .page-template-homepage .alejandraDescription img {
-  width: 410px; }
+  width: 790px; }
 .page-template-homepage .alejandraDescription .descriptionContent {
   margin-top: 200px; }
   .page-template-homepage .alejandraDescription .descriptionContent p {
@@ -474,6 +479,9 @@ h1 {
 .eventKind .row {
   box-shadow: 1px 1px 81px 11px rgba(0, 0, 0, 0.2); }
 
+.page-template-testimonial .pressSingle {
+  min-height: 230px; }
+
 /******************************************************************
 Site Name:
 Author:
@@ -494,8 +502,6 @@ be seen on the Desktop.
   .header nav {
     display: block;
     float: right; }
-    .header nav .nav li.qtranxs-lang-menu {
-      border-color: #fff; }
     .header nav .nav li a {
       color: #fff; }
   .header .menuOpener {

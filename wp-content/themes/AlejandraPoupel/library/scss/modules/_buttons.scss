@@ -41,6 +41,12 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   letter-spacing: 2px;
   transition: $basicTransition;
   position:relative;
+  &.fixed-btn {
+    position: absolute;
+    margin-top: -150px;
+    margin-left: 20px;
+    z-index: 90;
+  }
   &:hover,
   &:focus {
     background-color: transparent;
@@ -86,6 +92,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
     right: 50%;
     margin-right:-10px;
   }
+
 }
 
 [class^="icon-"]:before, [class*=" icon-"]:before {

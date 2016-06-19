@@ -38,17 +38,9 @@ you can just remove this stylesheet.
     background-position: center;
   }
   img {
-    opacity: 1;
-    max-width: none;
-    min-width: 100%;
-    min-height: 100%;
+    width: 100%;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    top: 30px;
   }
 
 }

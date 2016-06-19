@@ -48,10 +48,19 @@ NAVIGATION STYLES
 
 .nav {
 	border: 0;
-	.sub-menu {
-		width: 200%;
-		left: -50%;
+	li{
+		.sub-menu {
+			width: 200%;
+			left: -50%;
+		}
+		&.qtranxs-lang-menu {
+			.sub-menu {
+				width: 100%;
+				left: auto;
+			}
+		}
 	}
+
 	ul {
 		margin-top:0;
 		width:100%;
@@ -305,7 +314,7 @@ h1 {
 	}
 	.alejandraDescription {
 		img {
-			width: 410px;
+			width: 790px;
 		}
 		.descriptionContent {
 			margin-top:200px;
@@ -396,4 +405,11 @@ h1 {
 	.row {
 		box-shadow: 1px 1px 81px 11px rgba(0, 0, 0, 0.2);
 	}
+}
+
+.page-template-testimonial {
+	.pressSingle {
+		min-height: 230px;
+	}
+
 }

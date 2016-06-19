@@ -12,50 +12,50 @@
 
 
 <div class="heroSlider" xmlns="http://www.w3.org/1999/html">
+
     <ul class="portfolioSlider" data-scroll-speed="-4">
         <?php
         if( have_rows('slider_portfolio') ):
             while ( have_rows('slider_portfolio')) : the_row();?>
-                <li data-img="<?php the_sub_field('slider_portfolio_image');?>"></li>
+                <li data-img="<?php the_sub_field('slider_portfolio_image');?>">
+                    <img src="<?php the_sub_field('slider_portfolio_image');?>" style="opacity:0">
+                </li>
             <?php endwhile;
         else :?>
         <?php endif; ?>
     </ul>
-    <h1 class="heroMessage" data-scroll-speed="-8">
-        <?php the_field('heading_message');?>
-    </h1>
+
 </div>
 
 <main>
-    <section class="container portfolioAlter" id="gallery">
-        <div class="row">
+    <?php if(qtrans_getLanguage() == "fr") : ?>
+        <a href="tel:+33140810337" class="btn fixed-btn">Travaillons ensemble</a>
+    <?php endif ?>
+    <?php if(qtrans_getLanguage() == "en") : ?>
+        <a href="tel:+33140810337" class="btn fixed-btn">let's work together</a>
+    <?php endif ?>
 
-            <div id="gallery-content">
-                <div id="gallery-content-center">
-                    <?php if( have_rows('portfolio_images') ):
-                        while ( have_rows('portfolio_images') ) : the_row();?>
 
-                            <?php
-                                        $thumbs = wp_get_attachment_image_src(get_sub_field('portfolio_image'), 'portfolio-thumb' );
-                                    $srcImage = wp_get_attachment_image_src(get_sub_field('portfolio_image'), 'large' );
-                            ?>
-                            <img src="<?php echo $thumbs[0];?>" class="grid-item <?php if ( get_sub_field('double_width')): ?>grid-item--2<?php endif;?> lightboxSingle" data-image="<?php echo $srcImage[0];?>" />
-                        <?php endwhile;;?>
-                    <?php endif; ?>
-                </div>
-            </div>
+    <h1 class="heroMessage">
+        <?php the_field('heading_message');?>
+    </h1>
 
-            <div class="lightbox">
-                <img src="" class="lightboxedImage"/>
-                <div class="controls">
-                    <span class="close">x</span>
-                        <span class="navPrev"></span>
-                        <span class="navNext"></span>
-                </div>
-            </div>
 
-        </div>
-    </section>
+    <?php if( have_rows('sublinks_list') ):
+        while ( have_rows('sublinks_list') ) : the_row();?>
+            <article class="col-xs-3 servicesLinks">
+                <a href="<?php the_sub_field('sublink_single');?>">
+
+                    <?php $thumb = wp_get_attachment_image_src(get_sub_field('sublink_image'), 'bones-thumb-skyscraper' ); ?>
+                    <img src="<?php echo $thumb[0];?>">
+                    <h4 class="hiddenTitle"><?php the_sub_field('sublink_title');?></h4>
+                </a>
+                <h4 class="mobileHelper"><?php the_sub_field('sublink_title');?></h4>
+            </article>
+
+        <?php endwhile;?>
+    <?php endif;?>
+
 </main>
 
 <?php get_footer();?>
