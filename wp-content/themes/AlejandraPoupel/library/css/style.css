@@ -2113,7 +2113,7 @@ main h1 {
     border-radius: 50%;
     background-color: #e8ded5;
     margin: 7px 5px;
-    float: right; }
+    float: left; }
 .page-template-Service article h3 {
   font-size: 5em;
   text-align: center; }
@@ -2122,10 +2122,13 @@ main h1 {
   font-family: "Playfair Display", serif;
   font-weight: 900;
   top: 0;
-  color: whitesmoke;
-  text-align: center; }
+  color: #e8ded5;
+  opacity: 0.3;
+  text-align: center;
+  width: 200%;
+  margin-top: 250px; }
 .page-template-Service article:nth-of-type(odd) .descriptionContainer ul li:before {
-  float: left; }
+  float: right; }
 
 /******PAGE AGENCE************/
 .page-template-Agency .imgContainer {
@@ -2767,18 +2770,17 @@ you can add resource intensive styles.
     width: 50%; }
   .page-template-Service article, .page-template-ServiceSingle article {
     padding: 50px 0;
-    position: relative;
-    text-align: right; }
+    position: relative; }
     .page-template-Service article blockquote, .page-template-ServiceSingle article blockquote {
-      font-size: 5em;
-      text-align: left;
-      -ms-word-break: break-all;
-      word-break: break-all; }
+      font-size: 7em;
+      text-align: right;
+      float: right; }
     .page-template-Service article:nth-of-type(odd) .descriptionContainer, .page-template-ServiceSingle article:nth-of-type(odd) .descriptionContainer {
       float: right;
-      text-align: left; }
-      .page-template-Service article:nth-of-type(odd) .descriptionContainer blockquote, .page-template-ServiceSingle article:nth-of-type(odd) .descriptionContainer blockquote {
-        text-align: right; }
+      text-align: right; }
+    .page-template-Service article:nth-of-type(odd) blockquote, .page-template-ServiceSingle article:nth-of-type(odd) blockquote {
+      text-align: left;
+      float: left; }
 
   .page-template-testimonial .videoWrapper {
     width: 47%;

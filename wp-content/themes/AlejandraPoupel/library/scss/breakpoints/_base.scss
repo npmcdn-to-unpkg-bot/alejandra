@@ -1284,7 +1284,7 @@ main {
 						border-radius: 50%;
 						background-color:$AlejandraGrey;
 						margin: 7px 5px;
-						float: right;
+						float: left;
 					}
 				}
 			}
@@ -1298,8 +1298,11 @@ main {
 			font-family: $playfair;
 			font-weight: 900;
 			top: 0;
-			color: whitesmoke;
+			color: $AlejandraGrey;
+			opacity: 0.3;
 			text-align: center;
+			width: 200%;
+			margin-top: 250px;
 
 		}
 		&:nth-of-type(odd){
@@ -1307,7 +1310,7 @@ main {
 				ul{
 					li{
 						&:before {
-							float: left;
+							float: right;
 
 						}
 					}

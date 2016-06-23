@@ -85,7 +85,7 @@
                 <?php if( have_rows('press_single') ):
                     while ( have_rows('press_single') ) : the_row();?>
 
-                        <article class="col-xs-6 col-sm-3  pressSingle lightboxSingle " data-image="<?php the_sub_field('press_img');?>">
+                        <article class="col-xs-6 col-sm-3  pressSingle lightboxSingle <?php if(get_sub_field('press_img_hidden')){echo 'hidden';};?>" data-image="<?php the_sub_field('press_img');?>">
                             <div class="pressSingleInfos">
                                 <div class="pressSingleInfosWrapper">
                                     <?php the_sub_field('press_name');?><br />

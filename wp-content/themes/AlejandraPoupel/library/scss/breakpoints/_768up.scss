@@ -360,18 +360,20 @@ h1 {
 	article {
 		padding:50px 0;
 		position: relative;
-		text-align:right;
+
 		blockquote {
-			font-size: 5em;
-			text-align: left;
-			-ms-word-break:break-all;
-			word-break: break-all;
+			font-size: 7em;
+			text-align: right;
+			float:right;
 		}
-		&:nth-of-type(odd) .descriptionContainer {
-			float: right;
-			text-align:left;
-			blockquote {
+		&:nth-of-type(odd) {
+			.descriptionContainer{
+				float: right;
 				text-align:right;
+			}
+			blockquote {
+				text-align:left;
+				float:left;
 			}
 		}
 

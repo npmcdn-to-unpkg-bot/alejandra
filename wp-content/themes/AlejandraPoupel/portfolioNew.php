@@ -27,38 +27,13 @@
 
 </div>
 
-<!--<div id="frame">
-    <ul class="slidee">
-        <?php
-/*        if( have_rows('slider_portfolio') ):
-            while ( have_rows('slider_portfolio')) : the_row();*/?>
-                <li><img src="<?php /*the_sub_field('slider_portfolio_image');*/?>" data-src="<?php /*the_sub_field('slider_portfolio_image');*/?>"/></li>
-            <?php /*endwhile;
-        else :*/?>
-        <?php /*endif; */?>
-    </ul>
-</div>-->
-
 <main>
     <section class="container portfolioNew">
         <div class="row">
 
             <h2><?php the_field('heading_message');?></h2>
 
-            <?php if( have_rows('sublinks_list') ):
-                while ( have_rows('sublinks_list') ) : the_row();?>
-                    <article class="col-xs-3 servicesLinks">
-                        <a href="<?php the_sub_field('sublink_single');?>">
 
-                            <?php $thumb = wp_get_attachment_image_src(get_sub_field('sublink_image'), 'bones-thumb-skyscraper' ); ?>
-                            <img src="<?php echo $thumb[0];?>">
-                            <h4 class="hiddenTitle"><?php the_sub_field('sublink_title');?></h4>
-                        </a>
-                        <h4 class="mobileHelper"><?php the_sub_field('sublink_title');?></h4>
-                    </article>
-
-                <?php endwhile;?>
-            <?php endif;?>
             </div>
         </section>
 </main>
