@@ -27,7 +27,7 @@
                 </h1>
                 </div>
             <div class="row">
-                <blockquote  data-scroll-speed="9"><?php the_field('dna_quote');?></blockquote>
+                <blockquote  data-scroll-speed="9" class="col-xs-12 "><?php the_field('dna_quote');?></blockquote>
                 <div class="col-xs-10 col-xs-offset-1 col-md-9 col-md-offset-3"><?php the_field('dna_content');?></div>
 
             </div>

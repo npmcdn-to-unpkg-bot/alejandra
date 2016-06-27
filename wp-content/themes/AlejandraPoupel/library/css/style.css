@@ -2082,16 +2082,14 @@ main h1 {
 .page-template-Agency h2 {
   text-align: center; }
 .page-template-Agency .ourDna blockquote {
-  position: absolute;
   color: #e8ded5;
-  font-size: 9em;
+  font-size: 4em;
   font-family: "Playfair Display", serif;
-  width: 50%;
   font-weight: 900;
   line-height: 1;
   opacity: 0.5;
-  margin-top: 200px;
-  text-align: center; }
+  text-align: center;
+  margin: 0; }
 .page-template-Agency .ourDna p {
   text-align: left; }
 
@@ -2124,9 +2122,7 @@ main h1 {
   top: 0;
   color: #e8ded5;
   opacity: 0.3;
-  text-align: center;
-  width: 200%;
-  margin-top: 250px; }
+  text-align: center; }
 .page-template-Service article:nth-of-type(odd) .descriptionContainer ul li:before {
   float: right; }
 
@@ -2541,10 +2537,16 @@ tweeners.
 
   .page-template-Agency .ourDna blockquote {
     font-size: 13em;
-    text-align: left; }
+    text-align: left;
+    position: absolute;
+    width: 50%;
+    margin-top: 200px; }
 
   .page-template-Service .separator, .page-template-ServiceSingle .separator {
     background-attachment: fixed; }
+  .page-template-Service article blockquote, .page-template-ServiceSingle article blockquote {
+    width: 200%;
+    margin-top: 250px; }
 
   .page-template-testimonial .testimonials {
     padding-bottom: 100px; }

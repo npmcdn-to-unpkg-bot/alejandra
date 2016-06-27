@@ -40,6 +40,8 @@
             else :?>
             <?php endif; ?>
 
+                <h2><?php the_field('press_inquiries_title');?></h2>
+                <p><?php the_field('press_inquiries_content');?></p>
                 <h2><?php the_field('socials_title');?></h2>
                 <div class="Socials">
                     <?php wp_nav_menu( array( 'theme_location' => 'Social_Links' ) ); ?>

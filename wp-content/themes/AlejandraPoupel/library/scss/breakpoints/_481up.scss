@@ -166,6 +166,9 @@ body {
 		blockquote {
 			font-size: 13em;
 			text-align: left;
+			position: absolute;
+			width: 50%;
+			margin-top: 200px;
 		}
 	}
 
@@ -174,6 +177,12 @@ body {
 .page-template-Service, .page-template-ServiceSingle {
 	.separator {
 		background-attachment: fixed;
+	}
+	article {
+		blockquote {
+			width: 200%;
+			margin-top: 250px;
+		}
 	}
 }
 

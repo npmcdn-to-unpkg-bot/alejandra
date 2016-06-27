@@ -207,34 +207,40 @@ jQuery(document).ready(function($) {
 		$(this).css('background-image', 'url('+ sepImage +')');
 	});
 
-	/* SCROLL DES CONTENUS AVEC DATA-SCROLL-SPEED */
-	$.fn.moveIt = function(){
-		var $window = $(window);
-		var $scrollHeight = $window.height();
-		var instances = [];
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		// some code..
+	}else
+	{
+		/* SCROLL DES CONTENUS AVEC DATA-SCROLL-SPEED */
+		$.fn.moveIt = function(){
+			var $window = $(window);
+			var $scrollHeight = $window.height();
+			var instances = [];
 
-		$(this).each(function(){
-			instances.push(new moveItItem($(this)));
-		});
-
-		window.onscroll = function(){
-			var scrollTop = $window.scrollTop();
-			instances.forEach(function(inst){
-				inst.update(scrollTop);
+			$(this).each(function(){
+				instances.push(new moveItItem($(this)));
 			});
+
+			window.onscroll = function(){
+				var scrollTop = $window.scrollTop();
+				instances.forEach(function(inst){
+					inst.update(scrollTop);
+				});
+			}
 		}
+
+		var moveItItem = function(el){
+			this.el = $(el);
+			this.speed = parseInt(this.el.attr('data-scroll-speed'));
+		};
+
+		moveItItem.prototype.update = function(scrollTop){
+			var pos = scrollTop / this.speed;
+			this.el.css('transform', 'translateY(' + -pos + 'px)');
+		};
+		$('[data-scroll-speed]').moveIt();
+
 	}
-
-	var moveItItem = function(el){
-		this.el = $(el);
-		this.speed = parseInt(this.el.attr('data-scroll-speed'));
-	};
-
-	moveItItem.prototype.update = function(scrollTop){
-		var pos = scrollTop / this.speed;
-		this.el.css('transform', 'translateY(' + -pos + 'px)');
-	};
-	$('[data-scroll-speed]').moveIt();
 
 
 	/*HEADER COMPORTMENT*/
