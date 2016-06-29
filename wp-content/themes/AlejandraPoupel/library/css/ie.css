@@ -251,7 +251,7 @@ body {
   			}*/ }
 
 .page-template-Agency .ourDna blockquote {
-  font-size: 13em;
+  font-size: 8em;
   text-align: left;
   position: absolute;
   width: 50%;
@@ -259,10 +259,9 @@ body {
 
 .page-template-Service .separator, .page-template-ServiceSingle .separator {
   background-attachment: fixed; }
-.page-template-Service article blockquote, .page-template-ServiceSingle article blockquote {
-  width: 200%;
-  margin-top: 250px; }
 
+.page-template-testimonial .testimonialContent {
+  font-size: 1.1em; }
 .page-template-testimonial .testimonials {
   padding-bottom: 100px; }
   .page-template-testimonial .testimonials .testimonialDescription {
@@ -423,7 +422,7 @@ h1 {
 .page-template-homepage .portfolioSingle {
   margin: 25px 0 0 0; }
 .page-template-homepage .alejandraDescription img {
-  width: 790px; }
+  width: 580px; }
 .page-template-homepage .alejandraDescription .descriptionContent {
   margin-top: 200px; }
   .page-template-homepage .alejandraDescription .descriptionContent p {
@@ -436,6 +435,9 @@ h1 {
   width: 33.33333333%;
   float: left;
   margin-bottom: 5px; }
+
+.servicesLinks img {
+  max-width: none; }
 
 .page-template-Agency .imgContainer {
   display: block; }
@@ -450,15 +452,25 @@ h1 {
 .page-template-Service h2, .page-template-ServiceSingle h2 {
   width: 50%; }
 .page-template-Service article, .page-template-ServiceSingle article {
-  padding: 50px 0;
   position: relative; }
   .page-template-Service article blockquote, .page-template-ServiceSingle article blockquote {
     font-size: 7em;
     text-align: right;
     float: right; }
+  .page-template-Service article .decriptionContainer ul li:before, .page-template-ServiceSingle article .decriptionContainer ul li:before {
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #e8ded5;
+    margin: 7px 5px;
+    float: left; }
   .page-template-Service article:nth-of-type(odd) .descriptionContainer, .page-template-ServiceSingle article:nth-of-type(odd) .descriptionContainer {
     float: right;
     text-align: right; }
+    .page-template-Service article:nth-of-type(odd) .descriptionContainer ul li:before, .page-template-ServiceSingle article:nth-of-type(odd) .descriptionContainer ul li:before {
+      float: right; }
   .page-template-Service article:nth-of-type(odd) blockquote, .page-template-ServiceSingle article:nth-of-type(odd) blockquote {
     text-align: left;
     float: left; }
@@ -477,6 +489,8 @@ h1 {
     left: 0;
     width: 100%;
     height: 100%; }
+.page-template-testimonial .pressSingle .pressSingleInfosWrapper {
+  font-size: 1.1em; }
 
 .meetAlejandraSingle p {
   box-shadow: 1px 1px 191px 0 rgba(0, 0, 0, 0.2); }

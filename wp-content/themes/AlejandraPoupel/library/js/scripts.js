@@ -207,7 +207,15 @@ jQuery(document).ready(function($) {
 		$(this).css('background-image', 'url('+ sepImage +')');
 	});
 
-	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+
+		$('.descriptionImage').attr('data-scroll-speed', '16');
+		$('.descriptionContent').attr('data-scroll-speed', '16');
+	} else
+	{
+
+	};
+	if( (/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) && ($('.page-template-Agency').length )) {
 		// some code..
 	}else
 	{

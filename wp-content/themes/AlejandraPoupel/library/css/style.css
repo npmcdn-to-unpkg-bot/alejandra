@@ -1312,11 +1312,11 @@ h2 {
   line-height: 1; }
   h2::before, h2::after {
     width: 50px;
-    height: 2px;
+    height: 1px;
     content: '';
     display: block;
     background: #323944;
-    margin: 40px auto; }
+    margin: 20px auto; }
 
 h3, .h3 {
   font-size: 2.5em;
@@ -1656,7 +1656,8 @@ PAGE NAVI STYLES
       top: 50%;
       margin-top: -15px; }
   .servicesLinks img {
-    transition: all ease-in-out 0.2s; }
+    transition: all ease-in-out 0.2s;
+    max-width: 100%; }
     .servicesLinks img:hover {
       opacity: 0.4; }
       .servicesLinks img:hover + h4 {
@@ -2103,18 +2104,10 @@ main h1 {
   font-size: inherit;
   font-size: 1.2em;
   letter-spacing: 2px; }
-  .page-template-Service article .descriptionContainer ul li:before {
-    content: '';
-    display: inline-block;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background-color: #e8ded5;
-    margin: 7px 5px;
-    float: left; }
 .page-template-Service article h3 {
   font-size: 5em;
-  text-align: center; }
+  text-align: center;
+  margin-top: 0; }
 .page-template-Service article blockquote {
   font-size: 4em;
   font-family: "Playfair Display", serif;
@@ -2123,8 +2116,6 @@ main h1 {
   color: #e8ded5;
   opacity: 0.3;
   text-align: center; }
-.page-template-Service article:nth-of-type(odd) .descriptionContainer ul li:before {
-  float: right; }
 
 /******PAGE AGENCE************/
 .page-template-Agency .imgContainer {
@@ -2159,7 +2150,7 @@ main h1 {
 .page-template-testimonial .testimonialContent {
   display: block;
   width: 100%;
-  font-size: 1.1em;
+  font-size: 1.4em;
   font-style: italic;
   font-weight: 100;
   line-height: 1.5;
@@ -2348,8 +2339,8 @@ _______________________________________*/
         display: inline-block;
         margin: 20px 3px; }
         .page-template-testimonial .testimonials .bx-wrapper .bx-pager .bx-pager-item a {
-          width: 16px;
-          height: 16px;
+          width: 10px;
+          height: 10px;
           border-radius: 50%;
           background-color: #323944;
           opacity: 0.5;
@@ -2394,6 +2385,8 @@ _______________________________________*/
   .page-template-testimonial .pressSingle .logo {
     width: 80%;
     margin-left: 10%; }
+  .page-template-testimonial .pressSingle .pressSingleInfosWrapper {
+    font-size: 1.7em; }
 
 .single-events h2 {
   text-align: center;
@@ -2432,7 +2425,7 @@ _______________________________________*/
   margin: 0 50px;
   z-index: 100;
   font-size: 0;
-  margin-top: -31%; }
+  bottom: 50%; }
   .page-template-portfolioSingle .bx-controls a, .page-template-portfolioNew .bx-controls a {
     width: 40px;
     height: 40px; }
@@ -2536,7 +2529,7 @@ tweeners.
     			}*/ }
 
   .page-template-Agency .ourDna blockquote {
-    font-size: 13em;
+    font-size: 8em;
     text-align: left;
     position: absolute;
     width: 50%;
@@ -2544,10 +2537,9 @@ tweeners.
 
   .page-template-Service .separator, .page-template-ServiceSingle .separator {
     background-attachment: fixed; }
-  .page-template-Service article blockquote, .page-template-ServiceSingle article blockquote {
-    width: 200%;
-    margin-top: 250px; }
 
+  .page-template-testimonial .testimonialContent {
+    font-size: 1.1em; }
   .page-template-testimonial .testimonials {
     padding-bottom: 100px; }
     .page-template-testimonial .testimonials .testimonialDescription {
@@ -2744,7 +2736,7 @@ you can add resource intensive styles.
   .page-template-homepage .portfolioSingle {
     margin: 25px 0 0 0; }
   .page-template-homepage .alejandraDescription img {
-    width: 790px; }
+    width: 580px; }
   .page-template-homepage .alejandraDescription .descriptionContent {
     margin-top: 200px; }
     .page-template-homepage .alejandraDescription .descriptionContent p {
@@ -2757,6 +2749,9 @@ you can add resource intensive styles.
     width: 33.33333333%;
     float: left;
     margin-bottom: 5px; }
+
+  .servicesLinks img {
+    max-width: none; }
 
   .page-template-Agency .imgContainer {
     display: block; }
@@ -2771,15 +2766,25 @@ you can add resource intensive styles.
   .page-template-Service h2, .page-template-ServiceSingle h2 {
     width: 50%; }
   .page-template-Service article, .page-template-ServiceSingle article {
-    padding: 50px 0;
     position: relative; }
     .page-template-Service article blockquote, .page-template-ServiceSingle article blockquote {
       font-size: 7em;
       text-align: right;
       float: right; }
+    .page-template-Service article .decriptionContainer ul li:before, .page-template-ServiceSingle article .decriptionContainer ul li:before {
+      content: '';
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: #e8ded5;
+      margin: 7px 5px;
+      float: left; }
     .page-template-Service article:nth-of-type(odd) .descriptionContainer, .page-template-ServiceSingle article:nth-of-type(odd) .descriptionContainer {
       float: right;
       text-align: right; }
+      .page-template-Service article:nth-of-type(odd) .descriptionContainer ul li:before, .page-template-ServiceSingle article:nth-of-type(odd) .descriptionContainer ul li:before {
+        float: right; }
     .page-template-Service article:nth-of-type(odd) blockquote, .page-template-ServiceSingle article:nth-of-type(odd) blockquote {
       text-align: left;
       float: left; }
@@ -2798,6 +2803,8 @@ you can add resource intensive styles.
       left: 0;
       width: 100%;
       height: 100%; }
+  .page-template-testimonial .pressSingle .pressSingleInfosWrapper {
+    font-size: 1.1em; }
 
   .meetAlejandraSingle p {
     box-shadow: 1px 1px 191px 0 rgba(0, 0, 0, 0.2); }
@@ -2880,7 +2887,14 @@ you can add resource intensive styles.
     padding: 60px 0; }
 
   .page-template-testimonial .pressSingle {
-    min-height: 350px; } }
+    min-height: 350px; }
+
+  .page-template-homepage .alejandraDescription img {
+    width: 790px; }
+
+  h2::before, h2::after {
+    height: 2px;
+    margin: 40px auto; } }
 /*********************
 DESKTOP
 This is the average viewing window. So Desktops, Laptops, and

@@ -85,3 +85,17 @@ PAGE PORTFOLIO
 	}
 
 }
+
+.page-template-homepage {
+
+	.alejandraDescription {
+		img {
+			width: 790px;
+		}
+	}
+}
+
+h2::before, h2::after {
+	height: 2px;
+	margin: 40px auto;
+}

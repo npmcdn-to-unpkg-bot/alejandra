@@ -112,11 +112,11 @@ h2 {
 	line-height: 1;
 	&::before, &::after {
 		width: 50px;
-		height: 2px;
+		height: 1px ;
 		content: '';
 		display: block;
 		background: $black;
-		margin: 40px auto;
+		margin: 20px auto;
 	}
 }
 h3, .h3 {
@@ -584,6 +584,7 @@ PAGE NAVI STYLES
 	}
 	img {
 		transition: $basicTransition;
+		max-width:100% ;
 		&:hover {
 			opacity:0.4;
 			+ h4 {
@@ -1275,22 +1276,13 @@ main {
 					font-size:inherit;
 					font-size: 1.2em;
 					letter-spacing: 2px;
-					&:before {
-						content:'';
-						display:inline-block;
-						width:5px;
-						height:5px;
-						border-radius: 50%;
-						background-color:$AlejandraGrey;
-						margin: 7px 5px;
-						float: left;
-					}
 				}
 			}
 		}
 		h3 {
 			font-size:5em;
 			text-align:center;
+			margin-top: 0;
 		}
 		blockquote {
 			font-size: 4em;
@@ -1305,10 +1297,7 @@ main {
 			.descriptionContainer {
 				ul{
 					li{
-						&:before {
-							float: right;
 
-						}
 					}
 				}
 			}
@@ -1368,7 +1357,7 @@ main {
 	.testimonialContent {
 		display: block;
 		width: 100%;
-		font-size: 1.1em;
+		font-size: 1.4em;
 		font-style: italic;
 		font-weight: 100;
 		line-height: 1.5;
@@ -1613,8 +1602,8 @@ _______________________________________*/
 					display:inline-block;
 					margin:20px 3px;
 					a {
-						width:16px;
-						height:16px;
+						width:10px;
+						height:10px ;
 						border-radius:50%;
 						background-color:$black;
 						opacity:0.5;
@@ -1670,8 +1659,11 @@ _______________________________________*/
 			margin: 10px auto;
 		}
 		.logo {
-			width:80%;
-			margin-left:10%;
+					 width:80%;
+					 margin-left:10%;
+				 }
+		.pressSingleInfosWrapper {
+			font-size: 1.7em;
 		}
 	}
 }
@@ -1728,7 +1720,7 @@ _______________________________________*/
 		margin: 0 50px;
 		z-index: 100;
 		font-size: 0;
-		margin-top:-31%;
+		bottom: 50%;
 		a{
 			width:40px;
 			height:40px;

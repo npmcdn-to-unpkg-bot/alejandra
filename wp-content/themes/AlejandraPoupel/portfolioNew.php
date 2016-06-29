@@ -16,8 +16,9 @@
         <?php
         if( have_rows('slider_portfolio') ):
             while ( have_rows('slider_portfolio')) : the_row();?>
-                <li data-img="<?php the_sub_field('slider_portfolio_image');?>">
-                    <img src="<?php the_sub_field('slider_portfolio_image');?>" style="opacity:0">
+                <?php $image = get_sub_field('slider_portfolio_image');?>
+                <li data-img="<?php echo $image['url']; ?>">
+                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" style="opacity:0">
                 </li>
 
             <?php endwhile;

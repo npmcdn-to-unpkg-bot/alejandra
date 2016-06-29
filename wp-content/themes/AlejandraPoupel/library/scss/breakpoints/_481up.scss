@@ -164,7 +164,7 @@ body {
 	}
 	.ourDna {
 		blockquote {
-			font-size: 13em;
+			font-size: 8em;
 			text-align: left;
 			position: absolute;
 			width: 50%;
@@ -178,17 +178,15 @@ body {
 	.separator {
 		background-attachment: fixed;
 	}
-	article {
-		blockquote {
-			width: 200%;
-			margin-top: 250px;
-		}
-	}
 }
 
 .page-template-testimonial {
+	.testimonialContent {
+		font-size: 1.1em;
+	}
 	.testimonials {
 		padding-bottom: 100px;
+
 		.testimonialDescription {
 			text-align: left;
 			box-shadow: 1px 1px 21px 0 rgba(0, 0, 0, 0.05);
