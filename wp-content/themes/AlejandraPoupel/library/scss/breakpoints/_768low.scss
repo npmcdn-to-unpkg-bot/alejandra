@@ -16,8 +16,8 @@ body {
         li {
           &.menu-item {
             &.qtranxs-lang-menu {
-              > a {
-                background-color:$black;
+             /* > a {
+
                 color:$white;
                 display:inline-block;
               }
@@ -30,7 +30,7 @@ body {
                     padding: 0.75em;
                   }
                 }
-              }
+              }*/
             }
           }
         }

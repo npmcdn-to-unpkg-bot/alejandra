@@ -54,6 +54,9 @@ NAVIGATION STYLES
 			left: -50%;
 		}
 		&.qtranxs-lang-menu {
+			> a {
+				display:block !important;
+			}
 			.sub-menu {
 				width: 100%;
 				left: auto;

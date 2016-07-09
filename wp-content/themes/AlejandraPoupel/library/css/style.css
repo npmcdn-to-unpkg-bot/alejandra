@@ -1053,7 +1053,8 @@ input[type="password"] {
 textarea {
   max-width: 100%;
   min-height: 120px;
-  line-height: 1.5em; }
+  line-height: 1.5em;
+  padding-top: 10px; }
 
 select {
   -webkit-appearance: none;
@@ -1373,6 +1374,10 @@ HEADER STYLES
       .header nav .nav li.qtranxs-lang-menu {
         border: none;
         font-size: 0; }
+        .header nav .nav li.qtranxs-lang-menu > a {
+          display: none; }
+          .header nav .nav li.qtranxs-lang-menu > a:before, .header nav .nav li.qtranxs-lang-menu > a:after {
+            display: none; }
         .header nav .nav li.qtranxs-lang-menu a {
           padding: 12px; }
       .header nav .nav li a {
@@ -2147,6 +2152,12 @@ main h1 {
     max-width: 120%; }
 
 /******PAGE TEMOIGNAGES************/
+.single h2 {
+  text-align: center; }
+
+.page-template-Service .descriptionContainer {
+  margin-bottom: 60px; }
+
 .page-template-testimonial .testimonialContent {
   display: block;
   width: 100%;
@@ -2564,17 +2575,22 @@ tweeners.
   on larger screens.
   
   ******************************************************************/
-  body .header nav .nav li.menu-item.qtranxs-lang-menu > a {
-    background-color: #323944;
-    color: #fff;
-    display: inline-block; }
-  body .header nav .nav li.menu-item.qtranxs-lang-menu ul {
-    display: inline-block;
-    margin: 0; }
-    body .header nav .nav li.menu-item.qtranxs-lang-menu ul li {
-      display: inline-block; }
-      body .header nav .nav li.menu-item.qtranxs-lang-menu ul li a {
-        padding: 0.75em; }
+  body .header nav .nav li.menu-item.qtranxs-lang-menu {
+             /* > a {
+
+                color:$white;
+                display:inline-block;
+              }
+              ul {
+                display:inline-block;
+                margin:0;
+                li {
+                  display:inline-block;
+                  a{
+                    padding: 0.75em;
+                  }
+                }
+              }*/ }
   body .btn, body .blue-btn, body .comment-reply-link, body #submit {
     font-size: 1.2em; }
     body .btn.firstBtn, body .firstBtn.blue-btn, body .firstBtn.comment-reply-link, body .firstBtn#submit {
@@ -2629,6 +2645,8 @@ you can add resource intensive styles.
     .nav li .sub-menu {
       width: 200%;
       left: -50%; }
+    .nav li.qtranxs-lang-menu > a {
+      display: block !important; }
     .nav li.qtranxs-lang-menu .sub-menu {
       width: 100%;
       left: auto; }

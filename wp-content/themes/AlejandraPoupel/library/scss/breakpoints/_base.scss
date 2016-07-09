@@ -180,8 +180,14 @@ HEADER STYLES
 				&.qtranxs-lang-menu {
 					border: none;
 					font-size:0;
-					a{
-						padding: 12px;
+					> a{
+						display:none;
+						&:before, &:after {
+							display:none ;
+						}
+					}
+					a {
+						padding:12px;
 					}
 				}
 				a {
@@ -1352,7 +1358,13 @@ main {
 }
 
 /******PAGE TEMOIGNAGES************/
+.single h2 {
+	text-align: center;
+}
 
+.page-template-Service .descriptionContainer {
+	margin-bottom: 60px;
+}
 .page-template-testimonial {
 	.testimonialContent {
 		display: block;

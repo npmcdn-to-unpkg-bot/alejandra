@@ -315,6 +315,8 @@ NAVIGATION STYLES
   .nav li .sub-menu {
     width: 200%;
     left: -50%; }
+  .nav li.qtranxs-lang-menu > a {
+    display: block !important; }
   .nav li.qtranxs-lang-menu .sub-menu {
     width: 100%;
     left: auto; }

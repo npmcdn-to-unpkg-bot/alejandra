@@ -24,13 +24,13 @@
 						<article>
 
 							<section><?php the_content();?></section>
-							<footer>
-								<span class="previousLink"><?php previous_post_link('%link');?></span>
+							<!--<footer>
+								<span class="previousLink"><?php /*previous_post_link('%link');*/?></span>
 
-								<span class="postInfos"><?php the_date();?> | <?php the_author();?></span>
+								<span class="postInfos"><?php /*the_date();*/?> | <?php /*the_author();*/?></span>
 
-								<span class="nextLink"><?php next_post_link('%link'); ?></span>
-							</footer>
+								<span class="nextLink"><?php /*next_post_link('%link'); */?></span>
+							</footer>-->
 						</article>
 
 						<?php endwhile; ?>
